@@ -1,0 +1,40 @@
+// see http://docs.spring.io/platform/docs/1.0.1.RELEASE/reference/htmlsingle/#getting-started-introducing-spring-io-platform
+// see http://docs.spring.io/spring-boot/docs/1.1.4.RELEASE/reference/htmlsingle/#build-tool-plugins-gradle-plugin
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: "maven"
+
+def defaultEncoding = 'UTF-8'
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+group = 'jp.canetrash.sample.spring_io'
+archivesBaseName = 'sample-spring-io'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE'
+    }
+}
+apply plugin: 'spring-boot'
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
+    testCompile 'junit:junit:4.11'
+
+    versionManagement 'io.spring.platform:platform-versions:1.0.1.RELEASE@properties'
+}
+
+bootRepackage {
+    // enabled = false
+}
