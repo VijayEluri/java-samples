@@ -26,3 +26,10 @@ build and run
     gradle build
     java -jar build/libs/sample-spring-io-0.0.1.jar
 
+for Eclipse
+_____________
+
+
+    gradle eclipse
+
+and import.
