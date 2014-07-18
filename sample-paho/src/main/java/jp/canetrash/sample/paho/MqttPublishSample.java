@@ -13,7 +13,7 @@ public class MqttPublishSample {
 		String topic = "MQTT Examples";
 		String content = "Message from MqttPublishSample";
 		int qos = 2;
-		String broker = "tcp://192.168.127.139:1883";
+		String broker = "tcp://localhost:61613";
 		String clientId = "JavaSample";
 		MemoryPersistence persistence = new MemoryPersistence();
 
@@ -21,6 +21,8 @@ public class MqttPublishSample {
 			MqttClient sampleClient = new MqttClient(broker, clientId,
 					persistence);
 			MqttConnectOptions connOpts = new MqttConnectOptions();
+			connOpts.setUserName("admin");
+			connOpts.setPassword(new char[]{'p', 'a', 's', 's', 'w', 'o', 'r', 'd'});
 			connOpts.setCleanSession(true);
 			System.out.println("Connecting to broker: " + broker);
 			sampleClient.connect(connOpts);

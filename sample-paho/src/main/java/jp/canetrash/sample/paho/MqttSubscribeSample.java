@@ -3,6 +3,7 @@ package jp.canetrash.sample.paho;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
@@ -13,7 +14,7 @@ public class MqttSubscribeSample {
 
 		String topic = "MQTT Examples";
 		int qos = 2;
-		String broker = "tcp://192.168.127.139:1883";
+		String broker = "tcp://localhost:61613";
 		String clientId = "SubscribeSample";
 		MemoryPersistence persistence = new MemoryPersistence();
 
@@ -39,7 +40,10 @@ public class MqttSubscribeSample {
 					cause.printStackTrace();
 				}
 			});
-			sampleClient.connect();
+			MqttConnectOptions options = new MqttConnectOptions();
+			options.setUserName("admin");
+			options.setPassword(new char[]{'p', 'a', 's', 's', 'w', 'o', 'r', 'd'});
+			sampleClient.connect(options);
 			sampleClient.subscribe(topic, qos);
 
 		} catch (MqttException me) {
