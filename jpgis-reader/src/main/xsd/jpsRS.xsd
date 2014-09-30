@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsRS.xsd</xs:appinfo>
+		<xs:documentation>JPGIS（規定） 参照系スキーマのW3C XML Schema文書</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<!-- ========== include and import ========== -->
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<!-- ========== <xs:include schemaLocation="jpsExtraction.xsd"/> ========== -->
+	<!-- ========== types and elements ========== -->
+	<!-- ========== RS_ReferenceSystem ========== -->
+	<xs:element name="RS_ReferenceSystem" type="jps:RS_ReferenceSystem" abstract="true"/>
+	<xs:complexType name="RS_ReferenceSystem" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:RS_ReferenceSystem.name"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RS_ReferenceSystem.name">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:RS_Identifier"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== RS_CRS ========== -->
+	<xs:element name="RS_CRS" type="jps:RS_CRS" substitutionGroup="jps:RS_ReferenceSystem"/>
+	<xs:complexType name="RS_CRS">
+		<xs:complexContent>
+			<xs:extension base="jps:RS_ReferenceSystem"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== RS_Identifier ========== -->
+	<xs:element name="RS_Identifier" type="jps:RS_Identifier"/>
+	<xs:complexType name="RS_Identifier">
+		<xs:sequence>
+			<xs:element ref="jps:RS_Identifier.code"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="RS_Identifier.code" type="jps:CharacterString"/>
+	<!-- ========== Object Reference ==========-->
+	<!-- ========== ref_RS_CRS ========== -->
+	<xs:complexType name="ref_RS_CRS">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+</xs:schema>

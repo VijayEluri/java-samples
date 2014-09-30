@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans
+    PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd"
+>
+<beans>
+    <!-- The components of DBFlute Runtime. -->
+    <bean id="otherIntroduction" class="jp.canetrash.sample.spring.dbflute2.allcommon.OtherDBFluteInitializer">
+        <constructor-arg index="0"><ref bean="dataSourceSample2"/></constructor-arg>
+    </bean>
+    <bean id="otherInvokerAssistant" class="jp.canetrash.sample.spring.dbflute2.allcommon.OtherImplementedInvokerAssistant" autowire="byType">
+        <property name="dataSource"><ref bean="dataSourceSample2"/></property>
+        <property name="introduction"><ref bean="otherIntroduction"/></property>
+    </bean>
+    <bean id="otherCommonColumnAutoSetupper" class="jp.canetrash.sample.spring.dbflute2.allcommon.OtherImplementedCommonColumnAutoSetupper" autowire="byType"/>
+    <bean id="otherBehaviorSelector" class="jp.canetrash.sample.spring.dbflute2.allcommon.OtherImplementedBehaviorSelector" autowire="byType"/>
+    <bean id="otherBehaviorCommandInvoker" class="org.seasar.dbflute.bhv.core.BehaviorCommandInvoker" autowire="byType">
+        <property name="invokerAssistant"><ref bean="otherInvokerAssistant"/></property>
+    </bean>
+
+    <!-- The components of Behavior. -->
+	<bean id="otherUsers2Bhv" class="jp.canetrash.sample.spring.dbflute2.exbhv.OtherUsers2Bhv" autowire="byType">
+        <property name="behaviorCommandInvoker"><ref bean="otherBehaviorCommandInvoker"/></property>
+        <property name="behaviorSelector"><ref bean="otherBehaviorSelector"/></property>
+        <property name="commonColumnAutoSetupper"><ref bean="otherCommonColumnAutoSetupper"/></property>
+    </bean>
+</beans>

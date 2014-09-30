@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsGrid.xsd</xs:appinfo>
+		<xs:documentation>JPGIS（参考） 四辺形グリッド被覆スキーマのW3C XML Schema文書</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<!-- ========== include and import ========== -->
+	<xs:include schemaLocation="jpsCoverage.xsd"/>
+	<!-- ========== types and elements ========== -->
+	<!-- ========== JP_Grid ========== -->
+	<xs:element name="JP_Grid" type="jps:JP_Grid"/>
+	<xs:complexType name="JP_Grid">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:JP_Grid.dimension"/>
+					<xs:element ref="jps:JP_Grid.axisNames"/>
+					<xs:element ref="jps:JP_Grid.extent" minOccurs="0"/>
+					<xs:element ref="jps:JP_Grid.rangeType"/>
+					<xs:element ref="jps:JP_Grid.cell"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="JP_Grid.dimension" type="jps:Integer"/>
+	<xs:element name="JP_Grid.axisNames" type="jps:Sequence_CharacterString"/>
+	<xs:element name="JP_Grid.extent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:JP_GridEnvelope"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="JP_Grid.rangeType" type="jps:ref_RecordType"/>
+	<xs:element name="JP_Grid.cell" type="jps:ref_JP_Cell"/>
+	<xs:complexType name="ref_JP_Cell">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<!-- ========== JP_Cell ========== -->
+	<xs:element name="JP_Cell" type="jps:JP_Cell"/>
+	<xs:complexType name="JP_Cell">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:JP_Cell.gridCoord"/>
+					<xs:element ref="jps:JP_Cell.value"/>
+					<xs:element ref="jps:JP_Cell.scanDirection"/>
+					<xs:element ref="jps:JP_Cell.element" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="JP_Cell.gridCoord" type="jps:JP_Coordinate"/>
+	<xs:element name="JP_Cell.value" type="jps:ref_Record"/>
+	<xs:element name="JP_Cell.scanDirection" type="jps:Sequence_CharacterString"/>
+	<xs:element name="JP_Cell.element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:JP_Cell" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== JP_RectifiedGrid ========== -->
+	<xs:element name="JP_RectifiedGrid" type="jps:JP_RectifiedGrid" substitutionGroup="jps:JP_Grid"/>
+	<xs:complexType name="JP_RectifiedGrid">
+		<xs:complexContent>
+			<xs:extension base="jps:JP_Grid">
+				<xs:sequence>
+					<xs:element ref="jps:JP_RectifiedGrid.origin"/>
+					<xs:element ref="jps:JP_RectifiedGrid.offsetVectors" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="JP_RectifiedGrid.origin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:DirectPosition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="JP_RectifiedGrid.offsetVectors" type="jps:Vector"/>
+	<!-- ========== JP_RubberGrid ========== -->
+	<xs:element name="JP_RubberGrid" type="jps:JP_RubberGrid" substitutionGroup="jps:JP_Grid"/>
+	<xs:complexType name="JP_RubberGrid">
+		<xs:complexContent>
+			<xs:extension base="jps:JP_Grid">
+				<xs:sequence>
+					<xs:element ref="jps:JP_RubberGrid.gridCoords"/>
+					<xs:element ref="jps:JP_RubberGrid.groundPoints"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="JP_RubberGrid.gridCoords" type="jps:Sequence_JP_Coordinate"/>
+	<xs:element name="JP_RubberGrid.groundPoints" type="jps:Sequence_GM_Point"/>
+	<xs:complexType name="Sequence_JP_Coordinate">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element ref="jps:JP_Coordinate"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== JP_GridEnvelope ============ -->
+	<xs:element name="JP_GridEnvelope" type="jps:JP_GridEnvelope"/>
+	<xs:complexType name="JP_GridEnvelope">
+		<xs:sequence>
+			<xs:element name="JP_GridEnvelope.low" type="jps:JP_Coordinate"/>
+			<xs:element name="JP_GridEnvelope.high" type="jps:JP_Coordinate"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== JP_Coordinate ========== -->
+	<xs:element name="JP_Coordinate" type="jps:JP_Coordinate"/>
+	<xs:complexType name="JP_Coordinate">
+		<xs:choice>
+			<xs:element name="JP_Coordinate.grid">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:JP_GridCoordinate"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="JP_Coordinate.mesh">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:JP_MeshCode"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<!-- ========== JP_GridCoordinate ========== -->
+	<xs:element name="JP_GridCoordinate" type="jps:JP_GridCoordinate"/>
+	<xs:complexType name="JP_GridCoordinate">
+		<xs:sequence>
+			<xs:element name="JP_GridCoordinate.coordValues" type="jps:Sequence_Integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== JP_MeshCode ========== -->
+	<xs:element name="JP_MeshCode" type="jps:JP_MeshCode"/>
+	<xs:complexType name="JP_MeshCode">
+		<xs:sequence>
+			<xs:element name="JP_MeshCode.meshType" type="jps:CharacterString"/>
+			<xs:element name="JP_MeshCode.meshCode" type="jps:Sequence_Integer"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Sequence_CharacterString">
+		<xs:list itemType="jps:CharacterString"/>
+	</xs:simpleType>
+	<xs:complexType name="Sequence_GM_Point">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element ref="jps:GM_Point"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,15 @@
+<component-set>
+    <components>
+        <component>
+            <role>jp.canetrash.sample.plexus.Cheese</role>
+            <role-hint>parmesan</role-hint>
+            <implementation>jp.canetrash.sample.plexus.ParmesanCheese</implementation>
+        </component>
+        <component>
+            <role>jp.canetrash.sample.plexus.Cheese</role>
+            <role-hint>other</role-hint>
+            <implementation>jp.canetrash.sample.plexus.ParmesanCheese</implementation>
+        </component>
+    </components>
+</component-set>
+

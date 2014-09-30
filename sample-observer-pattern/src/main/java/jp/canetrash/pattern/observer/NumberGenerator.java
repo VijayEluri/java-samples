@@ -1,0 +1,27 @@
+package jp.canetrash.pattern.observer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class NumberGenerator {
+
+	private List<Observer> observers = new ArrayList<Observer>();
+
+	public void addObserver(Observer observer) {
+		this.observers.add(observer);
+	}
+
+	public void deleteObserver(Observer observer) {
+		this.observers.remove(observer);
+	}
+
+	public void notifyObservers() {
+		for (Observer observer : this.observers) {
+			observer.update(this);
+		}
+	}
+
+	public abstract int getNumber();
+
+	public abstract void execute();
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsLRSandExtraction.xsd</xs:appinfo>
+		<xs:documentation>JPGIS（規定） 参照系スキーマのうち，LRSのW3C XML Schema文書</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+		<xs:documentation>本XML Schemaは、2007年3月に改訂され、ここに定義された要素はjpsLocation.xsdに統合された。</xs:documentation>
+	</xs:annotation>
+	<!-- ========== include and import ========== -->
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<xs:include schemaLocation="jpsExtraction.xsd"/>
+	<xs:include schemaLocation="jpsRS.xsd"/>
+	<!-- ========== types and elements ========== -->
+	<!-- ========== RS_LRS ========== -->
+	<xs:element name="RS_LRS" type="jps:RS_LRS" substitutionGroup="jps:RS_ReferenceSystem"/>
+	<xs:complexType name="RS_LRS">
+		<xs:complexContent>
+			<xs:extension base="jps:RS_ReferenceSystem">
+				<xs:sequence>
+					<xs:element ref="jps:RS_LRS.domainOfValidity" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="jps:RS_LRS.theme"/>
+					<xs:element ref="jps:RS_LRS.overallOwner"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RS_LRS.domainOfValidity" type="jps:ref_EX_GeographicExtent"/>
+	<xs:element name="RS_LRS.theme" type="jps:CharacterString"/>
+	<xs:element name="RS_LRS.overallOwner">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:CI_ResponsibleParty"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ref_RS_LRS">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+</xs:schema>

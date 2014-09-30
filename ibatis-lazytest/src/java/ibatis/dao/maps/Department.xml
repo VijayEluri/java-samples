@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+	"http://www.ibatis.com/dtd/sql-map-2.dtd"
+>
+
+<sqlMap namespace="Department">
+
+	<typeAlias alias="department" type="ibatis.domain.Department" />
+
+	<resultMap id="dptResult" class="department">
+		<result property="cd" column="CODE" />
+		<result property="name" column="DPTNAME" />
+	</resultMap>
+
+	<select id="getDptByPk" resultMap="dptResult" parameterClass="string">
+select CODE, DPTNAME FROM DEPARTMENT WHERE CODE = #value#
+	</select>
+	<select id="getDptList" resultMap="dptResult">
+select CODE, DPTNAME FROM DEPARTMENT ORDER BY CODE
+	</select>
+
+</sqlMap>

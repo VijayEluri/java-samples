@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="targetGuitar" class="jp.canetrash.sample.aop.FenderImpl" />
+
+	<bean id="vocalMixinAdvisor" class="jp.canetrash.sample.aop.VocalMixinAdvisor" />
+
+	<bean name="target" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyTargetClass">
+			<value>true</value>
+		</property>
+		<property name="target">
+			<ref bean="targetGuitar" />
+		</property>
+		<property name="interceptorNames">
+			<value>vocalMixinAdvisor</value>
+		</property>
+	</bean>
+
+</beans>

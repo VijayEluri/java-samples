@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+	"http://www.ibatis.com/dtd/sql-map-2.dtd"
+>
+
+<sqlMap namespace="Employee">
+
+	<typeAlias alias="employee" type="ibatis.domain.Employee" />
+
+	<resultMap id="empResult" class="employee" groupBy="id">
+		<result property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="dptCd" column="DPTCODE" />
+		<result property="dpt" column="DPTCODE" select="Department.getDptByPk"/>
+	</resultMap>
+
+	<select id="getEmpByPk" resultMap="empResult" parameterClass="string">
+select ID, NAME, DPTCODE FROM EMPLOYEE WHERE ID = #value#
+	</select>
+	<select id="getEmpList" resultMap="empResult">
+select ID, NAME, DPTCODE FROM EMPLOYEE ORDER BY ID
+	</select>
+</sqlMap>

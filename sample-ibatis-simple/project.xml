@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <pomVersion>3</pomVersion>
+  <id>sample-ibatis-simple</id>
+  <groupId>test</groupId>
+
+  <name>test</name>
+
+  <currentVersion>1.0</currentVersion>
+
+  <organization>
+    <name />
+    <url />
+    <logo />
+  </organization>
+
+  <inceptionYear>2005</inceptionYear>
+  <package>sample.ibatis.simple</package>
+  <logo>http://maven.apache.org/images/maven.jpg</logo>
+  <description />
+
+  <shortDescription />
+
+  <url />
+  <issueTrackingUrl />
+  <siteAddress />
+  <siteDirectory>/</siteDirectory>
+  <distributionDirectory />
+
+  <repository />
+
+  <mailingLists />
+
+  <developers></developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.ibatis</groupId>
+      <artifactId>ibatis2-dao</artifactId>
+      <version>2.1.5.582</version>
+      <url>http://ibatis.apache.org/</url>
+    </dependency>
+    <dependency>
+      <groupId>com.ibatis</groupId>
+      <artifactId>ibatis2-common</artifactId>
+      <version>2.1.6.589</version>
+      <url>http://ibatis.apache.org/</url>
+    </dependency>
+    <dependency>
+      <groupId>com.ibatis</groupId>
+      <artifactId>ibatis2-sqlmap</artifactId>
+      <version>2.1.6.589</version>
+      <url>http://ibatis.apache.org/</url>
+    </dependency>
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib-full</artifactId>
+      <version>2.0.2</version>
+      <url>http://cglib.sourceforge.net/</url>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.0.4</version>
+      <url>http://jakarta.apache.org/commons/logging/</url>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.8</version>
+      <url>http://logging.apache.org/log4j/</url>
+    </dependency>
+    <dependency>
+      <groupId>oracle-jdbc</groupId>
+      <artifactId>ojdbc14</artifactId>
+      <version>9.2.0.4</version>
+      <url>http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html</url>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <nagEmailAddress>maven@apache.org</nagEmailAddress>
+    <sourceDirectory>src/java</sourceDirectory>
+    <unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+    <unitTest>
+      <includes>
+        <include>**/*Test.java</include>
+      </includes>
+      <excludes>
+        <exclude>**/NaughtyTest.java</exclude>
+      </excludes>
+      <resources>
+        <resource>
+          <directory>src/test</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.properties</include>
+          </includes>
+        </resource>
+      </resources>
+    </unitTest>
+    <resources>
+      <resource>
+        <directory>src/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+  <reports>
+    <report>maven-checkstyle-plugin</report>
+    <report>maven-pmd-plugin</report>
+    <report>maven-simian-plugin</report>
+    <report>maven-findbugs-plugin</report>
+    <report>maven-javancss-plugin</report>
+    <report>maven-jdepend-plugin</report>
+    <report>maven-junit-report-plugin</report>
+    <report>maven-jcoverage-plugin</report>
+    <report>maven-javadoc-plugin</report>
+    <report>maven-jxr-plugin</report>
+    <report>maven-tasklist-plugin</report>
+  </reports>
+</project>

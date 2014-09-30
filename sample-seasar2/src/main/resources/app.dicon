@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components>
+	<include path="convention.dicon"/>
+    <include path="aop.dicon"/>
+    <include path="j2ee.dicon"/>
+    <include path="s2csv.dicon"/>
+    
+    <component class="jp.canetrash.sample.test.SampleClass">
+        <aspect>returnAop</aspect>
+    </component>
+    
+    <component name="sampleInterceptor" class="jp.canetrash.sample.interceptor.SampleInterceptor"/>
+
+    <component name="returnAop" class="org.seasar.framework.aop.interceptors.InterceptorChain">
+        <initMethod name="add"><arg>sampleInterceptor</arg></initMethod>
+    </component>
+ 
+</components>

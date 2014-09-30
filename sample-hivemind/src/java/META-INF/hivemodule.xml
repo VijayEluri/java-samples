@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<module id="hivemind.sample" version="1.0.0" package="hivemind.sample">
+    <service-point id="Adder" interface="Adder">
+        <create-instance class="impl.AdderImpl"/>
+        <interceptor service-id="hivemind.LoggingInterceptor"/>
+    </service-point>
+    <service-point id="Subtracter" interface="Subtracter">
+        <create-instance class="impl.SubtracterImpl"/>
+        <interceptor service-id="hivemind.LoggingInterceptor"/>
+    </service-point>
+    <service-point id="Multiplier" interface="Multiplier">
+        <create-instance class="impl.MultiplierImpl"/>
+        <interceptor service-id="hivemind.LoggingInterceptor"/>
+    </service-point>
+    <service-point id="Divider" interface="Divider">
+        <create-instance class="impl.DividerImpl"/>
+        <interceptor service-id="hivemind.LoggingInterceptor"/>
+    </service-point>
+    <service-point id="Calculator" interface="Calculator">
+        <invoke-factory>
+            <!-- Most properties are autowired by the BuilderFactory -->
+            <construct class="impl.CalculatorImpl"/>
+        </invoke-factory>
+        <interceptor service-id="hivemind.LoggingInterceptor"/>
+    </service-point>
+</module>

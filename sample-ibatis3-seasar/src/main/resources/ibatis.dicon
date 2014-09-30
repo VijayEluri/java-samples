@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+    "http://www.seasar.org/dtd/components21.dtd">
+<components namespace="ibatis">
+    <include path="j2ee.dicon"/>
+
+    <component name="interceptor" class="jp.canetrash.sample.ibatis3.intercetor.SqlMapperInterceptor" autoBinding="none" >
+        <initMethod name="setSqlSessionFactory">
+            <arg>sessionFactoryBuilder.build(configuration)</arg>
+        </initMethod>
+    </component>
+
+    <component name="transactionFactory" class="org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory" autoBinding="none"/>
+
+    <component name="enviroment" class="org.apache.ibatis.mapping.Environment" autoBinding="none">
+        <arg>"sample"</arg>
+        <arg>transactionFactory</arg>
+        <arg>DataSource</arg>
+    </component>
+
+    <component name="configuration" class="org.apache.ibatis.session.Configuration" autoBinding="none">
+        <arg>enviroment</arg>
+    </component>
+
+    <component name="sessionFactoryBuilder" class="org.apache.ibatis.session.SqlSessionFactoryBuilder" autoBinding="none"/>
+    
+</components>

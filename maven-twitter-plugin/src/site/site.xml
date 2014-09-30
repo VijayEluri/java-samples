@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project name="Maven Twitter Plugin">
+  <bannerLeft>
+    <src>images/logo.gif</src>
+    <href>http://www.canetrash.jp/</href>
+  </bannerLeft>
+  <bannerRight>
+    <src>http://maven.apache.org/images/maven-logo-2.gif</src>
+  </bannerRight>
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-stylus-skin</artifactId>
+    <version>1.0</version>
+  </skin>
+
+  <version position="left"/>
+  <publishDate position="left" format="yyyy-MM-dd"/>
+
+  <body>
+    <head>
+    </head>
+    <links>
+      <item name="Maven" href="http://maven.apache.org"/>
+      <item name="Java Twitter" href="http://code.google.com/p/java-twitter/"/> 
+      <item name="Invention Works" href="http://www.canetrash.jp/"/>
+    </links>
+
+    <menu ref="parent"/>
+
+    <menu name="Overview">
+      <item name="Introduction" href="index.html"/>
+      <item name="Goals" href="plugin-info.html"/>
+      <item name="Usage" href="usage.html"/>
+    </menu>
+
+    <menu ref="reports"/>
+  </body>
+</project>
+

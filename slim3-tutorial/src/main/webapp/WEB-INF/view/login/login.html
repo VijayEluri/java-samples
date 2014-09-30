@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tutorial: Login</title>
+<link rel="stylesheet" type="text/css" href="../css/global.css" />
+</head>
+<body>
+
+<h1>Tutorial: Login</h1>
+<p>"tomcat" user and "role1" user can log in.</p>
+<p>You can see passoword in "conf/tomcat-users.xml".</p>
+<p>Please logout, If you want to log in as another user.</p>
+<form method="post" action="../j_security_check">
+<table>
+<tr>
+<td>User:</td>
+<td><input type="text" name="j_username"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="j_password"></td>
+</tr>
+</table>
+<input type="submit" name="login" value="login"/>
+</form>
+</body>
+</html>

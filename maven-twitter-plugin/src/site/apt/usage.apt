@@ -1,0 +1,54 @@
+ ------
+ Usage
+ ------
+ Takashi Funato
+ ------
+ Jan 16, 2008
+
+Introduction
+
+* コマンドラインからTwitする
+
+  このTwitter pluginはコマンドラインから実行してTwitterへTwitすることができます。
+  ユーザID、パスワードを<<settings.xml>>に書くか、<<pom.xml>>に書くか、コマンドラインの引数で渡すことで実行できます。
+
+* pom.xmlの設定
+
++-----
+<project>
+  [...]
+  <pluginRepositories>
+    <pluginRepository>
+      <id>maven.coderepos</id>
+      <name>CodeRepos Maven2 Repository</name>
+      <url>http://svn.coderepos.org/share/lang/java/misc/maven2repo/</url>
+    </pluginRepository>
+  </pluginRepositories>
+  [...]
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>jp.canetrash.maven.plugin</groupId>
+        <artifactId>maven-twitter-plugin</artifactId>
+        <configuration>
+          <twitterUsername>foo</twitterUsername>
+          <twitterPassword>baa</twitterPassword>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
++-----
+
++-----
+  mvn twitter:twit
++-----
+
+  コマンドライン引数で、ユーザID、パスワードを渡す場合
+
++-----
+  mvn twitter:twit                         \
+     -Dtwitter.username=user.id            \
+     -Dtwitter.password=password
++-----
+

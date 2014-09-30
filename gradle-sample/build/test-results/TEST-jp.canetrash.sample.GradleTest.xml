@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="rooibos" name="jp.canetrash.sample.GradleTest" tests="1" time="0.218" timestamp="2011-08-22T10:41:45">
+  <properties />
+  <testcase classname="jp.canetrash.sample.GradleTest" name="testHoge" time="0.041" />
+  <system-out><![CDATA[Hello GradleTest!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/commons-lang.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/springframework/jars/spring-1.1.3.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/p6spy/jars/p6spy-1.1.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/log4j/jars/log4j-1.2.8.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/commons-collections/jars/commons-collections-3.1.jar"/>
+	<classpathentry sourcepath="ECLIPSE_HOME/plugins/org.eclipse.jdt.source_3.0.0/src/org.junit_3.8.1/junitsrc.zip" kind="var" path="JUNIT_HOME/junit.jar"/>
+	<classpathentry sourcepath="JAVA_SRC" kind="var" path="MAVEN_REPO/commons-dbcp/jars/commons-dbcp-1.2.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/commons-pool/jars/commons-pool-1.2.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/oracle-jdbc/jars/ojdbc13-10.1.0.2.jar"/>
+	<classpathentry kind="var" path="JRE_LIB"/>
+	<classpathentry sourcepath="C:/JavaDocs/iBATIS/iBATIS_DBL-2.0.9b.550/ibatis-src.zip" kind="lib" path="lib/ibatis-common-2.jar"/>
+	<classpathentry sourcepath="C:/JavaDocs/iBATIS/iBATIS_DBL-2.0.9b.550/ibatis-src.zip" kind="lib" path="lib/ibatis-dao-2.jar"/>
+	<classpathentry sourcepath="C:/JavaDocs/iBATIS/iBATIS_DBL-2.0.9b.550/ibatis-src.zip" kind="lib" path="lib/ibatis-sqlmap-2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

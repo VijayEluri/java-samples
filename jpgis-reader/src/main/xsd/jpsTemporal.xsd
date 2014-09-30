@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsTemporal.xsd</xs:appinfo>
+		<xs:documentation>JPGIS（規定）時間スキーマのW3C XMLSchema</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<xs:include schemaLocation="jpsRS.xsd"/>
+	<!--========= Objects Declaration=========-->
+	<xs:element name="TM_Object" type="jps:TM_Object" abstract="true"/>
+	<xs:complexType name="TM_Object" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Primitive" type="jps:TM_Primitive" abstract="true"/>
+	<xs:complexType name="TM_Primitive" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_Object"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_GeometricPrimitive" type="jps:TM_GeometricPrimitive" abstract="true" substitutionGroup="jps:TM_Primitive"/>
+	<xs:complexType name="TM_GeometricPrimitive" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_Primitive"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Period" type="jps:TM_Period" substitutionGroup="jps:TM_GeometricPrimitive"/>
+	<xs:complexType name="TM_Period">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_GeometricPrimitive">
+				<xs:sequence>
+					<xs:element ref="jps:TM_Period.begin"/>
+					<xs:element ref="jps:TM_Period.end"/>
+					<xs:element ref="jps:TM_Period.topology" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Period.begin" type="jps:ref_TM_Instant"/>
+	<xs:element name="TM_Period.end" type="jps:ref_TM_Instant"/>
+	<xs:element name="TM_Period.topology" type="jps:ref_TM_Edge"/>
+	<xs:element name="TM_Instant" type="jps:TM_Instant" substitutionGroup="jps:TM_GeometricPrimitive"/>
+	<xs:complexType name="TM_Instant">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_GeometricPrimitive">
+				<xs:sequence>
+					<xs:element ref="jps:TM_Instant.position"/>
+					<xs:element ref="jps:TM_Instant.begunBy" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="jps:TM_Instant.endedBy" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="jps:TM_Instant.topology" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Instant.position" type="jps:TM_Position"/>
+	<xs:element name="TM_Instant.begunBy" type="jps:ref_TM_Period"/>
+	<xs:element name="TM_Instant.endedBy" type="jps:ref_TM_Period"/>
+	<xs:element name="TM_Instant.topology" type="jps:ref_TM_Node"/>
+	<xs:element name="TM_TopologicalPrimitive" type="jps:TM_TopologicalPrimitive" abstract="true" substitutionGroup="jps:TM_Primitive"/>
+	<xs:complexType name="TM_TopologicalPrimitive" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_Primitive"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Edge" type="jps:TM_Edge" substitutionGroup="jps:TM_TopologicalPrimitive"/>
+	<xs:complexType name="TM_Edge">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_TopologicalPrimitive">
+				<xs:sequence>
+					<xs:element ref="jps:TM_Edge.start"/>
+					<xs:element ref="jps:TM_Edge.end"/>
+					<xs:element ref="jps:TM_Edge.geometry" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Edge.start" type="jps:ref_TM_Node"/>
+	<xs:element name="TM_Edge.end" type="jps:ref_TM_Node"/>
+	<xs:element name="TM_Edge.geometry" type="jps:ref_TM_Period"/>
+	<xs:element name="TM_Node" type="jps:TM_Node" substitutionGroup="jps:TM_TopologicalPrimitive"/>
+	<xs:complexType name="TM_Node">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_TopologicalPrimitive">
+				<xs:sequence>
+					<xs:element ref="jps:TM_Node.nextEdge" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="jps:TM_Node.previousEdge" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="jps:TM_Node.geometry" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_Node.nextEdge" type="jps:ref_TM_Edge"/>
+	<xs:element name="TM_Node.previousEdge" type="jps:ref_TM_Edge"/>
+	<xs:element name="TM_Node.geometry" type="jps:ref_TM_Instant"/>
+	<xs:element name="TM_TemporalPosition" type="jps:TM_TemporalPosition"/>
+	<xs:complexType name="TM_TemporalPosition">
+		<xs:sequence>
+			<xs:element name="TM_TemporalPosition.indeterminatePosition" type="jps:TM_IndeterminateValue" minOccurs="0"/>
+			<xs:element name="TM_TemporalPosition.frame" type="jps:ref_RS_CRS" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="TM_CalDate" type="jps:TM_CalDate" substitutionGroup="jps:TM_TemporalPosition"/>
+	<xs:complexType name="TM_CalDate">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_TemporalPosition">
+				<xs:sequence>
+					<xs:element name="TM_CalDate.calDate" type="jps:Sequence_Integer"/>
+					<xs:element name="TM_CalDate.calendarEraName" type="jps:CharacterString"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TM_DateAndTime" type="jps:TM_DateAndTime" substitutionGroup="jps:TM_CalDate"/>
+	<xs:complexType name="TM_DateAndTime">
+		<xs:complexContent>
+			<xs:extension base="jps:TM_CalDate">
+				<xs:sequence>
+					<xs:element name="TM_DateAndTime.clkTime" type="jps:Sequence_Number"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TM_Position">
+		<xs:choice>
+			<xs:element ref="jps:TM_Position.anyOther"/>
+			<xs:element name="date8601" type="jps:Date"/>
+			<xs:element name="time8601" type="jps:Time"/>
+			<xs:element name="datetime8601" type="jps:DateTime"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="TM_Position.anyOther">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:TM_TemporalPosition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--========= Enumeration =========-->
+	<xs:simpleType name="TM_IndeterminateValue">
+		<xs:restriction base="jps:CharacterString">
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="now"/>
+			<xs:enumeration value="before"/>
+			<xs:enumeration value="after"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--========= ObjectReference =========-->
+	<xs:complexType name="ref_TM_Period">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TM_Primitive">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TM_Instant">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TM_Edge">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TM_Node">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+</xs:schema>

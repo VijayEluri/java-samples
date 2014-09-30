@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="sheetConfig" class="kankou.exceldoc.config.SheetConfig">
+    <property name="sheets">
+      <list>
+        <ref bean="userInfoSheet"/>
+        <ref bean="basicInfoSheet"/>
+        <ref bean="additinalInfo"/>
+        <ref bean="trafficInfo"/>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="userInfoSheet" class="kankou.exceldoc.config.Sheet">
+    <description>ユーザ情報のシート情報</description>
+    <property name="name"><ref bean="userInfoSheetName"/></property>
+    <property name="rowTable">
+      <bean class="kankou.exceldoc.config.Table">
+        <property name="name"><value>table</value></property>
+        <property name="key"><value>ユーザＩＤ</value></property>
+        <property name="row"><value>2</value></property>
+
+        <property name="cells">
+          <list>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>ユーザＩＤ</value></property>
+              <property name="col"><value>A</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>ログインＩＤ</value></property>
+              <property name="col"><value>B</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>PW</value></property>
+              <property name="col"><value>C</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>名前</value></property>
+              <property name="col"><value>D</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>ｶﾅ</value></property>
+              <property name="col"><value>E</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>ニックネーム</value></property>
+              <property name="col"><value>F</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>担当者名</value></property>
+              <property name="col"><value>G</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>メンバー区分</value></property>
+              <property name="col"><value>H</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>都道府県コード</value></property>
+              <property name="col"><value>I</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>市町村コード</value></property>
+              <property name="col"><value>J</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>郵便番号</value></property>
+              <property name="col"><value>K</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>住所</value></property>
+              <property name="col"><value>L</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>連絡先_電話番号</value></property>
+              <property name="col"><value>M</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>連絡先_FAX</value></property>
+              <property name="col"><value>N</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>連絡先_MAIL</value></property>
+              <property name="col"><value>O</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>URL</value></property>
+              <property name="col"><value>P</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>職業</value></property>
+              <property name="col"><value>Q</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>年齢</value></property>
+              <property name="col"><value>R</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>性別</value></property>
+              <property name="col"><value>S</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>メモ</value></property>
+              <property name="col"><value>T</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>有効フラグ</value></property>
+              <property name="col"><value>U</value></property>
+            </bean>
+          </list>
+        </property>
+      </bean>
+    </property>
+  </bean>
+  
+  <bean id="basicInfoSheet" class="kankou.exceldoc.config.Sheet">
+    <description>基本情報のシート情報</description>
+    <property name="name"><ref bean="basicInfoSheetName"/></property>
+    <property name="rowTable">
+      <bean id="basicInfoTable" class="kankou.exceldoc.config.Table">
+        <property name="name"> <value>table</value> </property>
+        <property name="key"> <value>番号</value> </property>
+        <property name="row"> <value>2</value> </property>
+        <property name="cells">
+          <list>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>番号</value> </property>
+              <property name="col"> <value>A</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>状態区分</value> </property>
+              <property name="col"> <value>B</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>ジャンル</value> </property>
+              <property name="col"> <value>C</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>サブジャンル</value> </property>
+              <property name="col"> <value>D</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>都道府県コード</value> </property>
+              <property name="col"> <value>E</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>市町村コード</value> </property>
+              <property name="col"> <value>F</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>市町村名</value> </property>
+              <property name="col"> <value>G</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>丁目/町名</value> </property>
+              <property name="col"> <value>H</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>街区/大字</value> </property>
+              <property name="col"> <value>I</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>小字</value> </property>
+              <property name="col"> <value>J</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>所番/地番</value> </property>
+              <property name="col"> <value>K</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>ビル名称階数/枝番</value> </property>
+              <property name="col"> <value>L</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>一般名称</value> </property>
+              <property name="col"> <value>M</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>一般名称ヨミ</value> </property>
+              <property name="col"> <value>N</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>電話番号</value> </property>
+              <property name="col"> <value>O</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>ファックス番号</value> </property>
+              <property name="col"> <value>P</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>郵便番号</value> </property>
+              <property name="col"> <value>Q</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>メールアドレス</value> </property>
+              <property name="col"> <value>R</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>URL</value> </property>
+              <property name="col"> <value>S</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>緯度</value> </property>
+              <property name="col"> <value>T</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>経度</value> </property>
+              <property name="col"> <value>U</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>新緯度</value> </property>
+              <property name="col"> <value>V</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>新経度</value> </property>
+              <property name="col"> <value>W</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>問い合わせ先番号</value> </property>
+              <property name="col"> <value>X</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>問合せ先名称</value> </property>
+              <property name="col"> <value>Y</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>問合せ先名称ヨミ</value> </property>
+              <property name="col"> <value>Z</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>問合せ先電話番号</value> </property>
+              <property name="col"> <value>AA</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>問合せ先ファックス番号</value> </property>
+              <property name="col"> <value>AB</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>問合せ先メールアドレス</value> </property>
+              <property name="col"> <value>AC</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>説明文</value> </property>
+              <property name="col"> <value>AD</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>キーワード</value> </property>
+              <property name="col"> <value>AE</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>エリア区分</value> </property>
+              <property name="col"> <value>AF</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>日本観光協会項目番号</value> </property>
+              <property name="col"> <value>AG</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>登録日</value> </property>
+              <property name="col"> <value>AH</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>更新日</value> </property>
+              <property name="col"> <value>AI</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>登録ユーザID</value> </property>
+              <property name="col"> <value>AJ</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>富士山フラグ</value> </property>
+              <property name="col"> <value>AK</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>百名山フラグ</value> </property>
+              <property name="col"> <value>AL</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>農村休暇邑フラグ</value> </property>
+              <property name="col"> <value>AM</value> </property>
+            </bean>
+          </list>
+        </property>
+      </bean>
+    </property>
+  </bean>
+  
+  <bean id="additinalInfo" class="kankou.exceldoc.config.Sheet">
+    <description>付加情報のシート情報</description>
+    <property name="name"><ref bean="additionalInfoSheetName"/></property>
+    <property name="rowTable">
+      <bean class="kankou.exceldoc.config.Table">
+        <property name="name"><value>table</value></property>
+        <property name="key"><value>番号</value></property>
+        <property name="row"><value>2</value></property>
+
+        <property name="cells">
+          <list>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>番号</value></property>
+              <property name="col"><value>A</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>所要時間</value></property>
+              <property name="col"><value>B</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>大きさ</value></property>
+              <property name="col"><value>C</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>面積</value></property>
+              <property name="col"><value>D</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>高さ</value></property>
+              <property name="col"><value>E</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>長さ</value></property>
+              <property name="col"><value>F</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>距離</value></property>
+              <property name="col"><value>G</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>幅</value></property>
+              <property name="col"><value>H</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>外国語対応</value></property>
+              <property name="col"><value>I</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>盲導犬受入</value></property>
+              <property name="col"> <value>J</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>車椅子スロープ</value> </property>
+              <property name="col"> <value>K</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>トイレ</value> </property>
+              <property name="col"> <value>L</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>乳幼児室</value> </property>
+              <property name="col"> <value>M</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>駐車場大型</value> </property>
+              <property name="col"> <value>N</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>駐車場普通</value> </property>
+              <property name="col"> <value>O</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>駐車場小型</value> </property>
+              <property name="col"> <value>P</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>開始日付区分</value> </property>
+              <property name="col"> <value>Q</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>終了日付区分</value> </property>
+              <property name="col"> <value>R</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>公開開始年月日</value> </property>
+              <property name="col"> <value>S</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>公開終了年月日</value> </property>
+              <property name="col"> <value>T</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>公開時間</value> </property>
+              <property name="col"> <value>U</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>営業日</value> </property>
+              <property name="col"> <value>V</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>営業時間</value> </property>
+              <property name="col"> <value>W</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>休業日</value> </property>
+              <property name="col"> <value>X</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>料金</value> </property>
+              <property name="col"> <value>Y</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>対応可能言語</value> </property>
+              <property name="col"> <value>Z</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>チェックイン</value> </property>
+              <property name="col"> <value>AA</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>チェックアウト</value> </property>
+              <property name="col"> <value>AB</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>食事</value> </property>
+              <property name="col"> <value>AC</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>部屋のタイプ(収容人数含む)</value> </property>
+              <property name="col"> <value>AD</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>付帯施設</value> </property>
+              <property name="col"> <value>AE</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>禁煙ルーム</value> </property>
+              <property name="col"> <value>AF</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>インターネット接続</value> </property>
+              <property name="col"> <value>AG</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>大浴場</value> </property>
+              <property name="col"> <value>AH</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>個室風呂</value> </property>
+              <property name="col"> <value>AI</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>温泉</value> </property>
+              <property name="col"> <value>AJ</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>露天風呂</value> </property>
+              <property name="col"> <value>AK</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>ペット対応</value> </property>
+              <property name="col"> <value>AL</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>バリアフリー対応</value> </property>
+              <property name="col"> <value>AM</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>その他情報</value> </property>
+              <property name="col"> <value>AN</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>画像ファイル</value> </property>
+              <property name="col"> <value>AO</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>画像タイプ</value> </property>
+              <property name="col"> <value>AP</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>動画URL</value> </property>
+              <property name="col"> <value>AQ</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>担当ユーザID</value> </property>
+              <property name="col"> <value>AR</value> </property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"> <value>公開フラグ</value> </property>
+              <property name="col"> <value>AS</value> </property>
+            </bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>季節開始月</value> </property>
+				<property name="col"> <value>AT</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>季節開始区分</value> </property>
+				<property name="col"> <value>AU</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>季節終了月</value> </property>
+				<property name="col"> <value>AV</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>季節終了区分</value> </property>
+				<property name="col"> <value>AW</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>段階区分</value> </property>
+				<property name="col"> <value>AX</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>段階</value> </property>
+				<property name="col"> <value>AY</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>段階名</value> </property>
+				<property name="col"> <value>AZ</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>段階その他</value> </property>
+				<property name="col"> <value>BA</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>宿泊施設ＩＤ</value> </property>
+				<property name="col"> <value>BB</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>EMPTY_FLG1</value> </property>
+				<property name="col"> <value>BC</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>EMPTY_FLG2</value> </property>
+				<property name="col"> <value>BD</value> </property>
+			</bean>			
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>EMPTY_FLG3</value> </property>
+				<property name="col"> <value>BE</value> </property>
+			</bean>
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>イベント開催時間</value> </property>
+				<property name="col"> <value>BF</value> </property>
+			</bean>			
+			<bean class="kankou.exceldoc.config.Cell">
+				<property name="name"> <value>イベントお休み日</value> </property>
+				<property name="col"> <value>BG</value> </property>
+			</bean>
+          </list>
+        </property>
+      </bean>
+    </property>
+  </bean>
+  
+  <bean id="trafficInfo" class="kankou.exceldoc.config.Sheet">
+    <description>交通情報のシート情報</description>
+    <property name="name"><ref bean="trafficInfoSheetName"/></property>
+    <property name="rowTable">
+      <bean class="kankou.exceldoc.config.Table">
+        <property name="name"><value>table</value></property>
+        <property name="key"><value>id</value></property>
+        <property name="row"><value>2</value></property>
+
+        <property name="cells">
+          <list>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>id</value></property>
+              <property name="col"><value>A</value></property>
+            </bean>
+            <bean class="kankou.exceldoc.config.Cell">
+              <property name="name"><value>access</value></property>
+              <property name="col"><value>B</value></property>
+            </bean>
+          </list>
+        </property>
+      </bean>
+    </property>
+  </bean>
+
+</beans>

@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sample-google-gdata</groupId>
+  <artifactId>sample-google-gdata</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOP</version>
+  <name>Maven Archetype</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+     <!-- Local installed Jar. See http://code.google.com/apis/gdata/client-java.html -->
+     <groupId>gdata</groupId>
+      <artifactId>gdata-client</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+     <!-- Local installed Jar. See http://code.google.com/apis/gdata/client-java.html -->
+     <groupId>gdata</groupId>
+      <artifactId>gdata-calendar</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+     <!-- Local installed Jar. See http://code.google.com/apis/gdata/client-java.html -->
+     <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>sample-google-gdata</finalName>
+    <plugins>
+    </plugins>
+  </build>
+</project>

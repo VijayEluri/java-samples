@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jp.co.np.p2net.sample.s2container</groupId>
+  <artifactId>s2container-sample</artifactId>
+  <name>Seasar2 Multi Datasources sample</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>Seasarで複数のDatasourceを扱うサンプル</description>
+  <repositories>
+  	<repository>
+  		<id>maven.seasar.org</id>
+  		<name>The Seasar Foundation Maven2 Repository</name>
+  		<url>http://maven.seasar.org/maven2</url>
+  	</repository>
+  	<repository>
+  		<id>maven.seasar.org snapshot</id>
+  		<name>The Seasar Foundation Maven2 Snapshot Repository</name>
+  		<url>http://maven.seasar.org/maven2-snapshot</url>
+  	</repository>
+  </repositories>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.seasar.container</groupId>
+  		<artifactId>s2-framework</artifactId>
+  		<version>2.4.23</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seasar.container</groupId>
+  		<artifactId>s2-tiger</artifactId>
+  		<version>2.4.23</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.h2database</groupId>
+  		<artifactId>h2</artifactId>
+  		<version>1.1.109</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seasar.dao</groupId>
+  		<artifactId>s2-dao</artifactId>
+  		<version>1.0.47</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seasar.dao</groupId>
+  		<artifactId>s2-dao-tiger</artifactId>
+  		<version>1.0.47</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.4</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>javax.transaction</groupId>
+  		<artifactId>jta</artifactId>
+  		<version>1.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.13</version>
+  		<exclusions>
+  			<exclusion>
+  				<artifactId>jms</artifactId>
+  				<groupId>javax.jms</groupId>
+  			</exclusion>
+  			<exclusion>
+  				<artifactId>jmxri</artifactId>
+  				<groupId>com.sun.jmx</groupId>
+  			</exclusion>
+  			<exclusion>
+  				<artifactId>jmxtools</artifactId>
+  				<groupId>com.sun.jdmk</groupId>
+  			</exclusion>
+  		</exclusions>
+  	</dependency>
+  </dependencies>
+</project>

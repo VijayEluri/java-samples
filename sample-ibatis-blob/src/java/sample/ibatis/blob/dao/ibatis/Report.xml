@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Shift_JIS" standalone="no"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+	"http://www.ibatis.com/dtd/sql-map-2.dtd"
+>
+
+<sqlMap namespace="Report">
+	<typeAlias alias="report" type="sample.ibatis.blob.domain.Report" />
+
+	<!-- BLOB -->
+	<resultMap class="report" id="reportResult">
+		<result column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="description" property="description" />
+		<result column="data" property="data" typeHandler="sample.ibatis.blob.dao.ibatis.OralceBlobTypeHandler" jdbcType="OraBLOB"/>
+	</resultMap>
+	<resultMap class="report" id="reportResultClob">
+		<result column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="description" property="description" />
+		<result column="data" property="data" typeHandler="sample.ibatis.blob.dao.ibatis.OralceClobTypeHandler" jdbcType="OraCLOB"/>
+	</resultMap>
+	
+	<parameterMap class="report" id="reportParam">
+		<parameter property="id" />
+		<parameter property="name" />
+		<parameter property="description" />
+		<parameter property="data" typeHandler="sample.ibatis.blob.dao.ibatis.OralceBlobTypeHandler" jdbcType="OraBLOB"/>
+	</parameterMap>
+	<parameterMap class="report" id="reportUpdateParam">
+		<parameter property="name" />
+		<parameter property="description" />
+		<parameter property="data" typeHandler="sample.ibatis.blob.dao.ibatis.OralceBlobTypeHandler" jdbcType="OraBLOB"/>
+		<parameter property="id" />
+	</parameterMap>
+	
+	<parameterMap class="report" id="reportParam2">
+		<parameter property="id" />
+		<parameter property="name" />
+		<parameter property="description" />
+		<parameter property="charData" typeHandler="sample.ibatis.blob.dao.ibatis.OralceClobTypeHandler" jdbcType="OraCLOB"/>
+	</parameterMap>
+	
+	<select id="getReportById" parameterClass="string" resultMap="reportResult">
+		SELECT * FROM REPORT WHERE id = #value#
+	</select>
+
+	<insert id="insertReport" parameterMap="reportParam">
+		INSERT INTO REPORT ( id, name, description, data ) values ( ?, ?, ?, ? )
+	</insert>
+
+	<update id="updateReport" parameterMap="reportUpdateParam">
+		UPDATE REPORT set name = ?, description = ?, data = ? WHERE id = ? 
+	</update>
+	<delete id="deleteReport" parameterClass="string">
+		DELETE FROM REPORT WHERE id = #id#
+	</delete>
+	
+	<!-- CLOB -->
+	<resultMap class="report" id="reportResult2">
+		<result column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="description" property="description" />
+		<result column="data" property="charData" typeHandler="sample.ibatis.blob.dao.ibatis.OralceClobTypeHandler" jdbcType="OraCLOB"/>
+	</resultMap>
+	
+	<parameterMap class="report" id="reportParam2">
+		<parameter property="id" />
+		<parameter property="name" />
+		<parameter property="description" />
+		<parameter property="charData" typeHandler="sample.ibatis.blob.dao.ibatis.OralceClobTypeHandler" jdbcType="OraCLOB"/>
+	</parameterMap>
+	<parameterMap class="report" id="reportUpdateParam2">
+		<parameter property="name" />
+		<parameter property="description" />
+		<parameter property="charData" typeHandler="sample.ibatis.blob.dao.ibatis.OralceClobTypeHandler" jdbcType="OraCLOB"/>
+		<parameter property="id" />
+	</parameterMap>
+	
+	<select id="getReportById2" parameterClass="string" resultMap="reportResult2">
+		SELECT * FROM REPORT2 WHERE id = #value#
+	</select>
+	
+	<insert id="insertReport2" parameterMap="reportParam2">
+		INSERT INTO REPORT2 ( id , name, description, data) values ( ?, ?, ? , ? )
+	</insert>
+	
+	<update id="updateReport2" parameterMap="reportUpdateParam2">
+		UPDATE REPORT2 set name = ?, description = ?, data = ? WHERE id = ? 
+	</update>
+	<delete id="deleteReport2" parameterClass="string">
+		DELETE FROM REPORT2 WHERE id = #id#
+	</delete>
+</sqlMap>

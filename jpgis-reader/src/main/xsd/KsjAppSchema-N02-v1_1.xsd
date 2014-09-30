@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:ksj="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:appinfo>KsjAppSchema.xsd</xs:appinfo>
+		<xs:documentation>国土数値情報（鉄道）第1.1版応用スキーマのXMLスキーマ文書</xs:documentation>
+	</xs:annotation>
+	<!-- include and import -->
+	<xs:import namespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" schemaLocation="jpsRoot.xsd"/>
+	<xs:import namespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" schemaLocation="jpsGrid.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlinks.xsd"/>
+	<!-- GI -->
+	<xs:element name="GI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="exchangeMetadata" type="jps:ExchangeMetadata" minOccurs="0"/>
+				<xs:element name="dataset" type="ksj:Dataset" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="version" type="jps:CharacterString" use="required" fixed="1.0"/>
+			<xs:attribute name="timeStamp" type="jps:DateTime" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Dataset">
+		<xs:sequence>
+			<xs:element name="crs" type="jps:ref_RS_CRS" minOccurs="0" maxOccurs="2"/>
+			<xs:element ref="ksj:object"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="object">
+		<xs:complexType>
+			<xs:group ref="ksj:Object" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="Object">
+		<xs:sequence>
+			<xs:any namespace="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app http://www.gsi.go.jp/GIS/jpgis/standardSchemas"/>
+		</xs:sequence>
+	</xs:group>
+	<!-- ================================================ -->
+	<!--   データ集合、国土数値情報地物、国土数値情報メッシュ          -->
+	<!-- ================================================ -->
+	<!-- 国土数値情報データ集合 -->
+	<xs:element name="AA01" type="ksj:AA01"/>
+	<xs:complexType name="AA01">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="ksj:RES" maxOccurs="2"/>
+					<xs:element ref="ksj:OBJ" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="ksj:OBJ-m" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RES" type="jps:ref_RS_CRS"/>
+	<xs:element name="OBJ">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>国土数値情報データ集合の地物への関連</xs:documentation>
+			</xs:annotation>
+			<xs:choice maxOccurs="unbounded">
+				<xs:any namespace="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app http://www.gsi.go.jp/GIS/jpgis/standardSchemas"/>
+			</xs:choice>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OBJ-m">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>国土数値情報データ集合のメッシュへの関連</xs:documentation>
+			</xs:annotation>
+			<xs:choice maxOccurs="unbounded">
+				<xs:any namespace="http://nlftp.mlit.go.jp/ksj/schemas/ksj-app http://www.gsi.go.jp/GIS/jpgis/standardSchemas"/>
+			</xs:choice>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- 国土数値情報地物 -->
+	<xs:element name="AA02" type="ksj:AA02" abstract="true"/>
+	<xs:complexType name="AA02" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 国土数値情報メッシュ -->
+	<xs:element name="mAA02" type="ksj:mAA02" abstract="true" substitutionGroup="jps:JP_Grid"/>
+	<xs:complexType name="mAA02" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:JP_Grid"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ================================ -->
+	<!--             鉄道                 -->
+	<!-- ================================ -->
+	<!-- ====国土骨格パッケージ==== -->
+	<!-- 鉄道 -->
+	<xs:element name="EB01" type="ksj:EB01" abstract="true" substitutionGroup="ksj:AA02"/>
+	<xs:element name="EB02" type="ksj:EB02" substitutionGroup="ksj:EB01">
+		<xs:annotation>
+			<xs:documentation>鉄道区間</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EB03" type="ksj:EB03" substitutionGroup="ksj:EB01">
+		<xs:annotation>
+			<xs:documentation>駅</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="EB01">
+		<xs:annotation>
+			<xs:documentation>type of 鉄道</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ksj:AA02">
+				<xs:sequence>
+					<xs:element ref="ksj:LOC"/>
+					<xs:element ref="ksj:RAC"/>
+					<xs:element ref="ksj:INT"/>
+					<xs:element ref="ksj:LIN"/>
+					<xs:element ref="ksj:OPC"/>
+				</xs:sequence>
+			</xs:extension> 
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="LIN" type="jps:CharacterString"/>
+	<xs:element name="OPC" type="jps:CharacterString"/>	
+	<!-- EB02 -->
+	<xs:complexType name="EB02">
+		<xs:annotation>
+			<xs:documentation>type of 鉄道区間</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ksj:EB01">
+				<xs:sequence>
+					<xs:element ref="ksj:RAS" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RAS" type="ksj:ref_EB03"/>
+	<!-- EB03 -->
+	<xs:complexType name="EB03">
+		<xs:annotation>
+			<xs:documentation>type of 駅</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ksj:EB01">
+				<xs:sequence>				
+					<xs:element ref="ksj:STN"/>
+					<xs:element ref="ksj:SRS" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="STN" type="jps:CharacterString"/>
+	<xs:element name="SRS" type="ksj:ref_EB02"/>	
+	<!-- ==================================================== -->
+	<!--   （ベクトルデータ）空間スキーマプロファイルへの参照 -->
+	<!-- ==================================================== -->
+	<!-- 空間属性GM_Pointへの参照 -->
+	<xs:element name="POS" type="jps:ref_GM_Point"/>
+	<!-- 空間属性GM_Curveへの参照 -->
+	<xs:element name="LOC" type="jps:ref_GM_Curve"/>
+	<!-- 空間属性GM_Surfaceへの参照 -->
+	<xs:element name="ARE" type="jps:ref_GM_Surface"/>
+	<!-- ==================================================== -->
+	<!--       （ベクトルデータ） コードリストへの参照        -->
+	<!-- ==================================================== -->
+	<!--鉄道区分コードへの参照 -->
+	<xs:element name="RAC" type="jps:CodeType"/>
+	<!--事業者種別コードへの参照 -->
+	<xs:element name="INT" type="jps:CodeType"/>
+	<!-- ==================================================== -->
+	<!--          （ベクトルデータ） Object Reference         -->
+	<!-- ==================================================== -->
+	<!-- EB03-->
+	<xs:complexType name="ref_EB03">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<!-- EB02-->
+	<xs:complexType name="ref_EB02">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+</xs:schema>

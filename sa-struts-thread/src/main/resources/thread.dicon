@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components namespace="convertThread" >
+    <!-- スレッドを管理するクラス -->
+    <component name="threadWorkerInvoker" class="jp.co.np.p2netex.sample.thread.worker.ThreadWorkerInvoker">
+       <!-- 起動するスレッドの数 -->
+       <property name="totalWorker">5</property>
+       <initMethod name="init"/>
+    </component>
+    
+    <!-- 処理の実装 -->
+    <component name="sampleProcessor" class="jp.co.np.p2netex.sample.thread.impl.SampleProcessor">
+        <arg>sampleStatus</arg>
+    </component>
+
+    <!-- それぞれのスレッドのステータス -->
+	<component name="sampleStatus" class="jp.co.np.p2netex.sample.thread.ThreadStatus" instance="singleton" >
+	    <property name="name">"SampleStatus"</property>
+	</component>
+</components>

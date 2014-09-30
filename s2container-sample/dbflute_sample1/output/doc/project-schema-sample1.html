@@ -1,0 +1,219 @@
+
+
+<html>
+<head>
+  <title>project-schema-sample1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+  .normalFont {
+    font-family: Verdana; font-size: 10pt;
+  }
+  </style>
+</head>
+
+<body class="normalFont">
+  <table border="1" cellspacing="0" cellpadding="0">
+    <tr bgcolor="#CCCCCC">
+      <th class="normalFont">Table Name</th>
+      <th class="normalFont">Entity Name</th>
+      <th class="normalFont">Foreign Table</th>
+      <th class="normalFont">Referrer Table</th>
+      <th class="normalFont">Comment</th>
+    </tr>
+      <tr>
+      <td class="normalFont"><a href="#SAMPLE1_DEPT">SAMPLE1_DEPT</a></td>
+      <td class="normalFont">Sample1Dept</td>
+      <td class="normalFont"></td>
+      <td class="normalFont"><a href="#SAMPLE1_EMP">SAMPLE1_EMP</a></td>
+      <td class="normalFont"></td>
+    </tr>
+      <tr>
+      <td class="normalFont"><a href="#SAMPLE1_EMP">SAMPLE1_EMP</a></td>
+      <td class="normalFont">Sample1Emp</td>
+      <td class="normalFont"><a href="#SAMPLE1_DEPT">SAMPLE1_DEPT</a></td>
+      <td class="normalFont"></td>
+      <td class="normalFont"></td>
+    </tr>
+    </table>
+
+      
+<a name="SAMPLE1_DEPT"/>
+<h2>SAMPLE1_DEPT</h2>
+
+<p/>
+<table border="1" cellspacing="0">
+  <tr>
+    <th class="normalFont" bgcolor="#CCCCCC">PK</th>
+    <th class="normalFont" bgcolor="#CCCCCC">INC</th>
+    <th class="normalFont" bgcolor="#CCCCCC">UQ</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Name</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Type</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Size</th>
+    <th class="normalFont" bgcolor="#CCCCCC">NotNull</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Default</th>
+    <th class="normalFont" bgcolor="#CCCCCC">ForeignTable</th>
+    <th class="normalFont" bgcolor="#CCCCCC">ReferrerTable</th>
+    <th class="normalFont" bgcolor="#CCCCCC">PropertyName</th>
+    <th class="normalFont" bgcolor="#CCCCCC">JavaType</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Classification</th>
+  </tr>
+  <tr>
+    <td class="normalFont"><center> o </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_DEPTID">ID</td>
+    <td class="normalFont">INTEGER</td>
+    <td class="normalFont"><center> &nbsp; </center></td>
+    <td class="normalFont"><center> o </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont"><a href="#SAMPLE1_EMP">SAMPLE1_EMP</a>&nbsp;</td>
+    <td class="normalFont">id</td>
+    <td class="normalFont">java.lang.Integer</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+  <tr>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_DEPTNAME">NAME</td>
+    <td class="normalFont">VARCHAR</td>
+    <td class="normalFont"><center> 20  </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">name</td>
+    <td class="normalFont">String</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+  <tr>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_DEPTVERSION_NO">VERSION_NO</td>
+    <td class="normalFont">INTEGER</td>
+    <td class="normalFont"><center> &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">versionNo</td>
+    <td class="normalFont">java.lang.Integer</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+</table>
+<script>
+</script>
+
+      
+<a name="SAMPLE1_EMP"/>
+<h2>SAMPLE1_EMP</h2>
+
+<p/>
+<table border="1" cellspacing="0">
+  <tr>
+    <th class="normalFont" bgcolor="#CCCCCC">PK</th>
+    <th class="normalFont" bgcolor="#CCCCCC">INC</th>
+    <th class="normalFont" bgcolor="#CCCCCC">UQ</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Name</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Type</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Size</th>
+    <th class="normalFont" bgcolor="#CCCCCC">NotNull</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Default</th>
+    <th class="normalFont" bgcolor="#CCCCCC">ForeignTable</th>
+    <th class="normalFont" bgcolor="#CCCCCC">ReferrerTable</th>
+    <th class="normalFont" bgcolor="#CCCCCC">PropertyName</th>
+    <th class="normalFont" bgcolor="#CCCCCC">JavaType</th>
+    <th class="normalFont" bgcolor="#CCCCCC">Classification</th>
+  </tr>
+  <tr>
+    <td class="normalFont"><center> o </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_EMPID">ID</td>
+    <td class="normalFont">INTEGER</td>
+    <td class="normalFont"><center> &nbsp; </center></td>
+    <td class="normalFont"><center> o </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">id</td>
+    <td class="normalFont">java.lang.Integer</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+  <tr>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_EMPNAME">NAME</td>
+    <td class="normalFont">VARCHAR</td>
+    <td class="normalFont"><center> 20  </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">name</td>
+    <td class="normalFont">String</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+  <tr>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_EMPHIRE_DATE">HIRE_DATE</td>
+    <td class="normalFont">DATE</td>
+    <td class="normalFont"><center> &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">hireDate</td>
+    <td class="normalFont">java.util.Date</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+  <tr>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_EMPDEPT_ID">DEPT_ID</td>
+    <td class="normalFont">INTEGER</td>
+    <td class="normalFont"><center> &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#SAMPLE1_DEPT">SAMPLE1_DEPT</a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">deptId</td>
+    <td class="normalFont">java.lang.Integer</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+  <tr>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont" id="SAMPLE1_EMPVERSION_NO">VERSION_NO</td>
+    <td class="normalFont">DECIMAL</td>
+    <td class="normalFont"><center> 8  </center></td>
+    <td class="normalFont"><center>  &nbsp; </center></td>
+    <td class="normalFont"> &nbsp;</td>
+    <td class="normalFont"><a href="#"></a>&nbsp;</td>
+    <td class="normalFont">&nbsp;</td>
+    <td class="normalFont">versionNo</td>
+    <td class="normalFont">java.math.BigDecimal</td>
+    <td class="normalFont"> &nbsp;</td>
+  </tr>
+</table>
+<script>
+if(document.getElementById) {
+    var col = document.getElementById("SAMPLE1_EMPDEPT_ID");
+    if (col != null) {
+        col.style.backgroundColor = "afe295";
+        col.title="Foreignkey from SAMPLE1_DEPT.ID";
+    }
+}
+</script>
+
+  
+
+</body>
+</html>

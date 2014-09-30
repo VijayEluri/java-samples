@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Guitar">
+<typeAlias alias="test" type="ibatis.test.bean.Guitar"/>
+<!--
+	<resultMap id="guitar" class="ibatis.test.bean.Guitar">
+		<result property="id" column="ID" columnIndex="1" />
+		<result property="name" column="NAME" columnIndex="2" />
+		<result property="maker" column="MAKER" columnIndex="3" />
+	</resultMap>
+  -->
+
+
+
+	<select id="findById" resultMap="Guitar">
+SELECT ID, NAME, MAKER FROM GUITAR WHERE ID = #value#
+	</select>
+
+	<insert id="insert">
+INSERT INTO GUITAR (ID, NAME, MAKER) values (#id#, #name#, #maker#)
+	</insert>
+	
+	<statement id="createTable">
+CREATE TABLE GUITAR (
+  ID VARCHAR(20),
+  NAME VARCHAR(30),
+  MAKER VARCHAR(30)
+)
+	</statement>
+	<statement id="dropTable">
+DROP TABLE GUITAR
+	</statement>
+
+
+</sqlMap>

@@ -1,0 +1,14 @@
+<jaxor package="jaxor.sample">
+    <entity name="Emp" >
+        <primary-key>
+            <attribute name="empno" type="Long" />
+        </primary-key>
+        <attribute name="ename" type="String" nullable="true" />
+        <attribute name="job" type="String" nullable="true" />
+        <attribute name="mgr" type="Long" nullable="true" />
+        <attribute name="hiredate" type="java.sql.Date" nullable="true" />
+        <attribute name="sal" type="Long" nullable="true" />
+        <attribute name="comm" type="Long" nullable="true" />
+        <attribute name="deptno" type="Long" nullable="true" />
+    </entity>
+</jaxor>

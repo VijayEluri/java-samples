@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:documentation>JPGIS（規定）空間スキーマのW3C XMLSchema</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<xs:include schemaLocation="jpsRS.xsd"/>
+	<!--========== Object Declaration ==========-->
+	<xs:element name="GM_Object" type="jps:GM_Object" abstract="true"/>
+	<xs:complexType name="GM_Object" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Object.CRS" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Object.CRS" type="jps:ref_RS_CRS"/>
+	<xs:element name="GM_Primitive" type="jps:GM_Primitive" abstract="true" substitutionGroup="jps:GM_Object"/>
+	<xs:complexType name="GM_Primitive" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Primitive.proxy" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Primitive.proxy" type="jps:ref_GM_OrientablePrimitive"/>
+	<xs:element name="GM_Point" type="jps:GM_Point" substitutionGroup="jps:GM_Primitive"/>
+	<xs:complexType name="GM_Point">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Primitive">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Point.position"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Point.position">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:DirectPosition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_OrientablePrimitive" type="jps:GM_OrientablePrimitive" abstract="true" substitutionGroup="jps:GM_Primitive"/>
+	<xs:complexType name="GM_OrientablePrimitive" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Primitive">
+				<xs:sequence>
+					<xs:element ref="jps:GM_OrientablePrimitive.orientation"/>
+					<xs:element ref="jps:GM_OrientablePrimitive.primitive"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_OrientablePrimitive.orientation" type="jps:Sign"/>
+	<xs:element name="GM_OrientablePrimitive.primitive" type="jps:ref_GM_Primitive"/>
+	<xs:element name="GM_OrientableCurve" type="jps:GM_OrientableCurve" substitutionGroup="jps:GM_OrientablePrimitive"/>
+	<xs:complexType name="GM_OrientableCurve">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_OrientablePrimitive"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_OrientableSurface" type="jps:GM_OrientableSurface" substitutionGroup="jps:GM_OrientablePrimitive"/>
+	<xs:complexType name="GM_OrientableSurface">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_OrientablePrimitive"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Curve" type="jps:GM_Curve" substitutionGroup="jps:GM_OrientableCurve"/>
+	<xs:complexType name="GM_Curve">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_OrientableCurve">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Curve.segment" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Curve.segment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_CurveSegments"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_Surface" type="jps:GM_Surface" substitutionGroup="jps:GM_OrientableSurface"/>
+	<xs:complexType name="GM_Surface">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_OrientableSurface">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Surface.patch" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Surface.patch">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_SurfacePatchs"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_PolyhederalSurface" type="jps:GM_PolyhederalSurface" substitutionGroup="jps:GM_Surface"/>
+	<xs:complexType name="GM_PolyhederalSurface">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Surface"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_TriangulatedSurface" type="jps:GM_TriangulatedSurface" substitutionGroup="jps:GM_PolyhederalSurface"/>
+	<xs:complexType name="GM_TriangulatedSurface">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_PolyhederalSurface"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Tin" type="jps:GM_Tin" substitutionGroup="jps:GM_TriangulatedSurface"/>
+	<xs:complexType name="GM_Tin">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_TriangulatedSurface">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Tin.stopLines"/>
+					<xs:element ref="jps:GM_Tin.breakLines"/>
+					<xs:element ref="jps:GM_Tin.maxLength"/>
+					<xs:element ref="jps:GM_Tin.controlPoint" minOccurs="3" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Tin.stopLines" type="jps:Set_GM_LineString_"/>
+	<xs:element name="GM_Tin.breakLines" type="jps:Set_GM_LineString_"/>
+	<xs:element name="GM_Tin.maxLength" type="jps:Measure"/>
+	<xs:element name="GM_Tin.controlPoint" type="jps:GM_Position"/>
+	<xs:element name="GM_Complex" type="jps:GM_Complex" substitutionGroup="jps:GM_Object"/>
+	<xs:complexType name="GM_Complex">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Complex.element" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Complex.element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_Primitive" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_Aggregate" type="jps:GM_Aggregate" substitutionGroup="jps:GM_Object"/>
+	<xs:complexType name="GM_Aggregate">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Aggregate.element" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Aggregate.element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_Object" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_Boundary" type="jps:GM_Boundary" abstract="true" substitutionGroup="jps:GM_Complex"/>
+	<xs:complexType name="GM_Boundary" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Complex"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_PrimitiveBoundary" type="jps:GM_PrimitiveBoundary" abstract="true" substitutionGroup="jps:GM_Boundary"/>
+	<xs:complexType name="GM_PrimitiveBoundary" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Boundary"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_SurfaceBoundary" type="jps:GM_SurfaceBoundary" substitutionGroup="jps:GM_PrimitiveBoundary"/>
+	<xs:complexType name="GM_SurfaceBoundary">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_PrimitiveBoundary">
+				<xs:sequence>
+					<xs:element ref="jps:GM_SurfaceBoundary.exterior" minOccurs="0"/>
+					<xs:element ref="jps:GM_SurfaceBoundary.interior" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_SurfaceBoundary.exterior">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_Ring"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_SurfaceBoundary.interior">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_Ring"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_CompositeCurve" type="jps:GM_CompositeCurve" substitutionGroup="jps:GM_OrientableCurve"/>
+	<xs:complexType name="GM_CompositeCurve">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_OrientableCurve">
+				<xs:sequence>
+					<xs:element ref="jps:GM_CompositeCurve.generator" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_CompositeCurve.generator" type="jps:ref_GM_OrientableCurve"/>
+	<xs:element name="GM_Ring" type="jps:GM_Ring" substitutionGroup="jps:GM_CompositeCurve"/>
+	<xs:complexType name="GM_Ring">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_CompositeCurve"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- DirectPosition -->
+	<xs:element name="DirectPosition" type="jps:DirectPosition"/>
+	<xs:complexType name="DirectPosition">
+		<xs:sequence>
+			<xs:element name="DirectPosition.coordinate" type="jps:Sequence_Number"/>
+			<xs:element name="DirectPosition.dimension" type="jps:Integer" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- GM_PointArray -->
+	<xs:element name="GM_PointArray" type="jps:GM_PointArray"/>
+	<xs:complexType name="GM_PointArray">
+		<xs:sequence>
+			<xs:element name="GM_PointArray.column" type="jps:GM_Position" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- GM_PointRef -->
+	<xs:element name="GM_PointRef" type="jps:GM_PointRef"/>
+	<xs:complexType name="GM_PointRef">
+		<xs:sequence>
+			<xs:element name="GM_PointRef.point" type="jps:ref_GM_Point"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GM_Position">
+		<xs:choice>
+			<xs:element ref="jps:GM_Position.direct"/>
+			<xs:element ref="jps:GM_Position.indirect"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="GM_Position.direct" type="jps:DirectPosition"/>
+	<xs:element name="GM_Position.indirect" type="jps:GM_PointRef"/>
+	<xs:element name="GM_CurveSegments" type="jps:GM_CurveSegments" abstract="true"/>
+	<xs:complexType name="GM_CurveSegments" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:GM_CurveSegment.interpolation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_CurveSegment.interpolation" type="jps:GM_CurveInterpolation"/>
+	<xs:element name="GM_CurveSegment.numDerivativesAtStart" type="jps:Integer"/>
+	<xs:element name="GM_CurveSegment.numDerivativesAtEnd" type="jps:Integer"/>
+	<xs:element name="GM_CurveSegment.numDerivativesInterior" type="jps:Integer"/>
+	<xs:element name="GM_LineString" type="jps:GM_LineString" substitutionGroup="jps:GM_CurveSegments"/>
+	<xs:complexType name="GM_LineString">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_CurveSegments">
+				<xs:sequence>
+					<xs:element ref="jps:GM_LineString.controlPoint"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_LineString.controlPoint">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_PointArray"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_ArcString" type="jps:GM_ArcString" substitutionGroup="jps:GM_CurveSegments"/>
+	<xs:complexType name="GM_ArcString">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_CurveSegments">
+				<xs:sequence>
+					<xs:element ref="jps:GM_ArcString.controlPoint"/>
+					<xs:element ref="jps:GM_ArcString.numArc"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_ArcString.controlPoint">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_PointArray"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_ArcString.numArc" type="jps:Integer"/>
+	<xs:element name="GM_Arc" type="jps:GM_Arc" substitutionGroup="jps:GM_ArcString"/>
+	<xs:complexType name="GM_Arc">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_ArcString"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Circle" type="jps:GM_Circle" substitutionGroup="jps:GM_Arc"/>
+	<xs:complexType name="GM_Circle">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_Arc"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_SurfacePatchs" type="jps:GM_SurfacePatchs" abstract="true"/>
+	<xs:complexType name="GM_SurfacePatchs" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:GM_SurfacePatch.interpolation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_SurfacePatch.interpolation" type="jps:GM_SurfaceInterpolation"/>
+	<!-- ========== GM_Polygon ========== -->
+	<xs:element name="GM_Polygon" type="jps:GM_Polygon" substitutionGroup="jps:GM_SurfacePatchs"/>
+	<xs:complexType name="GM_Polygon">
+		<xs:complexContent>
+			<xs:extension base="jps:GM_SurfacePatchs">
+				<xs:sequence>
+					<xs:element ref="jps:GM_Polygon.boundary"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GM_Polygon.boundary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:GM_SurfaceBoundary" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== GM_Tin ========== -->
+	<xs:element name="GM_Triangle" substitutionGroup="jps:GM_Polygon">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="jps:GM_Polygon">
+					<xs:sequence>
+						<xs:element ref="jps:GM_Triangle.corners" minOccurs="3" maxOccurs="3"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GM_Triangle.corners" type="jps:GM_Position"/>
+	<xs:complexType name="Set_GM_LineString_">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element ref="jps:GM_LineString"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--========== Enumeration ========== -->
+	<!-- ========== GM_CurveInterpolation ========== -->
+	<xs:simpleType name="GM_CurveInterpolation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="linear"/>
+			<xs:enumeration value="circlerArc3Points"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ========== GM_SurfaceInterpolation ========== -->
+	<xs:simpleType name="GM_SurfaceInterpolation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="planar"/>
+			<xs:enumeration value="tin"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="TP_Object" type="jps:TP_Object" abstract="true"/>
+	<xs:complexType name="TP_Object" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Primitive" type="jps:TP_Primitive" abstract="true" substitutionGroup="jps:TP_Object"/>
+	<xs:complexType name="TP_Primitive" abstract="true">
+		<xs:annotation>
+			<xs:documentation>JPGIS7.3.3.1ではTP_Primitiveの合成関連proxyの多重度は「2」としているが（原規格に準拠），この状態で実装するとデータがループするため，これを回避するためにXML Schemaでは多重度を「0..2」とする。</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="jps:TP_Object">
+				<xs:sequence>
+					<xs:element ref="jps:TP_Primitive.complex" maxOccurs="unbounded"/>
+					<xs:element ref="jps:TP_Primitive.proxy" minOccurs="0" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Primitive.complex" type="jps:IM_ObjectReference"/>
+	<xs:element name="TP_Primitive.proxy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:TP_DirectedTopo"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TP_DirectedTopo" type="jps:TP_DirectedTopo" abstract="true" substitutionGroup="jps:TP_Primitive"/>
+	<xs:complexType name="TP_DirectedTopo" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_Primitive">
+				<xs:sequence>
+					<xs:element ref="jps:TP_DirectedTopo.orientation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_DirectedTopo.orientation" type="jps:Sign"/>
+	<xs:element name="TP_DirectedNode" type="jps:TP_DirectedNode" substitutionGroup="jps:TP_DirectedTopo"/>
+	<xs:complexType name="TP_DirectedNode">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_DirectedTopo"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_DirectedEdge" type="jps:TP_DirectedEdge" substitutionGroup="jps:TP_DirectedTopo"/>
+	<xs:complexType name="TP_DirectedEdge">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_DirectedTopo"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_DirectedFace" type="jps:TP_DirectedFace" substitutionGroup="jps:TP_DirectedTopo"/>
+	<xs:complexType name="TP_DirectedFace">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_DirectedTopo"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Node" type="jps:TP_Node" substitutionGroup="jps:TP_DirectedNode"/>
+	<xs:complexType name="TP_Node">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_DirectedNode">
+				<xs:sequence>
+					<xs:element ref="jps:TP_Node.spoke" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Node.spoke" type="jps:ref_TP_DirectedEdge"/>
+	<xs:element name="TP_Edge" type="jps:TP_Edge" substitutionGroup="jps:TP_DirectedEdge"/>
+	<xs:complexType name="TP_Edge">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_DirectedEdge">
+				<xs:sequence>
+					<xs:element ref="jps:TP_Edge.spoke" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="jps:TP_Edge.boundary" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Edge.spoke" type="jps:ref_TP_DirectedFace"/>
+	<xs:element name="TP_Edge.boundary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:TP_DirectedNode" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TP_Face" type="jps:TP_Face" substitutionGroup="jps:TP_DirectedFace"/>
+	<xs:complexType name="TP_Face">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_DirectedFace">
+				<xs:sequence>
+					<xs:element ref="jps:TP_Face.boundary" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Face.boundary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:TP_DirectedEdge" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TP_Complex" type="jps:TP_Complex" substitutionGroup="jps:TP_Object"/>
+	<xs:complexType name="TP_Complex">
+		<xs:complexContent>
+			<xs:extension base="jps:TP_Object">
+				<xs:sequence>
+					<xs:element ref="jps:TP_Complex.element" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TP_Complex.element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:TP_Primitive" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Set_GM_CurveSegment">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="jps:GM_LineString" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="jps:GM_Arc" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!---========== Object Reference ==========-->
+	<xs:complexType name="ref_GM_Object">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Primitive">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_OrientablePrimitive">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Point">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_OrientableCurve">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Curve">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Surface">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Tin">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_CompositeCurve">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Aggregate">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Polygon">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_Triangle">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_GM_LineString">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TP_DirectedNode">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TP_DirectedEdge">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_TP_DirectedFace">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+</xs:schema>

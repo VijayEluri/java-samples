@@ -1,0 +1,47 @@
+map:{
+    ; 2013/04/22 10:28:44 = map:{
+        ; diffDate = 2013/04/22 10:28:44
+        ; tableDiff = map:{
+            ; users = map:{
+                ; tableName = users
+                ; diffType = CHANGE
+                ; unifiedSchemaDiff = map:{
+                    ; next = sample.public
+                    ; previous = null
+                }
+                ; columnDiff = map:{
+                    ; id = map:{
+                        ; columnName = id
+                        ; diffType = ADD
+                    }
+                    ; name = map:{
+                        ; columnName = name
+                        ; diffType = ADD
+                    }
+                    ; home = map:{
+                        ; columnName = home
+                        ; diffType = ADD
+                    }
+                    ; ID = map:{
+                        ; columnName = ID
+                        ; diffType = DELETE
+                    }
+                    ; NAME = map:{
+                        ; columnName = NAME
+                        ; diffType = DELETE
+                    }
+                    ; HOME = map:{
+                        ; columnName = HOME
+                        ; diffType = DELETE
+                    }
+                }
+                ; primaryKeyDiff = map:{
+                    ; users_pkey = map:{
+                        ; constraintName = users_pkey
+                        ; diffType = ADD
+                    }
+                }
+            }
+        }
+    }
+}

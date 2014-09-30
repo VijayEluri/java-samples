@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMapConfig
+	PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+	"http://www.ibatis.com/dtd/sql-map-config-2.dtd"
+>
+
+<sqlMapConfig>
+    <settings
+        cacheModelsEnabled="true"
+        enhancementEnabled="true"
+        lazyLoadingEnabled="true"
+        maxRequests="32"
+        maxSessions="10"
+        maxTransactions="5"
+        useStatementNamespaces="true"
+        />
+	<!-- Type Handlers -->
+	<typeHandler javaType="[B" callback="sample.ibatis.blob.dao.ibatis.OralceBlobTypeHandler" jdbcType="OraBLOB"/>
+	<typeHandler javaType="[C" callback="sample.ibatis.blob.dao.ibatis.OralceClobTypeHandler" jdbcType="OraCLOB"/>
+
+	<!--properties resource="properties/database.properties"/-->
+    <sqlMap resource="sample/ibatis/blob/dao/ibatis/Report.xml" />
+
+</sqlMapConfig>

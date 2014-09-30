@@ -1,0 +1,576 @@
+2009-03-19 16:19:57,937 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'
+2009-03-19 16:19:57,937 - ************************************************************** 
+2009-03-19 16:19:57,937 - Starting Jakarta Velocity v1.3.1
+2009-03-19 16:19:57,937 - RuntimeInstance initializing.
+2009-03-19 16:19:57,937 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2009-03-19 16:19:57,937 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2009-03-19 16:19:57,937 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath. Exception : java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+2009-03-19 16:19:57,937 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2009-03-19 16:19:57,937 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2009-03-19 16:19:57,937 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2009-03-19 16:19:57,953 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:57,953 - FileResourceLoader : initialization starting.
+2009-03-19 16:19:57,953 - FileResourceLoader : adding path 'C:\workspace\root\mydbflute\dbflute-0.7.9\templates'
+2009-03-19 16:19:57,953 - FileResourceLoader : initialization complete.
+2009-03-19 16:19:57,953 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2009-03-19 16:19:57,953 - Default ResourceManager initialization complete.
+2009-03-19 16:19:57,953 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2009-03-19 16:19:57,953 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2009-03-19 16:19:57,953 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2009-03-19 16:19:57,953 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2009-03-19 16:19:57,968 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2009-03-19 16:19:58,046 - Created: 20 parsers.
+2009-03-19 16:19:58,046 - Velocimacro : initialization starting.
+2009-03-19 16:19:58,046 - Velocimacro : adding VMs from VM library template : VM_global_library.vm
+2009-03-19 16:19:58,046 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2009-03-19 16:19:58,046 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+2009-03-19 16:19:58,046 - Velocimacro :  VM library template macro registration complete.
+2009-03-19 16:19:58,046 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2009-03-19 16:19:58,046 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2009-03-19 16:19:58,046 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+2009-03-19 16:19:58,046 - Velocimacro : messages on  : VM system will output logging messages
+2009-03-19 16:19:58,046 - Velocimacro : autoload off  : VM system will not automatically reload global library macros
+2009-03-19 16:19:58,046 - Velocimacro : initialization complete.
+2009-03-19 16:19:58,046 - Velocity successfully started.
+2009-03-19 16:19:58,421 - ResourceManager : found om/Control.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,484 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/Control.vm [line 1,column 1] : ${database.SqlParameterBeanPackage} is not a valid reference.
+2009-03-19 16:19:58,484 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/Control.vm [line 1,column 1] : ${database.SqlParameterBeanPackage} is not a valid reference.
+2009-03-19 16:19:58,484 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/Control.vm [line 1,column 1] : ${database.ArgumentBeanPackage} is not a valid reference.
+2009-03-19 16:19:58,484 - ResourceManager : found om/java/allcommon/annotation/OutsideSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,531 - ResourceManager : found om/java/allcommon/bhv/BehaviorReadable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,531 - ResourceManager : found om/java/allcommon/bhv/BehaviorWritable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,546 - ResourceManager : found om/java/allcommon/bhv/AbstractBehaviorReadable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,562 - ResourceManager : found om/java/allcommon/bhv/AbstractBehaviorWritable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,562 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileReflectionOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,562 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileReflectionResult.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,562 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileReflectionFailure.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,578 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileOutputOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,578 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileOutputResult.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,578 - ResourceManager : found om/java/allcommon/bhv/load/LoadRefererOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,578 - ResourceManager : found om/java/allcommon/bhv/load/LoadReferrerOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,578 - ResourceManager : found om/java/allcommon/bhv/setup/ConditionBeanSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,578 - ResourceManager : found om/java/allcommon/bhv/setup/EntityListSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,593 - ResourceManager : found om/java/allcommon/bhv/setup/ValueLabelSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,593 - ResourceManager : found om/java/allcommon/bhv/setup/ValueLabelBox.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,593 - ResourceManager : found om/java/allcommon/AccessContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,593 - ResourceManager : found om/java/allcommon/DaoReadable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,609 - ResourceManager : found om/java/allcommon/DaoWritable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,609 - ResourceManager : found om/java/allcommon/Entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,609 - ResourceManager : found om/java/allcommon/EntityDefinedCommonColumn.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,625 - ResourceManager : found om/java/allcommon/cbean/FetchNarrowingBeanContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,625 - ResourceManager : found om/java/allcommon/cbean/FetchNarrowingBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,625 - ResourceManager : found om/java/allcommon/cbean/SimpleOrderByBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - ResourceManager : found om/java/allcommon/cbean/SimplePagingBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - ResourceManager : found om/java/allcommon/cbean/PagingHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - ResourceManager : found om/java/allcommon/cbean/PagingInvoker.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - ResourceManager : found om/java/allcommon/cbean/PagingResultBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - ResourceManager : found om/java/allcommon/cbean/ListResultBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - ResourceManager : found om/java/allcommon/cbean/ResultBeanBuilder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,640 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/ResultBeanBuilder.vm [line 6,column 29] : ${myClassName} is not a valid reference.
+2009-03-19 16:19:58,656 - ResourceManager : found om/java/allcommon/cbean/ConditionBeanContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,656 - ResourceManager : found om/java/allcommon/cbean/ConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,656 - ResourceManager : found om/java/allcommon/cbean/ConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,656 - ResourceManager : found om/java/allcommon/cbean/MapParameterBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,656 - ResourceManager : found om/java/allcommon/cbean/PagingBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,671 - ResourceManager : found om/java/allcommon/cbean/OrderByBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,671 - ResourceManager : found om/java/allcommon/cbean/SelectResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,671 - ResourceManager : found om/java/allcommon/cbean/SubQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,671 - ResourceManager : found om/java/allcommon/cbean/UnionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,671 - ResourceManager : found om/java/allcommon/cbean/AbstractConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,687 - ResourceManager : found om/java/allcommon/cbean/AbstractConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,687 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/AbstractConditionQuery.vm [line 1016,column 57] : $alias is not a valid reference.
+2009-03-19 16:19:58,687 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/AbstractConditionQuery.vm [line 1017,column 57] : $foreignAlias is not a valid reference.
+2009-03-19 16:19:58,687 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/AbstractConditionQuery.vm [line 1018,column 57] : $localAlias is not a valid reference.
+2009-03-19 16:19:58,687 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,687 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_equal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,687 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_notEqual.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,703 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_greaterThan.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,703 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_lessThan.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,703 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_greaterEqual.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,703 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_lessEqual.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,703 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_prefixSearch.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,718 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_likeSearch.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,718 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_inScope.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,718 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_notInScope.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,718 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_isNull.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,718 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_isNotNull.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,718 - ResourceManager : found om/java/allcommon/cbean/coption/ConditionOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,734 - ResourceManager : found om/java/allcommon/cbean/coption/SimpleStringOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,734 - ResourceManager : found om/java/allcommon/cbean/coption/FromToOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,734 - ResourceManager : found om/java/allcommon/cbean/coption/DateFromToOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,734 - ResourceManager : found om/java/allcommon/cbean/coption/LikeSearchOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,734 - ResourceManager : found om/java/allcommon/cbean/coption/InScopeOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,734 - ResourceManager : found om/java/allcommon/cbean/coption/parts/SplitOptionParts.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,750 - ResourceManager : found om/java/allcommon/cbean/coption/parts/ToUpperLowerCaseOptionParts.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,750 - ResourceManager : found om/java/allcommon/cbean/coption/parts/ToSingleByteOptionParts.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,812 - ResourceManager : found om/java/allcommon/cbean/coption/parts/local/JapaneseOptionPartsAgent.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,812 - ResourceManager : found om/java/allcommon/cbean/cvalue/ConditionValue.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,812 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,812 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingRowEndDeterminer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,812 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingRowResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,828 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingRowSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,828 - ResourceManager : found om/java/allcommon/cbean/mapping/EntityDtoMapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,828 - ResourceManager : found om/java/allcommon/cbean/outsidesql/OutsideSqlContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,828 - ResourceManager : found om/java/allcommon/cbean/outsidesql/OutsideSqlDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,828 - ResourceManager : found om/java/allcommon/cbean/outsidesql/OutsideSqlOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,828 - ResourceManager : found om/java/allcommon/cbean/outsidesql/ProcedurePmb.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,843 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlBasicExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,843 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlCursorExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,843 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlPagingExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,843 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/outsidesql/executor/OutsideSqlPagingExecutor.vm [line 78,column 21] : $pmb.pageStartIndex is not a valid reference.
+2009-03-19 16:19:58,843 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/outsidesql/executor/OutsideSqlPagingExecutor.vm [line 78,column 52] : $pmb.fetchSize is not a valid reference.
+2009-03-19 16:19:58,843 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlEntityExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,843 - ResourceManager : found om/java/allcommon/cbean/pagenavi/PageNumberLink.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,843 - ResourceManager : found om/java/allcommon/cbean/pagenavi/PageNumberLinkSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,906 - ResourceManager : found om/java/allcommon/cbean/pagenavi/group/PageGroupBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,906 - ResourceManager : found om/java/allcommon/cbean/pagenavi/group/PageGroupOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,906 - ResourceManager : found om/java/allcommon/cbean/pagenavi/range/PageRangeBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,921 - ResourceManager : found om/java/allcommon/cbean/pagenavi/range/PageRangeOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,921 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,921 - ResourceManager : found om/java/allcommon/cbean/sqlclause/AbstractSqlClause.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,921 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/AbstractSqlClause.vm [line 36,column 52] : $dto.selectHint is not a valid reference.
+2009-03-19 16:19:58,921 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/AbstractSqlClause.vm [line 382,column 45] : $fixedCondition is not a valid reference.
+2009-03-19 16:19:58,921 - ResourceManager : found om/java/allcommon/cbean/sqlclause/WhereClauseSimpleFilter.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,937 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/WhereClauseSimpleFilter.vm [line 17,column 65] : $dto is not a valid reference.
+2009-03-19 16:19:58,937 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/WhereClauseSimpleFilter.vm [line 20,column 73] : $dto is not a valid reference.
+2009-03-19 16:19:58,937 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_derby.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,937 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_h2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,937 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_oracle.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,937 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_firebird.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,937 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_mysql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,937 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_postgresql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,953 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_mssql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,953 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_db2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,953 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_interbase.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,953 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_default.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,953 - ResourceManager : found om/java/allcommon/cbean/sqlclause/OrderByClause.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,953 - ResourceManager : found om/java/allcommon/cbean/sqlclause/OrderByElement.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,968 - ResourceManager : found om/java/allcommon/dbmeta/DBMeta.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,968 - ResourceManager : found om/java/allcommon/dbmeta/AbstractDBMeta.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,984 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyArranger.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,984 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyBasicRequest.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,984 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyRequest.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,984 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyRequestElement.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:58,984 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/dbmeta/hierarchy/HierarchyRequestElement.vm [line 20,column 43] : $top is not a valid reference.
+2009-03-19 16:19:58,984 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchySourceColumn.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,000 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchySourceIterator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,000 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchySourceRow.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,000 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceEntityColumn.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,000 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceEntityListIterator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,000 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceEntityRow.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,000 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceListIterator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,015 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceRowSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,015 - ResourceManager : found om/java/allcommon/dbmeta/info/ForeignInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,015 - ResourceManager : found om/java/allcommon/dbmeta/info/ReferrerInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,015 - ResourceManager : found om/java/allcommon/dbmeta/info/RelationInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,015 - ResourceManager : found om/java/allcommon/dbmeta/info/UniqueInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,015 - ResourceManager : found om/java/allcommon/dbmeta/info/ColumnInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,031 - ResourceManager : found om/java/allcommon/dbmeta/DBMetaInstanceHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,062 - ResourceManager : found om/java/allcommon/exception/BatchEntityAlreadyUpdatedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,062 - ResourceManager : found om/java/allcommon/exception/BindVariableCommentNotFoundPropertyException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,078 - ResourceManager : found om/java/allcommon/exception/BindVariableParameterNullValueException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,078 - ResourceManager : found om/java/allcommon/exception/EmbeddedValueCommentNotFoundPropertyException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,125 - ResourceManager : found om/java/allcommon/exception/EmbeddedValueParameterNullValueException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,125 - ResourceManager : found om/java/allcommon/exception/EndCommentNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,125 - ResourceManager : found om/java/allcommon/exception/IfCommentConditionNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,125 - ResourceManager : found om/java/allcommon/exception/IfCommentNotBooleanResultException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,125 - ResourceManager : found om/java/allcommon/exception/IfCommentWrongExpressionException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/DangerousResultSizeException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/EntityAlreadyUpdatedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/EntityAlreadyDeletedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/EntityAlreadyExistsException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/EntityDuplicatedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/OutsideSqlNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,140 - ResourceManager : found om/java/allcommon/exception/RequiredOptionNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,156 - ResourceManager : found om/java/allcommon/exception/RecordHasAlreadyBeenDeletedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,156 - ResourceManager : found om/java/allcommon/exception/RecordHasOverlappedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,156 - ResourceManager : found om/java/allcommon/exception/SQLFailureException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,156 - ResourceManager : found om/java/allcommon/helper/MapListString.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,156 - ResourceManager : found om/java/allcommon/helper/MapListStringImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,171 - ResourceManager : found om/java/allcommon/helper/MapStringBuilder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,171 - ResourceManager : found om/java/allcommon/helper/MapStringBuilderImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,171 - ResourceManager : found om/java/allcommon/helper/character/GeneralCharacter.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,171 - ResourceManager : found om/java/allcommon/helper/character/impl/GeneralCharacterImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,171 - ResourceManager : found om/java/allcommon/helper/character/JapaneseCharacter.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,187 - ResourceManager : found om/java/allcommon/helper/character/impl/JapaneseCharacterImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,187 - ResourceManager : found om/java/allcommon/helper/collection/order/AccordingToOrder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,187 - ResourceManager : found om/java/allcommon/helper/collection/order/AccordingToOrderOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,187 - ResourceManager : found om/java/allcommon/helper/collection/order/AccordingToOrderIdExtractor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,187 - ResourceManager : found om/java/allcommon/helper/collection/order/impl/AccordingToOrderImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,250 - ResourceManager : found om/java/allcommon/helper/token/line/LineToken.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,250 - ResourceManager : found om/java/allcommon/helper/token/line/impl/LineTokenImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,250 - ResourceManager : found om/java/allcommon/helper/token/line/LineTokenizingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,250 - ResourceManager : found om/java/allcommon/helper/token/line/LineMakingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,390 - ResourceManager : found om/java/allcommon/helper/token/file/FileToken.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,390 - ResourceManager : found om/java/allcommon/helper/token/file/impl/FileTokenImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,390 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,390 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingRowResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingCallback.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingHeaderInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingRowResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingCallback.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingHeaderInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,453 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingSimpleFacade.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,468 - ResourceManager : found om/java/allcommon/helper/token/file/impl/FileMakingSimpleFacadeImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,468 - ResourceManager : found om/java/allcommon/s2container/DBFluteNormalDicon.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,468 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/s2container/DBFluteNormalDicon.vm [line 31,column 76] : $ResultSetHandlerFactoryExtension is not a valid reference.
+2009-03-19 16:19:59,468 - ResourceManager : found om/java/allcommon/BFinder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,484 - ResourceManager : found om/java/allcommon/CacheAbstractSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,484 - ResourceManager : found om/java/allcommon/BehaviorSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,484 - ResourceManager : found om/java/allcommon/CacheBehaviorSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,484 - ResourceManager : found om/java/allcommon/DaoSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,484 - ResourceManager : found om/java/allcommon/CacheDaoSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,484 - ResourceManager : found om/java/allcommon/GenMetaData.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,500 - ResourceManager : found om/java/allcommon/InternalMapContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,546 - ResourceManager : found om/java/allcommon/QLog.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,546 - ResourceManager : found om/java/allcommon/XLog.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,562 - ResourceManager : found om/java/allcommon/DBFluteConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,593 - ResourceManager : found om/java/allcommon/jdbc/CursorHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,609 - ResourceManager : found om/java/allcommon/jdbc/LatestSqlProvider.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,609 - ResourceManager : found om/java/allcommon/jdbc/StatementConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,671 - ResourceManager : found om/java/allcommon/s2dao/S2DaoInterceptor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,671 - ResourceManager : found om/java/allcommon/s2dao/S2DaoLatestSqlProvider.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,687 - ResourceManager : found om/java/allcommon/s2dao/S2DaoMetaDataExtension.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,703 - ResourceManager : found om/java/allcommon/s2dao/S2DaoMetaDataFactoryImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/S2BeanMetaDataFactoryImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/S2DaoPropertyTypeFactoryBuilderExtension.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/S2DaoSelectDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/s2dao/S2DaoSelectDynamicCommand.vm [line 210,column 47] : $pmb is not a valid reference.
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/FetchNarrowingResultSetFactory.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/FetchNarrowingResultSetWrapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/internal/rshandler/InternalBeanListMetaDataResultSetHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,718 - ResourceManager : found om/java/allcommon/s2dao/internal/rshandler/InternalBeanArrayMetaDataResultSetHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,750 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,750 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,796 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,796 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractSqlCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalDeleteAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalDeleteBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalDeleteQueryAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalInsertAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalInsertBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,812 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalProcedureCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,828 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,828 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,828 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,828 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateModifiedOnlyCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,828 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateQueryAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,828 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalAbstractAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,843 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalAbstractBatchAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,843 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalBasicHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,843 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalBasicSelectHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,859 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalBasicUpdateHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,859 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalCommandContextHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,859 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalDeleteAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,859 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalDeleteBatchAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,859 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalInsertAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,859 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalInsertBatchAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,875 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalProcedureHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,875 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalUpdateAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,875 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlhandler/InternalUpdateBatchAutoHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,890 - ResourceManager : found om/java/allcommon/s2dao/internal/sqllog/InternalSqlLog.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,890 - ResourceManager : found om/java/allcommon/s2dao/internal/sqllog/InternalSqlLogRegistry.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlparser/InternalSqlParser.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlparser/InternalSqlTokenizer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlparser/InternalCommandContextCreator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/s2dao/internal/util/InternalBindVariableUtil.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/util/SimpleAssertUtil.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/util/SimpleStringUtil.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,968 - ResourceManager : found om/java/allcommon/util/SimpleSystemUtil.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,984 - ResourceManager : found om/java/allcommon/util/ValueLabelUtil.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:19:59,984 - ResourceManager : found om/java/allcommon/util/TraceViewUtil.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,062 - ResourceManager : found om/java/bsbhv/BaseBhv.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,062 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/bsbhv/BaseBhv.vm [line 1,column 28] : ${referrer.RefrererPropertyNameInitCap} is not a valid reference.
+2009-03-19 16:20:00,062 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/bsbhv/BaseBhv.vm [line 520,column 156] : ${glEntityAlreadyUpdateException} is not a valid reference.
+2009-03-19 16:20:00,062 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/bsbhv/BaseBhv.vm [line 550,column 156] : ${glEntityAlreadyUpdateException} is not a valid reference.
+2009-03-19 16:20:00,078 - ResourceManager : found om/java/bsdao/BaseDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,078 - ResourceManager : found om/java/bsentity/BaseEntity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,093 - ResourceManager : found om/java/bsentity/dbmeta/DBMetaImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,109 - ResourceManager : found om/java/exbhv/ExtendedBhv.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,109 - ResourceManager : found om/java/exdao/ExtendedDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,109 - ResourceManager : found om/java/exentity/ExtendedEntity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,109 - ResourceManager : found om/java/cbean/BsConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,125 - ResourceManager : found om/java/cbean/AbstractBsConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,140 - ResourceManager : found om/java/cbean/BsConditionInlineQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,156 - ResourceManager : found om/java/cbean/BsConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,156 - ResourceManager : found om/java/cbean/NestSelectSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,171 - ResourceManager : found om/java/cbean/ExConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,171 - ResourceManager : found om/java/cbean/ExConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,171 - ResourceManager : found om/java/bsbhv/BaseBhv.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,187 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/bsbhv/BaseBhv.vm [line 520,column 156] : ${glEntityAlreadyUpdateException} is not a valid reference.
+2009-03-19 16:20:00,187 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/bsbhv/BaseBhv.vm [line 550,column 156] : ${glEntityAlreadyUpdateException} is not a valid reference.
+2009-03-19 16:20:00,187 - ResourceManager : found om/java/bsdao/BaseDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,187 - ResourceManager : found om/java/bsentity/BaseEntity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,203 - ResourceManager : found om/java/bsentity/dbmeta/DBMetaImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,218 - ResourceManager : found om/java/exbhv/ExtendedBhv.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,218 - ResourceManager : found om/java/exdao/ExtendedDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,218 - ResourceManager : found om/java/exentity/ExtendedEntity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,218 - ResourceManager : found om/java/cbean/BsConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,296 - ResourceManager : found om/java/cbean/AbstractBsConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,312 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/cbean/AbstractBsConditionQuery.vm [line 669,column 15] : $fromDate is not a valid reference.
+2009-03-19 16:20:00,312 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/cbean/AbstractBsConditionQuery.vm [line 669,column 49] : $toDate is not a valid reference.
+2009-03-19 16:20:00,312 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/cbean/AbstractBsConditionQuery.vm [line 683,column 15] : $fromDate is not a valid reference.
+2009-03-19 16:20:00,312 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/cbean/AbstractBsConditionQuery.vm [line 683,column 48] : $toDate is not a valid reference.
+2009-03-19 16:20:00,328 - ResourceManager : found om/java/cbean/BsConditionInlineQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,343 - ResourceManager : found om/java/cbean/BsConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,343 - ResourceManager : found om/java/cbean/NestSelectSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,343 - ResourceManager : found om/java/cbean/ExConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:20:00,343 - ResourceManager : found om/java/cbean/ExConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,125 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'
+2009-03-19 16:27:52,125 - ************************************************************** 
+2009-03-19 16:27:52,125 - Starting Jakarta Velocity v1.3.1
+2009-03-19 16:27:52,125 - RuntimeInstance initializing.
+2009-03-19 16:27:52,125 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2009-03-19 16:27:52,125 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2009-03-19 16:27:52,125 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath. Exception : java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+2009-03-19 16:27:52,125 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2009-03-19 16:27:52,125 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2009-03-19 16:27:52,125 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2009-03-19 16:27:52,140 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,140 - FileResourceLoader : initialization starting.
+2009-03-19 16:27:52,140 - FileResourceLoader : adding path 'C:\workspace\root\mydbflute\dbflute-0.7.9\templates'
+2009-03-19 16:27:52,140 - FileResourceLoader : initialization complete.
+2009-03-19 16:27:52,140 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2009-03-19 16:27:52,140 - Default ResourceManager initialization complete.
+2009-03-19 16:27:52,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2009-03-19 16:27:52,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2009-03-19 16:27:52,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2009-03-19 16:27:52,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2009-03-19 16:27:52,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2009-03-19 16:27:52,234 - Created: 20 parsers.
+2009-03-19 16:27:52,234 - Velocimacro : initialization starting.
+2009-03-19 16:27:52,234 - Velocimacro : adding VMs from VM library template : VM_global_library.vm
+2009-03-19 16:27:52,250 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2009-03-19 16:27:52,250 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+2009-03-19 16:27:52,250 - Velocimacro :  VM library template macro registration complete.
+2009-03-19 16:27:52,250 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2009-03-19 16:27:52,250 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2009-03-19 16:27:52,250 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+2009-03-19 16:27:52,250 - Velocimacro : messages on  : VM system will output logging messages
+2009-03-19 16:27:52,250 - Velocimacro : autoload off  : VM system will not automatically reload global library macros
+2009-03-19 16:27:52,250 - Velocimacro : initialization complete.
+2009-03-19 16:27:52,250 - Velocity successfully started.
+2009-03-19 16:27:52,625 - ResourceManager : found om/Control.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,671 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/Control.vm [line 1,column 1] : ${database.SqlParameterBeanPackage} is not a valid reference.
+2009-03-19 16:27:52,671 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/Control.vm [line 1,column 1] : ${database.SqlParameterBeanPackage} is not a valid reference.
+2009-03-19 16:27:52,671 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/Control.vm [line 1,column 1] : ${database.ArgumentBeanPackage} is not a valid reference.
+2009-03-19 16:27:52,687 - ResourceManager : found om/java/allcommon/annotation/OutsideSql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,687 - ResourceManager : found om/java/allcommon/bhv/BehaviorReadable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,687 - ResourceManager : found om/java/allcommon/bhv/BehaviorWritable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,703 - ResourceManager : found om/java/allcommon/bhv/AbstractBehaviorReadable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,718 - ResourceManager : found om/java/allcommon/bhv/AbstractBehaviorWritable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,718 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileReflectionOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,734 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileReflectionResult.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,734 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileReflectionFailure.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,734 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileOutputOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,734 - ResourceManager : found om/java/allcommon/bhv/batch/TokenFileOutputResult.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,812 - ResourceManager : found om/java/allcommon/bhv/load/LoadRefererOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,812 - ResourceManager : found om/java/allcommon/bhv/load/LoadReferrerOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,828 - ResourceManager : found om/java/allcommon/bhv/setup/ConditionBeanSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,828 - ResourceManager : found om/java/allcommon/bhv/setup/EntityListSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,828 - ResourceManager : found om/java/allcommon/bhv/setup/ValueLabelSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,828 - ResourceManager : found om/java/allcommon/bhv/setup/ValueLabelBox.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,828 - ResourceManager : found om/java/allcommon/AccessContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,828 - ResourceManager : found om/java/allcommon/DaoReadable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,843 - ResourceManager : found om/java/allcommon/DaoWritable.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,843 - ResourceManager : found om/java/allcommon/Entity.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,843 - ResourceManager : found om/java/allcommon/EntityDefinedCommonColumn.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,859 - ResourceManager : found om/java/allcommon/cbean/FetchNarrowingBeanContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,859 - ResourceManager : found om/java/allcommon/cbean/FetchNarrowingBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,859 - ResourceManager : found om/java/allcommon/cbean/SimpleOrderByBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - ResourceManager : found om/java/allcommon/cbean/SimplePagingBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - ResourceManager : found om/java/allcommon/cbean/PagingHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - ResourceManager : found om/java/allcommon/cbean/PagingInvoker.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - ResourceManager : found om/java/allcommon/cbean/PagingResultBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - ResourceManager : found om/java/allcommon/cbean/ListResultBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - ResourceManager : found om/java/allcommon/cbean/ResultBeanBuilder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,875 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/ResultBeanBuilder.vm [line 6,column 29] : ${myClassName} is not a valid reference.
+2009-03-19 16:27:52,890 - ResourceManager : found om/java/allcommon/cbean/ConditionBeanContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,890 - ResourceManager : found om/java/allcommon/cbean/ConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,890 - ResourceManager : found om/java/allcommon/cbean/ConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,890 - ResourceManager : found om/java/allcommon/cbean/MapParameterBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,890 - ResourceManager : found om/java/allcommon/cbean/PagingBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,906 - ResourceManager : found om/java/allcommon/cbean/OrderByBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,906 - ResourceManager : found om/java/allcommon/cbean/SelectResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,906 - ResourceManager : found om/java/allcommon/cbean/SubQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,906 - ResourceManager : found om/java/allcommon/cbean/UnionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,906 - ResourceManager : found om/java/allcommon/cbean/AbstractConditionBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,921 - ResourceManager : found om/java/allcommon/cbean/AbstractConditionQuery.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,921 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/AbstractConditionQuery.vm [line 1016,column 57] : $alias is not a valid reference.
+2009-03-19 16:27:52,921 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/AbstractConditionQuery.vm [line 1017,column 57] : $foreignAlias is not a valid reference.
+2009-03-19 16:27:52,921 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/AbstractConditionQuery.vm [line 1018,column 57] : $localAlias is not a valid reference.
+2009-03-19 16:27:52,921 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,921 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_equal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,937 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_notEqual.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,937 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_greaterThan.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,937 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_lessThan.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,937 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_greaterEqual.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,937 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_lessEqual.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,937 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_prefixSearch.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,953 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_likeSearch.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,953 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_inScope.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,953 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_notInScope.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,953 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_isNull.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,953 - ResourceManager : found om/java/allcommon/cbean/ckey/ConditionKey_isNotNull.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,953 - ResourceManager : found om/java/allcommon/cbean/coption/ConditionOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,968 - ResourceManager : found om/java/allcommon/cbean/coption/SimpleStringOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,968 - ResourceManager : found om/java/allcommon/cbean/coption/FromToOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,968 - ResourceManager : found om/java/allcommon/cbean/coption/DateFromToOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,968 - ResourceManager : found om/java/allcommon/cbean/coption/LikeSearchOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,968 - ResourceManager : found om/java/allcommon/cbean/coption/InScopeOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,968 - ResourceManager : found om/java/allcommon/cbean/coption/parts/SplitOptionParts.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,984 - ResourceManager : found om/java/allcommon/cbean/coption/parts/ToUpperLowerCaseOptionParts.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,984 - ResourceManager : found om/java/allcommon/cbean/coption/parts/ToSingleByteOptionParts.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:52,984 - ResourceManager : found om/java/allcommon/cbean/coption/parts/local/JapaneseOptionPartsAgent.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,031 - ResourceManager : found om/java/allcommon/cbean/cvalue/ConditionValue.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,031 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,031 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingRowEndDeterminer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,031 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingRowResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,031 - ResourceManager : found om/java/allcommon/cbean/grouping/GroupingRowSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,031 - ResourceManager : found om/java/allcommon/cbean/mapping/EntityDtoMapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,046 - ResourceManager : found om/java/allcommon/cbean/outsidesql/OutsideSqlContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,046 - ResourceManager : found om/java/allcommon/cbean/outsidesql/OutsideSqlDao.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,046 - ResourceManager : found om/java/allcommon/cbean/outsidesql/OutsideSqlOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,046 - ResourceManager : found om/java/allcommon/cbean/outsidesql/ProcedurePmb.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,046 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlBasicExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,046 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlCursorExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,062 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlPagingExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,062 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/outsidesql/executor/OutsideSqlPagingExecutor.vm [line 78,column 21] : $pmb.pageStartIndex is not a valid reference.
+2009-03-19 16:27:53,062 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/outsidesql/executor/OutsideSqlPagingExecutor.vm [line 78,column 52] : $pmb.fetchSize is not a valid reference.
+2009-03-19 16:27:53,062 - ResourceManager : found om/java/allcommon/cbean/outsidesql/executor/OutsideSqlEntityExecutor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,062 - ResourceManager : found om/java/allcommon/cbean/pagenavi/PageNumberLink.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,062 - ResourceManager : found om/java/allcommon/cbean/pagenavi/PageNumberLinkSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,062 - ResourceManager : found om/java/allcommon/cbean/pagenavi/group/PageGroupBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,062 - ResourceManager : found om/java/allcommon/cbean/pagenavi/group/PageGroupOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,109 - ResourceManager : found om/java/allcommon/cbean/pagenavi/range/PageRangeBean.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,125 - ResourceManager : found om/java/allcommon/cbean/pagenavi/range/PageRangeOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,125 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,125 - ResourceManager : found om/java/allcommon/cbean/sqlclause/AbstractSqlClause.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,125 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/AbstractSqlClause.vm [line 36,column 52] : $dto.selectHint is not a valid reference.
+2009-03-19 16:27:53,125 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/AbstractSqlClause.vm [line 382,column 45] : $fixedCondition is not a valid reference.
+2009-03-19 16:27:53,125 - ResourceManager : found om/java/allcommon/cbean/sqlclause/WhereClauseSimpleFilter.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,140 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/WhereClauseSimpleFilter.vm [line 17,column 65] : $dto is not a valid reference.
+2009-03-19 16:27:53,140 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/cbean/sqlclause/WhereClauseSimpleFilter.vm [line 20,column 73] : $dto is not a valid reference.
+2009-03-19 16:27:53,140 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_derby.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,140 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_h2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,140 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_oracle.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,140 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_firebird.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,140 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_mysql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,140 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_postgresql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,156 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_mssql.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,156 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_db2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,156 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_interbase.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,156 - ResourceManager : found om/java/allcommon/cbean/sqlclause/SqlClause_default.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,156 - ResourceManager : found om/java/allcommon/cbean/sqlclause/OrderByClause.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,156 - ResourceManager : found om/java/allcommon/cbean/sqlclause/OrderByElement.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,171 - ResourceManager : found om/java/allcommon/dbmeta/DBMeta.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,171 - ResourceManager : found om/java/allcommon/dbmeta/AbstractDBMeta.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,187 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyArranger.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,187 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyBasicRequest.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,187 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyRequest.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,187 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchyRequestElement.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,187 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/dbmeta/hierarchy/HierarchyRequestElement.vm [line 20,column 43] : $top is not a valid reference.
+2009-03-19 16:27:53,187 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchySourceColumn.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,187 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchySourceIterator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/HierarchySourceRow.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceEntityColumn.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceEntityListIterator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceEntityRow.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceListIterator.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/hierarchy/basic/HierarchySourceRowSetupper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,203 - ResourceManager : found om/java/allcommon/dbmeta/info/ForeignInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,218 - ResourceManager : found om/java/allcommon/dbmeta/info/ReferrerInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,218 - ResourceManager : found om/java/allcommon/dbmeta/info/RelationInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,218 - ResourceManager : found om/java/allcommon/dbmeta/info/UniqueInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,218 - ResourceManager : found om/java/allcommon/dbmeta/info/ColumnInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,218 - ResourceManager : found om/java/allcommon/dbmeta/DBMetaInstanceHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,234 - ResourceManager : found om/java/allcommon/exception/BatchEntityAlreadyUpdatedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,234 - ResourceManager : found om/java/allcommon/exception/BindVariableCommentNotFoundPropertyException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,234 - ResourceManager : found om/java/allcommon/exception/BindVariableParameterNullValueException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,234 - ResourceManager : found om/java/allcommon/exception/EmbeddedValueCommentNotFoundPropertyException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/EmbeddedValueParameterNullValueException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/EndCommentNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/IfCommentConditionNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/IfCommentNotBooleanResultException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/IfCommentWrongExpressionException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/DangerousResultSizeException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/EntityAlreadyUpdatedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,296 - ResourceManager : found om/java/allcommon/exception/EntityAlreadyDeletedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/EntityAlreadyExistsException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/EntityDuplicatedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/OutsideSqlNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/RequiredOptionNotFoundException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/RecordHasAlreadyBeenDeletedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/RecordHasOverlappedException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,312 - ResourceManager : found om/java/allcommon/exception/SQLFailureException.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,359 - ResourceManager : found om/java/allcommon/helper/MapListString.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,375 - ResourceManager : found om/java/allcommon/helper/MapListStringImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,375 - ResourceManager : found om/java/allcommon/helper/MapStringBuilder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,375 - ResourceManager : found om/java/allcommon/helper/MapStringBuilderImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,375 - ResourceManager : found om/java/allcommon/helper/character/GeneralCharacter.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,375 - ResourceManager : found om/java/allcommon/helper/character/impl/GeneralCharacterImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,375 - ResourceManager : found om/java/allcommon/helper/character/JapaneseCharacter.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,390 - ResourceManager : found om/java/allcommon/helper/character/impl/JapaneseCharacterImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,390 - ResourceManager : found om/java/allcommon/helper/collection/order/AccordingToOrder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,390 - ResourceManager : found om/java/allcommon/helper/collection/order/AccordingToOrderOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,390 - ResourceManager : found om/java/allcommon/helper/collection/order/AccordingToOrderIdExtractor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,453 - ResourceManager : found om/java/allcommon/helper/collection/order/impl/AccordingToOrderImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,531 - ResourceManager : found om/java/allcommon/helper/token/line/LineToken.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,531 - ResourceManager : found om/java/allcommon/helper/token/line/impl/LineTokenImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,531 - ResourceManager : found om/java/allcommon/helper/token/line/LineTokenizingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,531 - ResourceManager : found om/java/allcommon/helper/token/line/LineMakingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,562 - ResourceManager : found om/java/allcommon/helper/token/file/FileToken.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,562 - ResourceManager : found om/java/allcommon/helper/token/file/impl/FileTokenImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,562 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,578 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingRowResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,609 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingCallback.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,609 - ResourceManager : found om/java/allcommon/helper/token/file/FileTokenizingHeaderInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,609 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingOption.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,609 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingRowResource.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,609 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingCallback.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,609 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingHeaderInfo.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,625 - ResourceManager : found om/java/allcommon/helper/token/file/FileMakingSimpleFacade.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,625 - ResourceManager : found om/java/allcommon/helper/token/file/impl/FileMakingSimpleFacadeImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,625 - ResourceManager : found om/java/allcommon/s2container/DBFluteNormalDicon.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,625 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/s2container/DBFluteNormalDicon.vm [line 31,column 76] : $ResultSetHandlerFactoryExtension is not a valid reference.
+2009-03-19 16:27:53,640 - ResourceManager : found om/java/allcommon/BFinder.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,640 - ResourceManager : found om/java/allcommon/CacheAbstractSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,640 - ResourceManager : found om/java/allcommon/BehaviorSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,656 - ResourceManager : found om/java/allcommon/CacheBehaviorSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,656 - ResourceManager : found om/java/allcommon/DaoSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,656 - ResourceManager : found om/java/allcommon/CacheDaoSelector.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,656 - ResourceManager : found om/java/allcommon/GenMetaData.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,656 - ResourceManager : found om/java/allcommon/InternalMapContext.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,703 - ResourceManager : found om/java/allcommon/QLog.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,703 - ResourceManager : found om/java/allcommon/XLog.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,718 - ResourceManager : found om/java/allcommon/DBFluteConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,718 - ResourceManager : found om/java/allcommon/jdbc/CursorHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,718 - ResourceManager : found om/java/allcommon/jdbc/LatestSqlProvider.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,718 - ResourceManager : found om/java/allcommon/jdbc/StatementConfig.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,750 - ResourceManager : found om/java/allcommon/s2dao/S2DaoInterceptor.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,765 - ResourceManager : found om/java/allcommon/s2dao/S2DaoLatestSqlProvider.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,765 - ResourceManager : found om/java/allcommon/s2dao/S2DaoMetaDataExtension.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,796 - ResourceManager : found om/java/allcommon/s2dao/S2DaoMetaDataFactoryImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,796 - ResourceManager : found om/java/allcommon/s2dao/S2BeanMetaDataFactoryImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,796 - ResourceManager : found om/java/allcommon/s2dao/S2DaoPropertyTypeFactoryBuilderExtension.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,812 - ResourceManager : found om/java/allcommon/s2dao/S2DaoSelectDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,812 - org.apache.velocity.runtime.exception.ReferenceException: reference : template = om/java/allcommon/s2dao/S2DaoSelectDynamicCommand.vm [line 210,column 47] : $pmb is not a valid reference.
+2009-03-19 16:27:53,812 - ResourceManager : found om/java/allcommon/s2dao/FetchNarrowingResultSetFactory.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,812 - ResourceManager : found om/java/allcommon/s2dao/FetchNarrowingResultSetWrapper.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,812 - ResourceManager : found om/java/allcommon/s2dao/internal/rshandler/InternalBeanListMetaDataResultSetHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,812 - ResourceManager : found om/java/allcommon/s2dao/internal/rshandler/InternalBeanArrayMetaDataResultSetHandler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,890 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,906 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,937 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,937 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractSqlCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,937 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalAbstractStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalDeleteAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalDeleteBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalDeleteQueryAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalInsertAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalInsertBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalProcedureCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,953 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateAutoDynamicCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2009-03-19 16:27:53,968 - ResourceManager : found om/java/allcommon/s2dao/internal/sqlcommand/InternalUpdateBatchAutoStaticCommand.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader

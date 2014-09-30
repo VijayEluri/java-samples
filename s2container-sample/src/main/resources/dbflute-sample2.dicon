@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+    "http://www.seasar.org/dtd/components21.dtd">
+
+<components namespace="dbflute-sample2">
+    <include path="j2ee-sample2.dicon"/>
+
+    <!-- S2Dao component. -->
+    <component class="jp.co.np.p2netex.sample2.allcommon.s2dao.Sample2S2DaoMetaDataFactoryImpl">
+        <property name="sqlFileEncoding">"UTF-8"</property>
+    </component>
+    <component name="interceptor" class="jp.co.np.p2netex.sample2.allcommon.s2dao.Sample2S2DaoInterceptor"/>
+    <component class="org.seasar.dao.impl.AnnotationReaderFactoryImpl"/>
+    <component class="org.seasar.dao.impl.ValueTypeFactoryImpl"/>
+    <component class="jp.co.np.p2netex.sample2.allcommon.s2dao.Sample2S2BeanMetaDataFactoryImpl"/>
+    <component class="org.seasar.dao.impl.DaoNamingConventionImpl"/>
+    <component class="org.seasar.dao.impl.NullBeanEnhancer"/>
+    <component class="jp.co.np.p2netex.sample2.allcommon.s2dao.Sample2S2DaoMetaDataExtension$ResultSetHandlerFactoryExtension"/>
+    <component class="org.seasar.dao.impl.DtoMetaDataFactoryImpl"/>
+    <component class="jp.co.np.p2netex.sample2.allcommon.s2dao.Sample2S2DaoPropertyTypeFactoryBuilderExtension"/>
+    <component class="org.seasar.dao.impl.RelationPropertyTypeFactoryBuilderImpl"/>
+    <component class="org.seasar.dao.impl.DefaultTableNaming"/>
+    <component class="org.seasar.dao.impl.DefaultColumnNaming"/>
+    <component class="org.seasar.dao.impl.ProcedureMetaDataFactoryImpl"/>
+    <component class="jp.co.np.p2netex.sample2.allcommon.s2dao.Sample2S2DaoLatestSqlProvider"/>
+	<component name="dbfluteStringClobType" class="org.seasar.extension.jdbc.types.StringClobType" />
+
+    <!-- The selector of behavior. -->
+    <component name="sample2BehaviorSelector" class="jp.co.np.p2netex.sample2.allcommon.Sample2CacheBehaviorSelector">
+        <destroyMethod name="destroy"/>
+    </component>
+
+    <!-- The selector of DAO. -->
+    <component name="sample2DaoSelector" class="jp.co.np.p2netex.sample2.allcommon.Sample2CacheDaoSelector">
+        <destroyMethod name="destroy"/>
+    </component>
+
+    <!-- The dao of outsideSql. -->
+    <component class="jp.co.np.p2netex.sample2.allcommon.cbean.outsidesql.Sample2OutsideSqlDao">
+        <aspect>interceptor</aspect>
+    </component>
+
+
+    <!-- SAMPLE2_DEPT -->
+    <component name="sample2Sample2DeptDao" class="jp.co.np.p2netex.sample2.exdao.Sample2Sample2DeptDao">
+        <aspect>interceptor</aspect>
+    </component>
+    <component name="sample2Sample2DeptBhv" class="jp.co.np.p2netex.sample2.exbhv.Sample2Sample2DeptBhv"/>
+
+    <!-- SAMPLE2_EMP -->
+    <component name="sample2Sample2EmpDao" class="jp.co.np.p2netex.sample2.exdao.Sample2Sample2EmpDao">
+        <aspect>interceptor</aspect>
+    </component>
+    <component name="sample2Sample2EmpBhv" class="jp.co.np.p2netex.sample2.exbhv.Sample2Sample2EmpBhv"/>
+
+</components>

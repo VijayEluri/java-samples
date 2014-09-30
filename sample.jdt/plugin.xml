@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="sample.jdt.viewerContribution"
+            targetID="#CompilationUnitEditorContext">
+         <action
+               class="sample.jdt.GenerateGetterSetterWithJavaDoc"
+               definitionId="sample.jdt.action"
+               id="sample.jdt.action1"
+               label="Getter/Setter生成withJavaDocコメント"
+               menubarPath="org.eclipse.jdt.ui.source.menu/generateGroup"/>
+      </viewerContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.jdt.ui.category.source"
+            id="sample.jdt.action"
+            name="サンプルJDT拡張コマンド"/>
+   </extension>
+
+</plugin>

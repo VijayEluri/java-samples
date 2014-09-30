@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsRoot.xsd</xs:appinfo>
+		<xs:documentation>JPGISで必要となる全ての要素を定義したXMLSchema</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<xs:include schemaLocation="jpsSpatial.xsd"/>
+	<xs:include schemaLocation="jpsTemporal.xsd"/>
+	<xs:include schemaLocation="jpsCoverage.xsd"/>
+	<xs:include schemaLocation="jpsRS.xsd"/>
+	<xs:include schemaLocation="jpsLRS.xsd"/>
+	<xs:include schemaLocation="jpsExtraction.xsd"/>
+	<xs:complexType name="ExchangeMetadata">
+		<xs:sequence>
+			<xs:element name="datasetCitation" type="jps:CI_Citation"/>
+			<xs:element name="metadataCitation" type="jps:CI_Citation" minOccurs="0"/>
+			<xs:element name="applicationSchemaCitation" type="jps:CI_Citation" minOccurs="0"/>
+			<xs:element name="encodingRule" type="jps:EncodingRule"/>
+			<xs:element name="codeLists" type="jps:CodeListExtraction" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EncodingRule">
+		<xs:sequence>
+			<xs:element name="encodingRuleCitation" type="jps:CI_Citation"/>
+			<xs:element name="toolName" type="jps:CharacterString"/>
+			<xs:element name="toolVersion" type="jps:CharacterString" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CodeListExtraction">
+		<xs:sequence>
+			<xs:element name="name" type="jps:CharacterString"/>
+			<xs:element name="source" type="jps:URI"/>
+			<xs:element name="extracted" type="jps:DateTime"/>
+			<xs:element name="format" type="jps:CodeListValueFormat"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="CodeListValueFormat">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="code"/>
+			<xs:enumeration value="value"/>
+			<xs:enumeration value="mix"/>
+			<xs:enumeration value="both"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

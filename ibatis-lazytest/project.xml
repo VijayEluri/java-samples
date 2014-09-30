@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <pomVersion>3</pomVersion>
+  <id>ibatis</id>
+  <groupId>ibatis-lazyloading-sample</groupId>
+
+  <name>iBATIS Spring Example Application</name>
+
+  <currentVersion>1.0</currentVersion>
+
+  <organization>
+    <name/>
+    <url/>
+    <logo/>
+  </organization>
+
+  <inceptionYear>2005</inceptionYear>
+  <package>ibatis</package>
+  <logo>http://maven.apache.org/images/maven.jpg</logo>
+  <description></description>
+
+  <shortDescription></shortDescription>
+
+  <url/>
+  <issueTrackingUrl/>
+  <siteAddress/>
+  <siteDirectory>/</siteDirectory>
+  <distributionDirectory/>
+
+  <repository/>
+
+  <mailingLists/>
+
+  <developers>
+  </developers>
+
+    <dependencies>
+        <dependency>
+            <id>commons-logging</id>
+            <version>1.0.4</version>
+            <properties>
+            </properties>
+        </dependency>
+        <dependency>
+            <id>commons-lang</id>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <id>log4j</id>
+            <version>1.2.8</version>
+        </dependency>
+        <dependency>
+            <groupId>springframework</groupId>
+            <artifactId>spring</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+        <dependency>
+            <id>hsqldb</id>
+            <version>1.7.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ibatis</groupId>
+            <artifactId>ibatis-common</artifactId>
+            <version>2.0.9B</version>
+        </dependency>
+        <dependency>
+            <groupId>ibatis</groupId>
+            <artifactId>ibatis-dao</artifactId>
+            <version>2.0.9B</version>
+        </dependency>
+        <dependency>
+            <groupId>ibatis</groupId>
+            <artifactId>ibatis-sqlmap</artifactId>
+            <version>2.0.9B</version>
+        </dependency>
+        <dependency>
+            <id>aopalliance</id>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <id>cglib</id>
+            <version>full-2.0.2</version>
+        </dependency>
+    </dependencies>
+  
+    <build>
+        <nagEmailAddress/>
+        <sourceDirectory>src/java</sourceDirectory>
+        <unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+        <unitTest>
+            <includes>
+                <include>**/*Test.java</include>
+            </includes>
+            <excludes/>
+            <resources>
+                <resource>
+                    <directory>src/sql</directory>
+                    <includes>
+                        <include>**/*.sql</include>
+                    </includes>
+
+                </resource>
+            </resources>
+        </unitTest>
+       <resources>
+          <resource>
+             <directory>src/conf</directory>
+             <includes>
+               <include>**/*.properties</include>
+               <include>**/*.xml</include>
+             </includes>
+          </resource>
+          <resource>
+             <directory>src/java</directory>
+             <includes>
+               <include>**/*.properties</include>
+               <include>**/*.xml</include>
+             </includes>
+          </resource>
+       </resources>
+    </build>
+  <reports>
+        <report>maven-clover-plugin</report>
+    </reports>
+</project>

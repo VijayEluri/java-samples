@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsCoverage.xsd</xs:appinfo>
+		<xs:documentation>JPGIS 被覆の幾何及び関数のためのスキーマのW3C XML Schema文書</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<!-- ========== include and import ==========-->
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<xs:include schemaLocation="jpsSpatial.xsd"/>
+	<xs:include schemaLocation="jpsRS.xsd"/>
+	<xs:include schemaLocation="jpsExtraction.xsd"/>
+	<!-- ========== types and elements ==========-->
+	<!-- ========== CV_Coverage ========== -->
+	<xs:element name="CV_Coverage" type="jps:CV_Coverage" abstract="true"/>
+	<xs:complexType name="CV_Coverage" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:CV_Coverage.domainExtent" maxOccurs="unbounded"/>
+					<xs:element ref="jps:CV_Coverage.rangeType"/>
+					<xs:element ref="jps:CV_Coverage.CRS"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_Coverage.domainExtent" type="jps:EX_Extent"/>
+	<xs:element name="CV_Coverage.rangeType" type="jps:ref_RecordType"/>
+	<xs:element name="CV_Coverage.CRS" type="jps:ref_RS_CRS"/>
+	<!-- ========== CV_DiscreteCoverage ========== -->
+	<xs:element name="CV_DiscreteCoverage" type="jps:CV_DiscreteCoverage" substitutionGroup="jps:CV_Coverage"/>
+	<xs:complexType name="CV_DiscreteCoverage">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_Coverage">
+				<xs:sequence>
+					<xs:element ref="jps:CV_DiscreteCoverage.element" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_DiscreteCoverage.element">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:CV_GeometryValuePair" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== CV_ContinuousCoverage ========== -->
+	<xs:element name="CV_ContinuousCoverage" type="jps:CV_ContinuousCoverage" abstract="true" substitutionGroup="jps:CV_Coverage"/>
+	<xs:complexType name="CV_ContinuousCoverage" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_Coverage"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_ContinuousCoverage.element" type="jps:CV_ValueObject"/>
+	<!-- ========== CV_ValueObject ========== -->
+	<xs:element name="CV_ValueObject" type="jps:CV_ValueObject" abstract="true"/>
+	<xs:complexType name="CV_ValueObject" abstract="true">
+		<xs:sequence/>
+	</xs:complexType>
+	<!-- ========== CV_GeometryValuePair ========== -->
+	<xs:element name="CV_GeometryValuePair" type="jps:CV_GeometryValuePair"/>
+	<xs:complexType name="CV_GeometryValuePair">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:CV_GeometryValuePair.geometry"/>
+					<xs:element ref="jps:CV_GeometryValuePair.value"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_GeometryValuePair.geometry" type="jps:ref_GM_Object"/>
+	<xs:element name="CV_GeometryValuePair.value" type="jps:ref_Record"/>
+	<!-- ========== CV_DiscretePointCoverage ========== -->
+	<xs:element name="CV_DiscretePointCoverage" type="jps:CV_DiscretePointCoverage" substitutionGroup="jps:CV_DiscreteCoverage"/>
+	<xs:complexType name="CV_DiscretePointCoverage">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_DiscreteCoverage"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== CV_DiscreteCurveCoverage ========== -->
+	<xs:element name="CV_DiscreteCurveCoverage" type="jps:CV_DiscreteCurveCoverage" substitutionGroup="jps:CV_DiscreteCoverage"/>
+	<xs:complexType name="CV_DiscreteCurveCoverage">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_DiscreteCoverage"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== CV_DiscreteCurveCoverage ========== -->
+	<xs:element name="CV_DiscreteSurfaceCoverage" type="jps:CV_DiscreteSurfaceCoverage" substitutionGroup="jps:CV_DiscreteCoverage"/>
+	<xs:complexType name="CV_DiscreteSurfaceCoverage">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_DiscreteCoverage"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== CV_PointValuePair ========== -->
+	<xs:element name="CV_PointValuePair" type="jps:CV_PointValuePair" substitutionGroup="jps:CV_GeometryValuePair"/>
+	<xs:complexType name="CV_PointValuePair">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_GeometryValuePair"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== CV_CurveValuePair ========== -->
+	<xs:element name="CV_CurveValuePair" type="jps:CV_CurveValuePair" substitutionGroup="jps:CV_GeometryValuePair"/>
+	<xs:complexType name="CV_CurveValuePair">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_GeometryValuePair"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== CV_SurfaceValuePair ========== -->
+	<xs:element name="CV_SurfaceValuePair" type="jps:CV_SurfaceValuePair" substitutionGroup="jps:CV_GeometryValuePair"/>
+	<xs:complexType name="CV_SurfaceValuePair">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_GeometryValuePair"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ========== CV_ThiessenPolygonCoverage ========== -->
+	<xs:element name="CV_ThiessenPolygonCoverage" type="jps:CV_ThiessenPolygonCoverage" substitutionGroup="jps:CV_ContinuousCoverage"/>
+	<xs:complexType name="CV_ThiessenPolygonCoverage">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_ContinuousCoverage">
+				<xs:sequence>
+					<xs:element ref="jps:CV_ContinuousCoverage.clipArea"/>
+					<xs:element name="CV_ThiessenPolygonCoverage.element" type="jps:CV_ThiessenValuePolygon" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_ContinuousCoverage.clipArea" type="jps:ref_GM_Surface"/>
+	<!-- ========== CV_ThiessenValuePolygon ========== -->
+	<xs:element name="CV_ThiessenValuePolygon" type="jps:CV_ThiessenValuePolygon" substitutionGroup="jps:CV_ValueObject"/>
+	<xs:complexType name="CV_ThiessenValuePolygon">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_ValueObject">
+				<xs:sequence>
+					<xs:element ref="jps:CV_ThiessenValuePolygon.geometry"/>
+					<xs:element ref="jps:CV_ThiessenValuePolygon.controlValue"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_ThiessenValuePolygon.geometry" type="jps:ref_GM_Polygon"/>
+	<xs:element name="CV_ThiessenValuePolygon.controlValue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:CV_GeometryValuePair" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ref_CV_PointValuePair">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<!-- ========== CV_TINCoverage ========== -->
+	<xs:element name="CV_TINCoverage" type="jps:CV_TINCoverage" substitutionGroup="jps:CV_ContinuousCoverage"/>
+	<xs:complexType name="CV_TINCoverage">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_ContinuousCoverage">
+				<xs:sequence>
+					<xs:element ref="jps:CV_TINCoverage.geometry"/>
+					<xs:element name="CV_TINCoverage.element" type="jps:CV_ValueTriangle" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_TINCoverage.geometry" type="jps:ref_GM_Tin"/>
+	<!-- ========== CV_ThiessenValuePolygon ========== -->
+	<xs:element name="CV_ValueTriangle" type="jps:CV_ValueTriangle" substitutionGroup="jps:CV_ValueObject"/>
+	<xs:complexType name="CV_ValueTriangle">
+		<xs:complexContent>
+			<xs:extension base="jps:CV_ValueObject">
+				<xs:sequence>
+					<xs:element ref="jps:CV_ValueTriangle.geometry"/>
+					<xs:element ref="jps:CV_ValueTriangle.controlValue" minOccurs="3" maxOccurs="3"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CV_ValueTriangle.geometry" type="jps:ref_GM_Triangle"/>
+	<xs:element name="CV_ValueTriangle.controlValue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:CV_GeometryValuePair" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="Windows-31j"?>
+<Address>
+<age>25</age>
+<friends>
+<friends>
+<age>23</age>
+<name>船戸</name>
+<type>female</type>
+</friends>
+<friends>
+<age>21</age>
+<name>山田</name>
+<type>male</type>
+</friends>
+</friends>
+<myAddress>Tokyo</myAddress>
+<myName>Foo Baa</myName>
+<tel>00-3333-5555</tel>
+</Address>

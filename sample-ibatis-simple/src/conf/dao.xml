@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE daoConfig
+    PUBLIC "-//iBATIS.com//DTD DAO Configuration 2.0//EN"
+    "http://ibatis.apache.org/dtd/dao-2.dtd">
+
+<daoConfig>
+  <context>
+    <transactionManager type="SQLMAP">
+      <property name="SqlMapConfigResource"
+        value="sql-map-config.xml"/>
+    </transactionManager>
+
+    <dao interface="sample.ibatis.simple.persistence.dao.EmployeeDao"
+      implementation="sample.ibatis.simple.persistence.dao.EmployeeSqlMapDao"/>
+  </context>
+
+</daoConfig>

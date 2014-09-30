@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsExtraction.xsd</xs:appinfo>
+		<xs:documentation>JPGIS（規定） 他の規格から引用するスキーマのW3C XML Schema文書</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<!-- ========== include and import ========== -->
+	<xs:include schemaLocation="jpsBasic.xsd"/>
+	<xs:include schemaLocation="jpsTemporal.xsd"/>
+	<xs:include schemaLocation="jpsSpatial.xsd"/>
+	<xs:include schemaLocation="jpsRS.xsd"/>
+	<!-- ========== types and elements ========== -->
+	<!-- ========== EX_Extent ========== -->
+	<xs:element name="EX_Extent" type="jps:EX_Extent"/>
+	<xs:complexType name="EX_Extent">
+		<xs:sequence>
+			<xs:element name="EX_Extent.description" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="EX_Extent.geographicElement" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:EX_GeographicExtent" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EX_Extent.temporalElement" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:EX_TemporalExtent" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EX_Extent.verticalElement" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:EX_VerticalExtent" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== EX_TemporalExtent ========== -->
+	<xs:element name="EX_TemporalExtent" type="jps:EX_TemporalExtent"/>
+	<xs:complexType name="EX_TemporalExtent">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:EX_TemporalExtent.extent"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_TemporalExtent.extent" type="jps:ref_TM_Primitive"/>
+	<!-- ========== EX_VerticalExtent ========== -->
+	<xs:element name="EX_VerticalExtent" type="jps:EX_VerticalExtent"/>
+	<xs:complexType name="EX_VerticalExtent">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:EX_VerticalExtent.minimumValue"/>
+					<xs:element ref="jps:EX_VerticalExtent.maximumValue"/>
+					<xs:element ref="jps:EX_VerticalExtent.unitOfMeasure"/>
+					<xs:element ref="jps:EX_VerticalExtent.verticalDatum"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_VerticalExtent.minimumValue" type="jps:Real"/>
+	<xs:element name="EX_VerticalExtent.maximumValue" type="jps:Real"/>
+	<xs:element name="EX_VerticalExtent.unitOfMeasure" type="jps:UnitOfMeasure"/>
+	<xs:element name="EX_VerticalExtent.verticalDatum" type="jps:ref_SC_VerticalDatum"/>
+	<!-- ========== SC_VerticalDatum ========== -->
+	<xs:element name="SC_VerticalDatum" type="jps:SC_VerticalDatum"/>
+	<xs:complexType name="SC_VerticalDatum">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:SC_VerticalDatum.datumID"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SC_VerticalDatum.datumID">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:RS_Identifier"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== EX_GeographicExtent ==========-->
+	<xs:element name="EX_GeographicExtent" type="jps:EX_GeographicExtent" abstract="true"/>
+	<xs:complexType name="EX_GeographicExtent" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:EX_GeographicExtent.extentTypeCode" minOccurs="0"/>
+					<xs:element ref="jps:EX_GeographicExtent.extentReferenceSystem" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_GeographicExtent.extentTypeCode" type="jps:Boolean"/>
+	<xs:element name="EX_GeographicExtent.extentReferenceSystem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:RS_Identifier"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== EX_GeographicBoundingBox ==========-->
+	<xs:element name="EX_GeographicBoundingBox" type="jps:EX_GeographicBoundingBox" substitutionGroup="jps:EX_GeographicExtent"/>
+	<xs:complexType name="EX_GeographicBoundingBox">
+		<xs:complexContent>
+			<xs:extension base="jps:EX_GeographicExtent">
+				<xs:sequence>
+					<xs:element ref="jps:EX_GeographicBoundingBox.westBoundLongitude"/>
+					<xs:element ref="jps:EX_GeographicBoundingBox.eastBoundLongitude"/>
+					<xs:element ref="jps:EX_GeographicBoundingBox.southBoundLatitude"/>
+					<xs:element ref="jps:EX_GeographicBoundingBox.northBoundLatitude"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_GeographicBoundingBox.westBoundLongitude" type="jps:Measure"/>
+	<xs:element name="EX_GeographicBoundingBox.eastBoundLongitude" type="jps:Measure"/>
+	<xs:element name="EX_GeographicBoundingBox.southBoundLatitude" type="jps:Measure"/>
+	<xs:element name="EX_GeographicBoundingBox.northBoundLatitude" type="jps:Measure"/>
+	<!-- ========== EX_BoundingPolygon ==========-->
+	<xs:element name="EX_BoundingPolygon" type="jps:EX_BoundingPolygon" substitutionGroup="jps:EX_GeographicExtent"/>
+	<xs:complexType name="EX_BoundingPolygon">
+		<xs:complexContent>
+			<xs:extension base="jps:EX_GeographicExtent">
+				<xs:sequence>
+					<xs:element ref="jps:EX_BoundingPolygon.polygon" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_BoundingPolygon.polygon" type="jps:ref_GM_Object"/>
+	<!-- ========== EX_CoordinateBoundingBox ===========-->
+	<xs:element name="EX_CoordinateBoundingBox" type="jps:EX_CoordinateBoundingBox" substitutionGroup="jps:EX_GeographicExtent"/>
+	<xs:complexType name="EX_CoordinateBoundingBox">
+		<xs:complexContent>
+			<xs:extension base="jps:EX_GeographicExtent">
+				<xs:sequence>
+					<xs:element ref="jps:EX_CoordinateBoundingBox.westBoundCoordinate"/>
+					<xs:element ref="jps:EX_CoordinateBoundingBox.eastBoundCoordinate"/>
+					<xs:element ref="jps:EX_CoordinateBoundingBox.southBoundCoordinate"/>
+					<xs:element ref="jps:EX_CoordinateBoundingBox.northBoundCoordinate"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_CoordinateBoundingBox.westBoundCoordinate" type="jps:Real"/>
+	<xs:element name="EX_CoordinateBoundingBox.eastBoundCoordinate" type="jps:Real"/>
+	<xs:element name="EX_CoordinateBoundingBox.southBoundCoordinate" type="jps:Real"/>
+	<xs:element name="EX_CoordinateBoundingBox.northBoundCoordinate" type="jps:Real"/>
+	<!-- ========== EX_GeographicDescription ========== -->
+	<xs:element name="EX_GeographicDescription" type="jps:EX_GeographicDescription" substitutionGroup="jps:EX_GeographicExtent"/>
+	<xs:complexType name="EX_GeographicDescription">
+		<xs:complexContent>
+			<xs:extension base="jps:EX_GeographicExtent">
+				<xs:sequence>
+					<xs:element ref="jps:EX_GeographicDescription.geographicIdentifier"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EX_GeographicDescription.geographicIdentifier">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:MD_Identifier"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== MD_Identifier ========== -->
+	<xs:element name="MD_Identifier" type="jps:MD_Identifier"/>
+	<xs:complexType name="MD_Identifier">
+		<xs:sequence>
+			<xs:element name="MD_Identifier.authority" type="jps:ref_CI_Citation" minOccurs="0"/>
+			<xs:element name="MD_Identifier.code" type="jps:CharacterString"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== CI_Citation ========== -->
+	<xs:element name="CI_Citation" type="jps:CI_Citation"/>
+	<xs:complexType name="CI_Citation">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:CI_Citation.title"/>
+					<xs:element ref="jps:CI_Citation.date" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CI_Citation.title" type="jps:CharacterString"/>
+	<xs:element name="CI_Citation.date">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jps:CI_Date"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========== CI_Date ========== -->
+	<xs:element name="CI_Date" type="jps:CI_Date"/>
+	<xs:complexType name="CI_Date">
+		<xs:sequence>
+			<xs:element name="CI_Date.date" type="jps:Date"/>
+			<xs:element name="CI_Date.dateType" type="jps:CI_DateTypeCode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== CI_DateTypeCode ========== -->
+	<xs:simpleType name="CI_DateTypeCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="001"/>
+			<xs:enumeration value="002"/>
+			<xs:enumeration value="003"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ========== CI_ResponsibleParty ========== -->
+	<xs:element name="CI_ResponsibleParty" type="jps:CI_ResponsibleParty"/>
+	<xs:complexType name="CI_ResponsibleParty">
+		<xs:sequence>
+			<xs:element name="CI_ResponsibleParty.individualName" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_ResponsibleParty.organisationName" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_ResponsibleParty.positionName" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_ResponsibleParty.contactInfo" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:CI_Contact"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CI_ResponsibleParty.role" type="jps:CI_RoleCode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== CI_RoleCode ========== -->
+	<xs:simpleType name="CI_RoleCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="001"/>
+			<xs:enumeration value="002"/>
+			<xs:enumeration value="003"/>
+			<xs:enumeration value="004"/>
+			<xs:enumeration value="005"/>
+			<xs:enumeration value="006"/>
+			<xs:enumeration value="007"/>
+			<xs:enumeration value="008"/>
+			<xs:enumeration value="009"/>
+			<xs:enumeration value="010"/>
+			<xs:enumeration value="011"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ========== CI_OnlineResource =========== -->
+	<xs:element name="CI_OnlineResource" type="jps:CI_OnlineResource"/>
+	<xs:complexType name="CI_OnlineResource">
+		<xs:sequence>
+			<xs:element name="CI_OnlineResource.linkage" type="jps:URI"/>
+			<xs:element name="CI_OnlineResource.description" type="jps:CharacterString" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== CI_Contact ========== -->
+	<xs:element name="CI_Contact" type="jps:CI_Contact"/>
+	<xs:complexType name="CI_Contact">
+		<xs:sequence>
+			<xs:element name="CI_Contact.phone" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:CI_Telephone"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CI_Contact.address" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:CI_Address"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CI_Contact.onlineResource" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="jps:CI_OnlineResource"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CI_Contact.hoursOfService" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_Contact.contactInstructions" type="jps:CharacterString" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========== CI_Address ========== -->
+	<xs:element name="CI_Address" type="jps:CI_Address"/>
+	<xs:complexType name="CI_Address">
+		<xs:sequence>
+			<xs:element name="CI_Address.deliveryPoint" type="jps:CharacterString" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="CI_Address.city" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_Address.administrativeArea" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_Address.postalCode" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_Address.country" type="jps:CharacterString" minOccurs="0"/>
+			<xs:element name="CI_Address.electronicMailAddress" type="jps:CharacterString" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== CI_Telephone ========== -->
+	<xs:element name="CI_Telephone" type="jps:CI_Telephone"/>
+	<xs:complexType name="CI_Telephone">
+		<xs:sequence>
+			<xs:element name="CI_Telephone.voice" type="jps:CharacterString" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="CI_Telephone.facsimile" type="jps:CharacterString" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== URI ========== -->
+	<xs:element name="URI" type="jps:URI"/>
+	<!-- ========== RecordType ========== -->
+	<xs:element name="RecordType" type="jps:RecordType"/>
+	<xs:complexType name="RecordType">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:RecordType.typeName"/>
+					<xs:element ref="jps:RecordType.attributeTypes" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="RecordType.typeName" type="jps:CharacterString"/>
+	<xs:element name="RecordType.attributeTypes" type="jps:Dictionary_AttributeName_TypeName_"/>
+	<!-- ========== Record ========== -->
+	<xs:element name="Record" type="jps:Record"/>
+	<xs:complexType name="Record">
+		<xs:complexContent>
+			<xs:extension base="jps:IM_Object">
+				<xs:sequence>
+					<xs:element ref="jps:Record.attributes" maxOccurs="unbounded"/>
+					<xs:element ref="jps:Record.recordType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Record.attributes" type="jps:Dictionary_AttributeName_Any_"/>
+	<xs:element name="Record.recordType" type="jps:ref_RecordType"/>
+	<xs:complexType name="Dictionary_AttributeName_Any_">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="AttributeName" type="jps:CharacterString"/>
+			<xs:element name="Any" type="xs:anyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Dictionary_AttributeName_TypeName_">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="AttributeName" type="jps:CharacterString"/>
+			<xs:element name="TypeName" type="jps:CharacterString"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ========== ObjectReference ========== -->
+	<xs:complexType name="ref_SC_VerticalDatum">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_CI_Citation">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_RecordType">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_Record">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_EX_GeographicExtent">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<xs:complexType name="ref_EX_TemporalExtent">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+</xs:schema>

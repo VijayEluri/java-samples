@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans
+    PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd"
+>
+<beans>
+    <bean id="userTransaction"
+        class="org.seasar.extension.jta.TransactionManagerImpl"/>
+    <bean id="transactionManager"
+        class="org.springframework.transaction.jta.JtaTransactionManager">
+        <property name="userTransaction">
+            <ref bean="userTransaction"/>
+        </property>
+    </bean>
+
+	<bean id="resultSetFactory"
+	    class="org.seasar.extension.jdbc.impl.OracleResultSetFactory"/>
+	<bean id="statementFactory"
+	    class="org.seasar.extension.jdbc.impl.BooleanToIntStatementFactory"/>
+	
+    <bean id="xaDataSource"
+        class="org.seasar.extension.dbcp.impl.XADataSourceImpl">
+        <property name="driverClassName">
+            <value>com.mysql.jdbc.Driver</value>
+        </property>
+        <property name="URL">
+            <value>jdbc:mysql://kitaurawa.atlsys.com/funato</value>
+        </property>
+        <property name="user">
+            <value>root</value>
+        </property>
+        <property name="password">
+            <value></value>
+        </property>
+    </bean>
+
+    <bean id="connectionPool" destroy-method="close" 
+        class="org.seasar.extension.dbcp.impl.ConnectionPoolImpl">
+        <property name="transactionManager">
+            <ref bean="userTransaction"/>
+        </property>
+        <property name="XADataSource">
+            <ref bean="xaDataSource"/>
+        </property>
+    </bean>
+
+    <bean id="dataSource"
+        class="org.seasar.extension.dbcp.impl.DataSourceImpl">
+        <constructor-arg>
+            <ref bean="connectionPool"/>
+        </constructor-arg>
+    </bean>
+
+	<bean id="annotationReaderFactory" class="org.seasar.dao.impl.FieldAnnotationReaderFactory"/>
+	<bean id="daoMetaDataFactory" class="org.seasar.dao.impl.DaoMetaDataFactoryImpl">
+        <constructor-arg>
+            <ref bean="dataSource"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="statementFactory"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="resultSetFactory"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="annotationReaderFactory"/>
+        </constructor-arg>
+        <property name="valueTypeFactory">
+            <ref bean="valueTypeFactory"/>
+        </property>
+	</bean>
+	<bean id="valueTypeFactory" class="framework.dao.SpringValueTypeFactoryImpl"/>
+	<bean id="s2DaoInterceptor" class="org.seasar.dao.interceptors.S2DaoInterceptor">
+        <constructor-arg>
+            <ref bean="daoMetaDataFactory"/>
+        </constructor-arg>
+    </bean>
+
+</beans>

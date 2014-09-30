@@ -1,0 +1,10 @@
+Hello World
+#set($ostype = $System.getEnv("JAVA_HOME") )
+$ostype
+
+<html>
+<body>
+#set( $foo = "Velocity" )
+Hello $foo World!
+</body>
+<html>

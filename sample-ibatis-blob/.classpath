@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/conf"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry sourcepath="JAVA_SRC/spring/spring-framework-1.2.2/src" kind="var" path="MAVEN_REPO/springframework/jars/spring-1.2.2.jar"/>
+	<classpathentry sourcepath="JAVA_SRC/iBATIS/iBATIS_DBL-2.1.5.582/ibatis-src" kind="var" path="MAVEN_REPO/com.ibatis/jars/ibatis-common-2.1.5.582.jar"/>
+	<classpathentry sourcepath="JAVA_SRC/iBATIS/iBATIS_DBL-2.1.5.582/ibatis-src" kind="var" path="MAVEN_REPO/com.ibatis/jars/ibatis-sqlmap-2.1.5.582.jar"/>
+	<classpathentry sourcepath="ECLIPSE_HOME/plugins/org.eclipse.jdt.source_3.0.0/src/org.junit_3.8.1/junitsrc.zip" kind="var" path="JUNIT_HOME/junit.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/commons-logging/jars/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/log4j/jars/log4j-1.2.8.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/oracle-jdbc/jars/ojdbc14-9.2.0.4.jar"/>
+	<classpathentry kind="var" path="MAVEN_REPO/cglib/jars/cglib-full-2.0.2.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

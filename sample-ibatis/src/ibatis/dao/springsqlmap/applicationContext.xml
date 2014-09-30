@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+		destroy-method="close">
+		<property name="driverClassName"><value>com.p6spy.engine.spy.P6SpyDriver</value></property>
+		<!--<property name="driverClassName"><value>oracle.jdbc.driver.OracleDriver</value></property>-->
+		<property name="url"><value>jdbc:oracle:thin:@kawasaki.atlsys.com:1521:kawasaki</value></property>
+		<property name="username"><value>funato_test</value></property>
+		<property name="password"><value>funato_test</value></property>
+	</bean>
+
+	<!-- Transaction manager for a single JDBC DataSource -->
+	<!-- (see dataAccessContext-jta.xml for an alternative) -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource"><ref local="dataSource"/></property>
+	</bean>
+
+	<!-- SqlMap setup for iBATIS Database Layer -->
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation"><value>${user.dir}/bin/ibatis/dao/springsqlmap/sql-map-config.xml</value></property>
+		<property name="dataSource"><ref local="dataSource"/></property>
+	</bean>
+
+
+	<!-- ========================= DAO DEFINITIONS: IBATIS IMPLEMENTATIONS ========================= -->
+
+	<bean id="userDao" class="ibatis.dao.springsqlmap.UserSqlMapDao">
+		<property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+	</bean>
+
+</beans>

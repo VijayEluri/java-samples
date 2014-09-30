@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" 
+		"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Employee">
+
+  <typeAlias alias="employee" type="sample.ibatis.simple.domain.Employee"/>
+
+  <cacheModel id="instantCache" type="LRU">
+    <flushInterval minutes="1"/>
+  </cacheModel>
+
+  <resultMap id="employeeResult" class="employee">
+    <result property="empNo" column="EMPNO"/>
+    <result property="ename" column="ENAME"/>
+    <result property="job" column="JOB"/>
+    <result property="mgr" column="MGR"/>
+    <result property="hireDate" column="HIREDATE"/>
+    <result property="sal" column="SAL"/>
+    <result property="comm" column="COMM"/>
+    <result property="deptNo" column="DEPTNO"/>
+  </resultMap>
+
+  <select id="getEmployeeList" resultMap="employeeResult">
+    select * from EMP
+  </select>
+</sqlMap>

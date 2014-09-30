@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+  <bean id="executor" class="kankou.exceldoc.Executor">
+    <property name="context"><ref bean="kankouContext"/></property>
+    <property name="excelDocParser">
+      <bean id="multiSheetexcelDocParser" class="kankou.exceldoc.parser.POIExcelDocParser">
+        <description>Excelのパーサ</description>
+        <constructor-arg><value>C:/projects/sarugau/yusuke.sarugau-rp/document/import_data.xls</value></constructor-arg>
+        <constructor-arg><ref bean="sheetConfig" /></constructor-arg>
+      </bean>
+    </property>
+    <property name="builders">
+      <list>
+        <ref bean="contentTableDataBuilder"/>
+        <ref bean="flowInstanceTableDataBuilder"/>
+        <ref bean="currentSearchKeyTableDataBuilder"/>
+      </list>
+    </property>
+  </bean>
+
+
+  <bean id="userInfoExecutor" class="kankou.exceldoc.SingleSheetExecutor">
+    <property name="context"><ref bean="kankouContext"/></property>
+    <property name="sheetName"><ref bean="userInfoSheetName"/></property>
+    <property name="excelDocParser">
+      <bean id="singleSheetExcelDocParser" class="kankou.exceldoc.parser.POIExcelDocParser">
+        <constructor-arg><value>C:/projects/sarugau/yusuke.sarugau-rp/document/users.xls</value></constructor-arg>
+        <constructor-arg><ref bean="sheetConfig" /></constructor-arg>
+      </bean>
+    </property>
+    <property name="builders">
+      <list>
+        <ref bean="userTableDataBuilder"/>
+        <ref bean="userSearchkeyTableDataBuilder"/>
+        <bean id="userFlowInstanceTableDataBuilder" class="kankou.exceldoc.builder.sql.FlowInstanceTableDataBuilder" parent="abstractDataBuilder">
+          <description>T_FLOW_INSTANCEテーブル用SQLデータを作成するビルダー</description>
+          <property name="context">
+            <ref bean="kankouContext"/>
+          </property>
+          <property name="mappingHandlers">
+            <list>
+              <bean class="kankou.exceldoc.handler.impl.kankou.CurrentFlowInstanceIdMappingHandler" parent="abstractUserMappingHandler">
+                <property name="columnName"><value>ID</value></property>
+              </bean>
+              <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+                <property name="columnName"><value>FLOW_ID</value></property>
+                <property name="constantValue"><value>user</value></property>
+              </bean>
+              <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+                <property name="columnName"><value>STATE_ID</value></property>
+                <property name="constantValue"><value>published</value></property>
+              </bean> 
+              <bean class="kankou.exceldoc.handler.impl.kankou.DateConstantMappingHandler" parent="abstractUserMappingHandler">
+                <property name="columnName"><value>CREATED_DATE</value></property>
+              </bean>
+            </list>
+          </property>
+        </bean>
+      </list>
+    </property>
+  </bean>
+  
+  <bean id="propertyConfigurator" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <description>環境情報を定義</description>
+    <property name="locations">
+        <list>
+            <value>classpath:env.properties</value>
+        </list>
+    </property>
+  </bean>
+
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+      <description>データソース(DriverManager経由)</description>
+      <property name="driverClassName">
+          <value>${jdbc.driverClassName}</value>
+      </property>
+      <property name="url">
+          <value>${jdbc.url}</value>
+      </property>
+      <property name="username">
+          <value>${jdbc.username}</value>
+      </property>
+      <property name="password">
+          <value>${jdbc.password}</value>
+      </property>
+  </bean>
+
+  <bean id="userInfoSheetName" class="java.lang.String">
+    <description>ユーザ情報のシート名のエイリアス</description>
+    <constructor-arg type="java.lang.String">
+      <value>userInfo</value>
+    </constructor-arg>
+  </bean>
+  <bean id="basicInfoSheetName" class="java.lang.String">
+    <description>基本情報のシート名のエイリアス</description>
+    <constructor-arg type="java.lang.String">
+      <value>basicInfo</value>
+    </constructor-arg>
+  </bean>
+  <bean id="additionalInfoSheetName" class="java.lang.String">
+    <description>付加情報のシート名のエイリアス</description>
+    <constructor-arg type="java.lang.String">
+      <value>additionalInfo</value>
+    </constructor-arg>
+  </bean>
+  <bean id="trafficInfoSheetName" class="java.lang.String">
+    <description>交通情報のシート名のエイリアス</description>
+    <constructor-arg type="java.lang.String">
+      <value>trafficInfo</value>
+    </constructor-arg>
+  </bean>
+
+  <bean id="kankouContext" class="kankou.exceldoc.context.impl.KankouContext" singleton="true"/>
+
+  <bean id="abstractContentMappingHandler" class="kankou.exceldoc.handler.AbstractKankouMappingHandler" abstract="true">
+    <description>マッピングハンドラーの基底クラス</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="defaultSheetName"><ref bean="basicInfoSheetName"/></property>
+  </bean>
+
+  <bean id="abstractUserMappingHandler" class="kankou.exceldoc.handler.AbstractKankouMappingHandler" abstract="true">
+    <description>マッピングハンドラーの基底クラス</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="defaultSheetName"><ref bean="userInfoSheetName"/></property>
+  </bean>
+  
+  <bean id="abstractDataBuilder" class="kankou.exceldoc.builder.AbstractDataBuilder" abstract="true">
+    <description>データビルダーの基底クラス</description>
+    <property name="dataSource">
+      <ref bean="dataSource"/>
+    </property>
+  </bean>
+
+  <bean id="userTableDataBuilder" class="kankou.exceldoc.builder.sql.UserTableDataBuilder" parent="abstractDataBuilder">
+    <description>ユーザテーブル用SQLデータを作成するビルダー</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="mappingHandlers">
+      <list>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>UID</value></property>
+          <property name="excelKeyAttribute"><value>ユーザＩＤ</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>LOGIN_ID</value></property>
+          <property name="excelKeyAttribute"><value>ログインＩＤ</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>PASSWORD</value></property>
+          <property name="excelKeyAttribute"><value>PW</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.FlowInstanceIdMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>FLOW_INSTANCE_ID</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.ComplexXMLMappingHandler" parent="abstractUserMappingHandler">
+          <constructor-arg>
+            <list>
+              <ref bean="userInfoProbe"/> 
+            </list>
+          </constructor-arg>
+          <property name="columnName"><value>DETAIL_DATA</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.DateConstantMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>DATE</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>CREATOR</value></property>
+          <property name="constantValue"><value>u1</value></property>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="userSearchkeyTableDataBuilder" class="kankou.exceldoc.builder.sql.UserSearchkeyTableDataBuilder" parent="abstractDataBuilder">
+    <description>USER_SEARCHKEY用SQLデータを作成するビルダー</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="mappingHandlers">
+      <list>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>UID</value></property>
+          <property name="excelKeyAttribute"><value>ユーザＩＤ</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>NAME_NAME</value></property>
+          <property name="excelKeyAttribute"><value>名前</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>MEMBER_KIND_SELECT</value></property>
+          <property name="excelKeyAttribute"><value>メンバー区分</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.FlgMappingHandler" parent="abstractUserMappingHandler">
+          <property name="columnName"><value>AVAILABLE_FLG</value></property>
+          <property name="excelKeyAttribute"><value>有効フラグ</value></property>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="contentTableDataBuilder" class="kankou.exceldoc.builder.sql.ContentTableDataBuilder" parent="abstractDataBuilder">
+    <description>CONTENTテーブル用SQLデータを作成するビルダー</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="mappingHandlers">
+      <list>
+        <bean class="kankou.exceldoc.handler.impl.kankou.ContentIdMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>CID</value></property>
+          <property name="excelKeyAttribute"><value>番号</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.CategoryMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>CATEGORY</value></property>
+          <property name="excelKeyAttribute"><value>ジャンル</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.FlowInstanceIdMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>FLOW_INSTANCE_ID</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>STATUS_CODE</value></property>
+          <property name="constantValue"><value>published</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.ComplexXMLMappingHandler" parent="abstractContentMappingHandler">
+          <constructor-arg>
+            <list>
+              <ref bean="basicInfoProbe"/> 
+              <ref bean="additionaInfoProbe"/> 
+              <ref bean="trafficInfoProbe"/> 
+            </list>
+          </constructor-arg>
+          <property name="columnName"><value>CURRENT_DATA</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.DateConstantMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>DATE</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>CREATOR</value></property>
+          <property name="constantValue"><value>u0001</value></property>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="flowInstanceTableDataBuilder" class="kankou.exceldoc.builder.sql.FlowInstanceTableDataBuilder" parent="abstractDataBuilder">
+    <description>T_FLOW_INSTANCEテーブル用SQLデータを作成するビルダー</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="mappingHandlers">
+      <list>
+        <bean class="kankou.exceldoc.handler.impl.kankou.CurrentFlowInstanceIdMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>ID</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.FlowIdMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>FLOW_ID</value></property>
+        </bean>
+        <bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>STATE_ID</value></property>
+          <property name="constantValue"><value>published</value></property>
+        </bean> 
+        <bean class="kankou.exceldoc.handler.impl.kankou.DateConstantMappingHandler" parent="abstractContentMappingHandler">
+          <property name="columnName"><value>CREATED_DATE</value></property>
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="currentSearchKeyTableDataBuilder" class="kankou.exceldoc.builder.sql.CurrentSearchKeyTableDataBuilder" parent="abstractDataBuilder">
+    <description>CURRENT_SEARCHKEYテーブル用SQLデータを作成するビルダー</description>
+    <property name="context">
+      <ref bean="kankouContext"/>
+    </property>
+    <property name="mappingHandlers">
+      <list>
+		<bean class="kankou.exceldoc.handler.impl.kankou.ContentIdMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>CID</value></property>
+		  <property name="excelKeyAttribute"><value>番号</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.NullMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>PUBLISHDATE_FROM</value></property>
+<!-- 
+		  <property name="excelKeyAttribute"><value>公開開始期間</value></property>
+		  <property name="format"><value>yyyy-MM-dd HH:mm:ss+9</value></property>
+-->
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.NullMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>PUBLISHDATE_TO</value></property>
+<!-- 
+		  <property name="excelKeyAttribute"><value>公開終了期間</value></property>
+		  <property name="format"><value>yyyy-MM-dd HH:mm:ss+9</value></property>
+-->
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.BooleanMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>PUBLISH_FLG</value></property>
+		  <property name="excelKeyAttribute"><value>公開フラグ</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.NullMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DIVISION_SELECT</value></property>
+		  <property name="excelKeyAttribute"><value>施設区分</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.NullMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>NEWSCATEGORY_SELECT</value></property>
+		  <property name="excelKeyAttribute"><value>ニュース区分</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>LODGE_ID_VALUE</value></property>
+		  <property name="excelKeyAttribute"><value>宿泊施設ＩＤ</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.IntegerMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>GENRE_SELECT</value></property>
+		  <property name="excelKeyAttribute"><value>ジャンル</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.IntegerMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>GENRE_SUBSELECT</value></property>
+		  <property name="excelKeyAttribute"><value>サブジャンル</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.IntegerMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>PREFCITY_PREF</value></property>
+		  <property name="excelKeyAttribute"><value>都道府県コード</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.IntegerMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>PREFCITY_CITY</value></property>
+		  <property name="excelKeyAttribute"><value>市町村コード</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.IntegerMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>PREFCITY_AREA</value></property>
+		  <property name="excelKeyAttribute"><value>エリア区分</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.FloatMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>COORDINATE_LAT</value></property>
+		  <property name="excelKeyAttribute"><value>新緯度</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.FloatMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>COORDINATE_LNG</value></property>
+		  <property name="excelKeyAttribute"><value>新経度</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>KEYWORD_VALUE</value></property>
+		  <property name="excelKeyAttribute"><value>キーワード</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>TANTOU_VALUE</value></property>
+		  <property name="excelKeyAttribute"><value>担当ユーザID</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.BooleanMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>MTFUJI_FLG</value></property>
+		  <property name="excelKeyAttribute"><value>富士山フラグ</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.BooleanMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>FAMOUSMT_FLG</value></property>
+		  <property name="excelKeyAttribute"><value>百名山フラグ</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.BooleanMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>VIL_FLG</value></property>
+		  <property name="excelKeyAttribute"><value>農村休暇邑フラグ</value></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DATE_DIV_FROM_MONTH</value></property>
+		  <property name="excelKeyAttribute"><value>季節開始月</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DATE_DIV_FROM_DIV</value></property>
+		  <property name="excelKeyAttribute"><value>季節開始区分</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DATE_DIV_TO_MONTH</value></property>
+		  <property name="excelKeyAttribute"><value>季節終了月</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DATE_DIV_TO_DIV</value></property>
+		  <property name="excelKeyAttribute"><value>季節終了区分</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DANKAI_DIVISION</value></property>
+		  <property name="excelKeyAttribute"><value>段階区分</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DANKAI_DANKAI</value></property>
+		  <property name="excelKeyAttribute"><value>段階</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>DANKAI_NAME</value></property>
+		  <property name="excelKeyAttribute"><value>段階名</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>EVENT_DATE_FROM_DIV</value></property>
+		  <property name="excelKeyAttribute"><value>開始日付区分</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.StringMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>EVENT_DATE_TO_DIV</value></property>
+		  <property name="excelKeyAttribute"><value>終了日付区分</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.DateMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>EVENT_DATE_FROM</value></property>
+		  <property name="excelKeyAttribute"><value>公開開始年月日</value></property>
+		  <property name="format"><value>yyyy-MM-dd HH:mm:ss</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+		<bean class="kankou.exceldoc.handler.impl.kankou.DateMappingHandler" parent="abstractContentMappingHandler">
+		  <property name="columnName"><value>EVENT_DATE_TO</value></property>
+		  <property name="excelKeyAttribute"><value>公開終了年月日</value></property>
+		  <property name="format"><value>yyyy-MM-dd HH:mm:ss</value></property>
+          <property name="defaultSheetName"><ref bean="additionalInfoSheetName"/></property>
+		</bean>
+      </list>
+    </property>
+  </bean>
+
+</beans>

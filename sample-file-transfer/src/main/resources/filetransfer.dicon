@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container 2.4//EN"
+	"http://www.seasar.org/dtd/components24.dtd">
+<components>
+
+    <!-- 実際にファイルの転送処理をするクラス-->
+	<component name="fileTransfer" class="jp.co.np.p2netex.sample.impl.FileTransferImpl">
+	    <property name="retrieveWorker">ftpTransferWorker</property>
+	    <property name="putWorker">sftpTransferWorker</property>
+	</component>
+	
+	<!-- ローカルファイルを操作するクラス -->
+	<component name="localFileTransferWorker" class="jp.co.np.p2netex.sample.impl.LocalFileTransferWorker">
+	</component>
+
+	<!-- FTPを利用してファイルを操作するクラス-->
+	<component name="ftpTransferWorker" class="jp.co.np.p2netex.sample.impl.FTPTransferWorker">
+	    <property name="username">"tfunato"</property>
+	    <property name="password">"tfunato"</property>
+	    <property name="host">"192.168.0.2"</property>
+	</component>
+	
+	<!-- SFTPを利用してファイルを操作するクラス-->
+	<component name="sftpTransferWorker" class="jp.co.np.p2netex.sample.impl.SFTPTransferWorker">
+	    <property name="username">"tfunato"</property>
+	    <property name="password">"tfunato"</property>
+	    <property name="host">"192.168.0.2"</property>
+	</component>
+</components>

@@ -1,0 +1,22 @@
+<project name="jaxor-example" default="jaxor">
+
+  <property name="debug" value="true"/>
+  <property name="build-dir" value="src/java"/>
+  <path id="jaxor.run.path" >
+    <fileset dir="lib">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+  <taskdef name="jaxor" classname="net.sourceforge.jaxor.parser.AntTask" 
+    classpathref="jaxor.run.path"/>
+
+  <target name="jaxor">
+    <jaxor destdir="${build-dir}">
+      <fileset dir="src/conf/jaxor">
+        <include name="**/*.jaxor"/>
+      </fileset>
+    </jaxor>
+  </target>
+</project>
+

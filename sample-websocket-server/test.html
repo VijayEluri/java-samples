@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>AAA</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$(function(){
+    var ws = new WebSocket("ws://192.168.0.59:5000/", ["test", "chat"]);
+     ws.onopen = function() {
+        console.log(ws);
+        ws.onmessage = function(event) {
+          //alert(event.data);
+          $('#resp').append(event.data + '<br>');
+        };
+        ws.onerror = function(event) {
+            alert("ERROR:" +  event.data);
+        };
+      }
+    $('#send').click(function(){
+        ws.send($('#txt').val());
+    });
+});
+</script>
+</head>
+<body>
+<textarea col="10" row="5" id="txt"></textarea><br><input type="button" value="Send" id="send">
+<div id="resp"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="execluter1" class="sample.freemarker.custom.TemplateExcecuteWithSpringSample">
+      <property name="template" ref="template1"/>
+    </bean>
+
+    <bean id="template1" class="sample.freemarker.custom.template.TextTemplateFreeMarkerImpl">
+      <property name="templateName"><value>sampleTemplate1</value></property>
+      <property name="configuration" ref="freeMarkerConfiguration"/>
+    </bean>
+
+    <bean id="freeMarkerConfiguration" class="freemarker.template.Configuration">
+      <description>FreeMarkerのConfigurationの設定</description>
+      <property name="templateLoader">
+        <bean class="sample.freemarker.custom.loader.SimpleFreeMarkerResourceLoader">
+          <property name="resources">
+            <map>
+              <entry key="sampleTemplate1"><value><![CDATA[Test ${name}]]></value></entry>
+              <entry key="sampleTemplate2"><value><![CDATA[
+<#-- ifのサンプル-->
+<#if user = "Big Joe">
+Big Joe
+<#else>
+no Big Joe
+</#if>]]></value></entry>
+              <entry key="sampleTemplate3"><value><![CDATA[
+<#-- list 繰り返しのサンプル -->
+<#list animals as being>
+${being.name}
+</#list>
+              ]]></value></entry>
+              <entry key="sampleTemplate4"><value><![CDATA[
+<#-- フォーマットのサンプル -->
+${number?string("000000000")}]]></value></entry>
+              <entry key="sampleTemplate5"><value><![CDATA[
+<#-- パディングのサンプル -->
+${user?left_pad(10,"A")}]]></value></entry>
+              <entry key="sampleTemplate6"><value><![CDATA[
+<#-- シンプルなBeanのサンプル -->
+${animal.name}:サンプル]]></value></entry>
+            </map>
+          </property>
+        </bean>
+      </property>
+    </bean>
+</beans>

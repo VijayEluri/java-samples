@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:jps="http://www.gsi.go.jp/GIS/jpgis/standardSchemas" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0_2005-01">
+	<xs:annotation>
+		<xs:appinfo>jpsBasic.xsd</xs:appinfo>
+		<xs:documentation>JPGISで必要となるインスタンスモデル及び基本データ型のXMLSchema</xs:documentation>
+		<xs:documentation>2005年1月制定</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="xlinks.xsd"/>
+	<!--=========== Instance Model ===========-->
+	<!--=========== IM_Object 識別子を持つ構造型 ===========-->
+	<xs:attributeGroup name="IM_Object">
+		<xs:attribute name="id" type="xs:ID"/>
+		<xs:attribute name="uuid" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:element name="IM_Object" type="jps:IM_Object"/>
+	<xs:complexType name="IM_Object">
+		<xs:attributeGroup ref="jps:IM_Object"/>
+	</xs:complexType>
+	<!-- ========== Object Reference IM_Object参照型 ========== -->
+	<xs:attributeGroup name="IM_ObjectReference">
+		<xs:attribute name="idref" type="xs:IDREF"/>
+		<xs:attribute name="uuidref" type="xs:string"/>
+		<xs:attribute name="uriref" type="jps:URI"/>
+		<xs:attributeGroup ref="xlink:simpleLink"/>
+	</xs:attributeGroup>
+	<xs:complexType name="IM_ObjectReference">
+		<xs:attributeGroup ref="jps:IM_ObjectReference"/>
+	</xs:complexType>
+	<!--=========== Basic datatypes ==========-->
+	<xs:simpleType name="Number">
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="Real">
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="Decimal">
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="Integer">
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="Boolean">
+		<xs:restriction base="xs:boolean"/>
+	</xs:simpleType>
+	<xs:simpleType name="CharacterString">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="JulianDate">
+		<xs:restriction base="jps:Decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="Vector">
+		<xs:list itemType="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="Date">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="Time">
+		<xs:restriction base="xs:time"/>
+	</xs:simpleType>
+	<xs:simpleType name="DateTime">
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	<xs:simpleType name="Sign">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="+"/>
+			<xs:enumeration value="-"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Sequence_Number">
+		<xs:list itemType="jps:Number"/>
+	</xs:simpleType>
+	<xs:simpleType name="Sequence_Integer">
+		<xs:list itemType="jps:Integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="URI">
+		<xs:restriction base="xs:anyURI"/>
+	</xs:simpleType>
+	<xs:complexType name="codelist">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="codelabel" type="jps:codevalue" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="version" type="xs:string" use="optional"/>
+		<xs:attribute name="date" type="xs:date" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="codevalue">
+		<xs:attribute name="label" type="xs:string"/>
+		<xs:attribute name="code" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="CodeType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="codeSpace" type="xs:anyURI" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--========== Unit Of Measure ===========-->
+	<xs:complexType name="Measure">
+		<xs:sequence>
+			<xs:element name="value" type="jps:Number"/>
+			<xs:element name="uom" type="jps:UnitOfMeasure" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UnitOfMeasure">
+		<xs:sequence>
+			<xs:element name="uomName" type="jps:CharacterString"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:hdp="http://www.springframework.org/schema/hadoop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/hadoop http://www.springframework.org/schema/hadoop/spring-hadoop.xsd">
+
+	<hdp:job-tasklet id="mapredTasklet" job-ref="wordcountJob"/>
+
+    <hdp:configuration>
+      fs.default.name=hdfs://cloudera-hadoop:8020
+      mapred.job.tracker=cloudera-hadoop:8021
+      yarn.resourcemanager.address=cloudera-hadoop:8032
+    </hdp:configuration>
+
+    <hdp:job id="wordcountJob"
+         input-path="hdfs://cloudera-hadoop/user/tfunato/test.txt"
+         output-path="hdfs://cloudera-hadoop/user/tfunato/output"
+           libs="file:*/spring-hadoop-sample-*.jar"
+         mapper="jp.canetrash.sample.springhadoop.MapperSample"
+         reducer="jp.canetrash.sample.springhadoop.ReducerSample" />
+
+<!-- 
+    <hdp:job-runner id="runner" run-at-startup="true" job-ref="wordcountJob" />
+ -->
+
+</beans>

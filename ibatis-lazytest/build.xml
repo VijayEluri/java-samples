@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="Windows-31J"?>
+<project name="test generate file" default="generate" basedir=".">
+    <description>iBATISのSQL Mapファイルを生成するテスト</description>
+    <path id="build.classpath">
+        <fileset dir="lib">
+            <include name="**/*.jar"/>
+        </fileset>
+        <dirset dir="target/test-classes"/>
+    </path>
+    <target name="generate">
+        <taskdef name="ibatisdoclet" classname="xdoclet.modules.atl.ibatis.IbatisDocletTask">
+            <classpath refid="build.classpath"/>
+        </taskdef>
+        <echo message="Start iBATIS Test"/>
+        <ibatisdoclet destdir="target">
+            <fileset dir="src/java">
+                <include name="ibatis/dao/sqlmap/*SqlMapDao.java"/>
+            </fileset>
+            <ibatisxml />
+            <ibatiscfgxml>
+            </ibatiscfgxml>
+        </ibatisdoclet>
+    </target>
+</project>

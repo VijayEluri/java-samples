@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<faces-config>
+
+  <navigation-rule>
+    <from-view-id>/greeting.jsp</from-view-id>
+    <navigation-case>
+      <from-outcome>success</from-outcome>
+      <to-view-id>/response.jsp</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+
+  <navigation-rule>
+    <from-view-id>/response.jsp</from-view-id>
+    <navigation-case>
+        <from-outcome>success</from-outcome>
+      <to-view-id>/greeting.jsp</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+
+  <managed-bean>
+    <managed-bean-name>UserNumberBean</managed-bean-name>
+    <managed-bean-class>guessNumber.UserNumberBean</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+    <managed-property>
+      <property-name>minimum</property-name>
+      <property-class>int</property-class>
+      <value>0</value>
+    </managed-property>
+    <managed-property>
+      <property-name>maximum</property-name>
+      <property-class>int</property-class>
+      <value>100</value>
+    </managed-property>
+
+  </managed-bean>
+
+
+</faces-config>

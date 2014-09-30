@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+    <meta property="og:title" content="MHP3 狩猟笛旋律リファレンス">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="モンスターハンターポータブル3rdの狩猟笛の旋律リファレンスです。">
+    <meta property="og:url" content="http://canetrash.appspot.com/mhp3/index.html">
+    <meta property="og:image" content="http://canetrash.appspot.com/mhp3/QRcode.gif">
+    <meta property="og:site_name" content="Canetrash">
+    <meta property="og:email" content="tfunato@gmail.com">
+     <meta property="fb:admins" content="tfunato">
+    <title>BattlePipeMelody</title>
+    <link rel="stylesheet" href="sencha-touch.css" type="text/css">
+    <script type="text/javascript" src="sencha-touch.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    
+    <style type="text/css" media="screen">
+        .title {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-weight: bold;
+        }
+        .content {
+            background-image:    url(title.png);
+            background-position: center center;
+            background-repeat:   no-repeat;
+            background-attachment: fixed;
+        }
+        .box {
+            float: bottom;
+            background-color: #222222;
+            color: rgba(255,255,255,1.0);
+            margin: 5% auto 0 auto;
+            width: 80%;
+            text-align: center;
+            -webkit-border-radius: 15px;
+            border-bottom: 1px solid #999;
+            padding: 15px;
+        }
+        .x-phone .box {
+            float: none;
+            width: 90%;
+            padding: 10px;
+        }
+        .pipecolor {
+            margin: 10px 0 5px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .timbre {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin: 10px 0 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .effect {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin: 10px 0 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .loading {
+          background: rgba(255,255,255,1) url(loading.gif) center center no-repeat;
+          display: block;
+          width: 10em;
+          height: 10em;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -5em;
+          margin-top: -5em;  
+          -webkit-border-radius: .5em;
+          color: #000;
+          text-shadow: #ccc 0 1px 1px;
+          text-align: center;
+          padding-top: 8em;
+          font-weight: bold;
+        }
+        table {
+            margin:0 auto 0 auto;
+            text-align: 'left';
+        }
+    </style>
+</head>
+<body>
+<textarea id="pipe" class="x-hidden-display">
+    <div class="box">
+        <div class="pipecolor"><span style='color:#{color1};'> ♪</span> <span style='color:#{color2};'> ♪</span> <span style='color:#{color3};'> ♪</span></div>
+        <table>
+            <tpl for="effects">
+            <tr>
+                <td><div class="timbre">{timbre}</div></td>
+                <td><div class="effect">{effect}</div></td>
+            </tr>
+            </tpl>
+        </table>
+    </div>
+</textarea>
+</body>
+</html>

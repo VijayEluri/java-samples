@@ -1,0 +1,1 @@
+テストが通らなくなったので mvn clean package -Dmaven.test.skip=true で構築

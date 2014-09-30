@@ -1,0 +1,24 @@
+  ---
+Introduction
+  ---
+Takashi Funato
+  ---
+2008-01-13
+  ---
+
+Overview
+
+  Maven2のTwitterPluginです。
+
+* Goals Overview
+
+  * {{{twit-mojo.html}twitter:twit}} TwitterにTwitすることができます。
+
+* Usage
+
+  使い方は{{{usage.html}こちら}}。
+
+
+  []
+
+

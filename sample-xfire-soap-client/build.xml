@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="XFire WSGen" basedir=".">
+ 
+ <!--
+    <property name="schema" value="src/main/config/AWSECommerceService.wsdl" />
+    <property name="repository" value="${user.home}/.m2/repository" />
+ 
+    <path id="class.path">
+      <fileset dir="C:/JavaDocs/XFire/xfire-1.2.1"   includes="**/*.jar"/>
+    </path>
+
+    <taskdef name="wsgen" classname="org.codehaus.xfire.gen.WsGenTask" 
+        classpathref="class.path"/>
+        
+    <wsgen outputDirectory="${basedir}/src/main/java" wsdl="${schema}"
+        package="sample.xfire" binding="xmlbeans"  />
+ -->
+
+</project>

@@ -1,0 +1,2303 @@
++ Error stacktraces are turned on.
+Apache Maven 2.2.1 (r801777; 2009-08-07 04:16:01+0900)
+Java version: 1.6.0_17
+Java home: C:\Program Files\Java\jdk1.6.0_17\jre
+Default locale: ja_JP, platform encoding: MS932
+OS name: "windows vista" version: "6.0" arch: "x86" Family: "windows"
+[DEBUG] Building Maven user-level plugin registry from: 'C:\Users\tfunato\.m2\plugin-registry.xml'
+[DEBUG] Building Maven global-level plugin registry from: 'C:\maven-2\conf\plugin-registry.xml'
+[INFO] Scanning for projects...
+[DEBUG] Wagons could not be registered as the extension container was never created
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Unnamed - jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT
+[INFO]    task-segment: [package]
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:12 for project: null:maven-resources-plugin:maven-plugin:2.3 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:9 for project: org.apache.maven.plugins:maven-plugins:pom:12 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:4 for project: org.apache.maven:maven-parent:pom:9 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:8 for project: null:maven-compiler-plugin:maven-plugin:2.0.2 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:5 for project: org.apache.maven.plugins:maven-plugins:pom:8 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache:apache:pom:3 for project: org.apache.maven:maven-parent:pom:5 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven.surefire:surefire:pom:2.4.3 for project: org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:null from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:7 for project: org.apache.maven.surefire:surefire:pom:2.4.3 from the repository.
+[DEBUG] Adding managed dependencies for org.apache.maven.plugins:maven-surefire-plugin
+[DEBUG]   org.apache.maven.surefire:surefire-api:jar:2.4.3
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.4.3
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG] Retrieving parent-POM: org.apache.maven.plugins:maven-plugins:pom:10 for project: null:maven-jar-plugin:maven-plugin:2.2 from the repository.
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-resources-plugin:2.3
+
+are:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.6:runtime
+org.codehaus.plexus:plexus-utils:jar:1.5.6:runtime
+org.apache.maven.shared:maven-filtering:jar:1.0-beta-2:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:maven-plugin:2.3:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0.6 for project: null:maven-plugin-api:jar:null from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-api
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-project
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-settings
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-settings:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-model
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.11 for project: null:plexus-utils:jar:1.4.1 from the repository.
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-containers:pom:1.0.3 for project: null:plexus-container-default:jar:1.0-alpha-9-stable-1 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.4 for project: org.codehaus.plexus:plexus-containers:pom:1.0.3 from the repository.
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]         junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]         classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-profile
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-profile:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-artifact-manager
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-repository-metadata
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-artifact
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.wagon:wagon:pom:1.0-beta-2 for project: null:wagon-provider-api:jar:1.0-beta-2 from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:4 for project: org.apache.maven.wagon:wagon:pom:1.0-beta-2 from the repository.
+[DEBUG] Adding managed dependencies for unknown:wagon-provider-api
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-registry
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-plugin-registry:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]       junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]       classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.12 for project: null:plexus-utils:jar:1.5.6 from the repository.
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.5.6)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:10 for project: org.apache.maven.shared:maven-filtering:jar:1.0-beta-2 from the repository.
+[DEBUG]   org.apache.maven.shared:maven-filtering:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-core
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-core:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.wagon:wagon-providers:pom:1.0-beta-2 for project: null:wagon-file:jar:1.0-beta-2 from the repository.
+[DEBUG] Adding managed dependencies for unknown:wagon-file
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-file:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-parameter-documenter
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.5.6)
+[DEBUG] Adding managed dependencies for unknown:wagon-http-lightweight
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:wagon-http-shared
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]         org.apache.maven.wagon:wagon-http-shared:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]           jtidy:jtidy:jar:4aug2000r7-dev:runtime (selected for runtime)
+[DEBUG]         xml-apis:xml-apis:jar:1.0.b2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.reporting:maven-reporting:pom:2.0.6 for project: null:maven-reporting-api:jar:null from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-reporting-api
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.doxia:doxia:pom:1.0-alpha-7 for project: null:doxia-sink-api:jar:1.0-alpha-7 from the repository.
+[DEBUG]         org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-error-diagnostics
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       commons-cli:commons-cli:jar:1.0:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:wagon-ssh-external
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.6)
+[DEBUG] Adding managed dependencies for unknown:wagon-ssh-common
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]         org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.6)
+[DEBUG]           org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: plexus:plexus-containers:pom:1.0.2 for project: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-7 from the repository.
+[DEBUG] Retrieving parent-POM: plexus:plexus-root:pom:1.0.3 for project: plexus:plexus-containers:pom:1.0.2 from the repository.
+[DEBUG]             org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-7:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]             plexus:plexus-utils:jar:1.0.2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-descriptor
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-monitor
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:wagon-ssh
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-common-test:jar:1.0-beta-2:test
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-beta-2
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]       org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         com.jcraft:jsch:jar:0.1.27:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.6)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.5.6)
+[DEBUG]       classworlds:classworlds:jar:1.1:runtime (removed - nearer found: 1.1-alpha-2)
+[DEBUG]     org.apache.maven:maven-monitor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-interpolation:jar:1.6:runtime (selected for runtime)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-resources-plugin:2.3 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.6:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.3:resources' -->
+[DEBUG]   (f) filters = []
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = C:\workspace\maven-sample\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: jp.canetrash.sample.maven:maven-sample:0.0.1-SNAPSHOT @ C:\workspace\maven-sample\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: C:\workspace\maven-sample\src\main\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1e13e07
+[DEBUG] -- end configuration --
+[INFO] [resources:resources {execution: default-resources}]
+[DEBUG] properties used {java.vendor=Sun Microsystems Inc., env.SYSTEMROOT=C:\Windows, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot Client Compiler, env.PROMPT=$P$G, os.name=Windows Vista, env.FP_NO_HOST_CHECK=NO, sun.boot.class.path=C:\Program Files\Java\jdk1.6.0_17\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_17\jre\classes, env.COMPUTERNAME=SALT, env.ALLUSERSPROFILE=C:\ProgramData, sun.desktop=windows, java.vm.specification.vendor=Sun Microsystems Inc., downloadJavadocs=true, java.runtime.version=1.6.0_17-b04, env.HOMEPATH=\Users\tfunato, user.name=tfunato, env.QTJAVA=C:\Program Files\Java\jre6\lib\ext\QTJava.zip, env.PATH=C:\Python25:C:\Python25\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\CollabNet Subversion Server;C:\Program Files\CollabNet Subversion;C:\Program Files\TortoiseSVN\bin;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\MySQL\MySQL Server 5.4\bin;C:\Python25\Scripts;C:\Python25;C:\maven-2\bin;C:\vim71;C:\flex_sdk_3\bin;C:\apache-ant-1.7.1\bin, user.language=ja, env.WINDIR=C:\Windows, sun.boot.library.path=C:\Program Files\Java\jdk1.6.0_17\jre\bin, classworlds.conf=C:\maven-2\bin\m2.conf, java.version=1.6.0_17, env.PROCESSOR_IDENTIFIER=x86 Family 15 Model 2 Stepping 9, GenuineIntel, user.timezone=Asia/Tokyo, env.TEMP=C:\Users\tfunato\AppData\Local\Temp, sun.arch.data.model=32, java.endorsed.dirs=C:\Program Files\Java\jdk1.6.0_17\jre\lib\endorsed, sun.cpu.isalist=, env.HOMEDRIVE=C:, sun.jnu.encoding=MS932, file.encoding.pkg=sun.io, env.SYSTEMDRIVE=C:, file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=50.0, user.country=JP, java.home=C:\Program Files\Java\jdk1.6.0_17\jre, env.APPDATA=C:\Users\tfunato\AppData\Roaming, env.PUBLIC=C:\Users\Public, java.vm.info=mixed mode, sharing, env.OS=Windows_NT, os.version=6.0, path.separator=;, java.vm.version=14.3-b01, env.USERPROFILE=C:\Users\tfunato, user.variant=, env.JAVA_HOME=C:\Program Files\Java\jdk1.6.0_17, java.awt.printerjob=sun.awt.windows.WPrinterJob, env.TMP=C:\Users\tfunato\AppData\Local\Temp, env.PROGRAMFILES=C:\Program Files, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, user.home=C:\Users\tfunato, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, env.SESSIONNAME=Console, java.specification.vendor=Sun Microsystems Inc., env.CLASSPATH=.;C:\Program Files\Java\jre6\lib\ext\QTJava.zip, env.M2_HOME=C:\maven-2, env.NUMBER_OF_PROCESSORS=2, java.library.path=C:\Program Files\Java\jdk1.6.0_17\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python25:C:\Python25\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\CollabNet Subversion Server;C:\Program Files\CollabNet Subversion;C:\Program Files\TortoiseSVN\bin;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\MySQL\MySQL Server 5.4\bin;C:\Python25\Scripts;C:\Python25;C:\maven-2\bin;C:\vim71;C:\flex_sdk_3\bin;C:\apache-ant-1.7.1\bin, java.vendor.url=http://java.sun.com/, env.MAVEN_CMD_LINE_ARGS=package -X, java.vm.vendor=Sun Microsystems Inc., maven.home=C:\maven-2, java.runtime.name=Java(TM) SE Runtime Environment, java.class.path=C:\maven-2\boot\classworlds-1.1.jar, maven.test.skip=true, env.MAVEN_JAVA_EXE="C:\Program Files\Java\jdk1.6.0_17\bin\java.exe", java.vm.specification.name=Java Virtual Machine Specification, env.LOGONSERVER=\\SALT, env.PROCESSOR_ARCHITECTURE=x86, java.vm.specification.version=1.0, sun.os.patch.level=Service Pack 2, sun.cpu.endian=little, downloadSources=true, env.HOME=C:\Users\tfunato, java.io.tmpdir=C:\Users\tfunato\AppData\Local\Temp\, env.PROCESSOR_REVISION=0209, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, env.COMSPEC=C:\Windows\system32\cmd.exe, env.PROGRAMDATA=C:\ProgramData, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, os.arch=x86, java.ext.dirs=C:\Program Files\Java\jdk1.6.0_17\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, user.dir=C:\workspace\maven-sample, env.LOCALAPPDATA=C:\Users\tfunato\AppData\Local, line.separator=
+, java.vm.name=Java HotSpot(TM) Client VM, env.CLASSWORLDS_JAR="C:\maven-2\boot\classworlds-1.1.jar", env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw, env.ERROR_CODE=0, env.USERNAME=tfunato, file.encoding=MS932, env.USERDOMAIN=SALT, java.specification.version=1.6, DcreateChecksum=true, env.PROCESSOR_LEVEL=15}
+[WARNING] Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+[DEBUG] resource with targetPath null
+directory C:\workspace\maven-sample\src\main\resources
+excludes []
+includes []
+[INFO] Copying 0 resource
+[DEBUG] jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT (selected for null)
+[DEBUG] Retrieving parent-POM: org.apache.commons:commons-parent:pom:9 for project: commons-lang:commons-lang:jar:2.4 from the repository.
+[DEBUG]   commons-lang:commons-lang:jar:2.4:compile (selected for compile)
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-compiler-plugin:2.0.2
+
+are:
+
+org.apache.maven:maven-plugin-api:jar:2.0:runtime
+org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime
+org.codehaus.plexus:plexus-compiler-api:jar:1.5.3:runtime
+org.codehaus.plexus:plexus-compiler-manager:jar:1.5.3:runtime
+org.codehaus.plexus:plexus-compiler-javac:jar:1.5.3:runtime
+org.apache.maven:maven-artifact:jar:2.0:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:maven-plugin:2.0.2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0 for project: org.apache.maven:maven-plugin-api:jar:2.0 from the repository.
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-api
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-compiler:pom:1.5.3 for project: null:plexus-compiler-api:jar:1.5.3 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-components:pom:1.1.6 for project: null:plexus-compiler:pom:1.5.3 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.8 for project: org.codehaus.plexus:plexus-components:pom:1.1.6 from the repository.
+[DEBUG]   org.codehaus.plexus:plexus-compiler-api:jar:1.5.3:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:runtime (selected for runtime)
+[DEBUG]       junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]       classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-compiler-manager:jar:1.5.3:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-compilers:pom:1.5.3 for project: null:plexus-compiler-javac:jar:1.5.3 from the repository.
+[DEBUG]   org.codehaus.plexus:plexus-compiler-javac:jar:1.5.3:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.0.5:runtime (removed - nearer found: 1.0.4)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-artifact
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0:runtime (selected for runtime)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-compiler-plugin:2.0.2 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0:runtime
+org.apache.maven:maven-artifact:jar:2.0:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:2.0.2:compile' -->
+[DEBUG]   (f) basedir = C:\workspace\maven-sample
+[DEBUG]   (f) buildDirectory = C:\workspace\maven-sample\target
+[DEBUG]   (f) classpathElements = [C:\workspace\maven-sample\target\classes, C:\Users\tfunato\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar]
+[DEBUG]   (f) compileSourceRoots = [C:\workspace\maven-sample\src\main\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = C:\workspace\maven-sample\target\classes
+[DEBUG]   (f) outputFileName = maven-sample-0.0.1-SNAPSHOT
+[DEBUG]   (f) projectArtifact = jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[INFO] [compiler:compile {execution: default-compile}]
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [C:\workspace\maven-sample\src\main\java]
+[DEBUG] Classpath: [C:\workspace\maven-sample\target\classes
+ C:\Users\tfunato\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar]
+[DEBUG] Output directory: C:\workspace\maven-sample\target\classes
+[INFO] Nothing to compile - all classes are up to date
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.3:testResources' -->
+[DEBUG]   (f) filters = []
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = C:\workspace\maven-sample\target\test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: jp.canetrash.sample.maven:maven-sample:0.0.1-SNAPSHOT @ C:\workspace\maven-sample\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: C:\workspace\maven-sample\src\test\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1e13e07
+[DEBUG] -- end configuration --
+[INFO] [resources:testResources {execution: default-testResources}]
+[DEBUG] properties used {java.vendor=Sun Microsystems Inc., env.SYSTEMROOT=C:\Windows, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot Client Compiler, env.PROMPT=$P$G, os.name=Windows Vista, env.FP_NO_HOST_CHECK=NO, sun.boot.class.path=C:\Program Files\Java\jdk1.6.0_17\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_17\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_17\jre\classes, env.COMPUTERNAME=SALT, env.ALLUSERSPROFILE=C:\ProgramData, sun.desktop=windows, java.vm.specification.vendor=Sun Microsystems Inc., downloadJavadocs=true, java.runtime.version=1.6.0_17-b04, env.HOMEPATH=\Users\tfunato, user.name=tfunato, env.QTJAVA=C:\Program Files\Java\jre6\lib\ext\QTJava.zip, env.PATH=C:\Python25:C:\Python25\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\CollabNet Subversion Server;C:\Program Files\CollabNet Subversion;C:\Program Files\TortoiseSVN\bin;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\MySQL\MySQL Server 5.4\bin;C:\Python25\Scripts;C:\Python25;C:\maven-2\bin;C:\vim71;C:\flex_sdk_3\bin;C:\apache-ant-1.7.1\bin, user.language=ja, env.WINDIR=C:\Windows, sun.boot.library.path=C:\Program Files\Java\jdk1.6.0_17\jre\bin, classworlds.conf=C:\maven-2\bin\m2.conf, java.version=1.6.0_17, env.PROCESSOR_IDENTIFIER=x86 Family 15 Model 2 Stepping 9, GenuineIntel, user.timezone=Asia/Tokyo, env.TEMP=C:\Users\tfunato\AppData\Local\Temp, sun.arch.data.model=32, java.endorsed.dirs=C:\Program Files\Java\jdk1.6.0_17\jre\lib\endorsed, sun.cpu.isalist=, env.HOMEDRIVE=C:, sun.jnu.encoding=MS932, file.encoding.pkg=sun.io, env.SYSTEMDRIVE=C:, file.separator=\, java.specification.name=Java Platform API Specification, java.class.version=50.0, user.country=JP, java.home=C:\Program Files\Java\jdk1.6.0_17\jre, env.APPDATA=C:\Users\tfunato\AppData\Roaming, env.PUBLIC=C:\Users\Public, java.vm.info=mixed mode, sharing, env.OS=Windows_NT, os.version=6.0, path.separator=;, java.vm.version=14.3-b01, env.USERPROFILE=C:\Users\tfunato, user.variant=, env.JAVA_HOME=C:\Program Files\Java\jdk1.6.0_17, java.awt.printerjob=sun.awt.windows.WPrinterJob, env.TMP=C:\Users\tfunato\AppData\Local\Temp, env.PROGRAMFILES=C:\Program Files, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.windows.WToolkit, user.home=C:\Users\tfunato, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, env.SESSIONNAME=Console, java.specification.vendor=Sun Microsystems Inc., env.CLASSPATH=.;C:\Program Files\Java\jre6\lib\ext\QTJava.zip, env.M2_HOME=C:\maven-2, env.NUMBER_OF_PROCESSORS=2, java.library.path=C:\Program Files\Java\jdk1.6.0_17\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python25:C:\Python25\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\CollabNet Subversion Server;C:\Program Files\CollabNet Subversion;C:\Program Files\TortoiseSVN\bin;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\MySQL\MySQL Server 5.4\bin;C:\Python25\Scripts;C:\Python25;C:\maven-2\bin;C:\vim71;C:\flex_sdk_3\bin;C:\apache-ant-1.7.1\bin, java.vendor.url=http://java.sun.com/, env.MAVEN_CMD_LINE_ARGS=package -X, java.vm.vendor=Sun Microsystems Inc., maven.home=C:\maven-2, java.runtime.name=Java(TM) SE Runtime Environment, java.class.path=C:\maven-2\boot\classworlds-1.1.jar, maven.test.skip=true, env.MAVEN_JAVA_EXE="C:\Program Files\Java\jdk1.6.0_17\bin\java.exe", java.vm.specification.name=Java Virtual Machine Specification, env.LOGONSERVER=\\SALT, env.PROCESSOR_ARCHITECTURE=x86, java.vm.specification.version=1.0, sun.os.patch.level=Service Pack 2, sun.cpu.endian=little, downloadSources=true, env.HOME=C:\Users\tfunato, java.io.tmpdir=C:\Users\tfunato\AppData\Local\Temp\, env.PROCESSOR_REVISION=0209, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, env.COMSPEC=C:\Windows\system32\cmd.exe, env.PROGRAMDATA=C:\ProgramData, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, os.arch=x86, java.ext.dirs=C:\Program Files\Java\jdk1.6.0_17\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, user.dir=C:\workspace\maven-sample, env.LOCALAPPDATA=C:\Users\tfunato\AppData\Local, line.separator=
+, java.vm.name=Java HotSpot(TM) Client VM, env.CLASSWORLDS_JAR="C:\maven-2\boot\classworlds-1.1.jar", env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw, env.ERROR_CODE=0, env.USERNAME=tfunato, file.encoding=MS932, env.USERDOMAIN=SALT, java.specification.version=1.6, DcreateChecksum=true, env.PROCESSOR_LEVEL=15}
+[WARNING] Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+[DEBUG] resource with targetPath null
+directory C:\workspace\maven-sample\src\test\resources
+excludes []
+includes []
+[INFO] Copying 0 resource
+[DEBUG] jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT (selected for null)
+[DEBUG]   commons-lang:commons-lang:jar:2.4:compile (selected for compile)
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:2.0.2:testCompile' -->
+[DEBUG]   (f) basedir = C:\workspace\maven-sample
+[DEBUG]   (f) buildDirectory = C:\workspace\maven-sample\target
+[DEBUG]   (f) classpathElements = [C:\workspace\maven-sample\target\test-classes, C:\workspace\maven-sample\target\classes, C:\Users\tfunato\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar]
+[DEBUG]   (f) compileSourceRoots = [C:\workspace\maven-sample\src\test\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = C:\workspace\maven-sample\target\test-classes
+[DEBUG]   (f) outputFileName = maven-sample-0.0.1-SNAPSHOT
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skip = true
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Not compiling test sources
+[DEBUG] jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT (selected for null)
+[DEBUG]   commons-lang:commons-lang:jar:2.4:compile (selected for compile)
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-surefire-plugin:2.4.3
+
+are:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven.surefire:surefire-booter:jar:2.4.3:runtime
+org.codehaus.plexus:plexus-utils:jar:1.5.1:runtime
+org.apache.maven:maven-artifact:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.6:runtime
+org.apache.maven:maven-core:jar:2.0.6:runtime
+org.apache.maven:maven-toolchain:jar:1.0:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.4.3:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:surefire-booter
+[DEBUG]   org.apache.maven.surefire:surefire-api:jar:2.4.3
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.4.3
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.4.3:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:surefire-api
+[DEBUG]   org.apache.maven.surefire:surefire-api:jar:2.4.3
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.4.3
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.4.3:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.1:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-settings:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]         junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]         classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-profile:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     org.apache.maven:maven-model:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]     org.apache.maven:maven-plugin-registry:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]       junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]       classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-core:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven.wagon:wagon-file:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]       org.apache.maven.wagon:wagon-http-shared:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         jtidy:jtidy:jar:4aug2000r7-dev:runtime (selected for runtime)
+[DEBUG]       xml-apis:xml-apis:jar:1.0.b2:runtime (selected for runtime)
+[DEBUG]     org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:runtime (selected for runtime)
+[DEBUG]     org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]     org.apache.maven:maven-repository-metadata:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     org.apache.maven:maven-error-diagnostics:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     commons-cli:commons-cli:jar:1.0:runtime (selected for runtime)
+[DEBUG]     org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]       org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]         org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-7:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]           plexus:plexus-utils:jar:1.0.2:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-plugin-descriptor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-monitor:jar:2.0.6:runtime (selected for runtime)
+[DEBUG]     org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]       com.jcraft:jsch:jar:0.1.27:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (applying version: 1.5.1)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (applying version: 1.5.1)
+[DEBUG]     classworlds:classworlds:jar:1.1-alpha-2:runtime (removed - nearer found: 1.1)
+[DEBUG]     classworlds:classworlds:jar:1.1:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-toolchain
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-toolchain:jar:1.0:runtime (selected for runtime)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-surefire-plugin:2.4.3 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-artifact:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.6:runtime
+org.apache.maven:maven-core:jar:2.0.6:runtime
+org.apache.maven:maven-toolchain:jar:1.0:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:2.4.3:test' -->
+[DEBUG]   (f) basedir = C:\workspace\maven-sample
+[DEBUG]   (f) childDelegation = false
+[DEBUG]   (f) classesDirectory = C:\workspace\maven-sample\target\classes
+[DEBUG]   (f) classpathElements = [C:\workspace\maven-sample\target\test-classes, C:\workspace\maven-sample\target\classes, C:\Users\tfunato\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar]
+[DEBUG]   (f) disableXmlReport = false
+[DEBUG]   (f) enableAssertions = true
+[DEBUG]   (f) forkMode = once
+[DEBUG]   (f) junitArtifactName = junit:junit
+[DEBUG]   (f) localRepository = Repository[local|file://C:\Users\tfunato\.m2\repository]
+[DEBUG]   (f) pluginArtifactMap = {org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:2.4.3:runtime, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:2.4.3:runtime, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:1.5.1:runtime, org.apache.maven:maven-plugin-api=org.apache.maven:maven-plugin-api:jar:2.0.6:runtime, org.apache.maven:maven-artifact=org.apache.maven:maven-artifact:jar:2.0.6:runtime, org.apache.maven:maven-project=org.apache.maven:maven-project:jar:2.0.6:runtime, org.apache.maven:maven-core=org.apache.maven:maven-core:jar:2.0.6:runtime, org.apache.maven:maven-toolchain=org.apache.maven:maven-toolchain:jar:1.0:runtime}
+[DEBUG]   (f) printSummary = true
+[DEBUG]   (f) project = MavenProject: jp.canetrash.sample.maven:maven-sample:0.0.1-SNAPSHOT @ C:\workspace\maven-sample\pom.xml
+[DEBUG]   (f) projectArtifactMap = {commons-lang:commons-lang=commons-lang:commons-lang:jar:2.4:compile}
+[DEBUG]   (f) redirectTestOutputToFile = false
+[DEBUG]   (f) remoteRepositories = [Repository[central|http://repo1.maven.org/maven2]]
+[DEBUG]   (f) reportFormat = brief
+[DEBUG]   (f) reportsDirectory = C:\workspace\maven-sample\target\surefire-reports
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1e13e07
+[DEBUG]   (f) skip = true
+[DEBUG]   (f) testClassesDirectory = C:\workspace\maven-sample\target\test-classes
+[DEBUG]   (f) testNGArtifactName = org.testng:testng
+[DEBUG]   (f) testSourceDirectory = C:\workspace\maven-sample\src\test\java
+[DEBUG]   (f) trimStackTrace = true
+[DEBUG]   (f) useFile = true
+[DEBUG]   (f) useManifestOnlyJar = true
+[DEBUG]   (f) workingDirectory = C:\workspace\maven-sample
+[DEBUG] -- end configuration --
+[INFO] [surefire:test {execution: default-test}]
+[INFO] Tests are skipped.
+[DEBUG] jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT (selected for null)
+[DEBUG]   commons-lang:commons-lang:jar:2.4:compile (selected for compile)
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-jar-plugin:2.2
+
+are:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.7:runtime
+org.apache.maven:maven-archiver:jar:2.3:runtime
+org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-9:runtime
+org.codehaus.plexus:plexus-io:jar:1.0-alpha-1:runtime
+commons-lang:commons-lang:jar:2.1:runtime
+org.codehaus.plexus:plexus-utils:jar:1.4.9:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-jar-plugin:maven-plugin:2.2:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.6:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0.7 for project: null:maven-project:jar:null from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-project
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-settings
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-settings:jar:2.0.7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-model
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.7:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]         junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]         classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-profile
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-profile:jar:2.0.7:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-model:jar:2.0.7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-artifact-manager
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-repository-metadata
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.7:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-artifact
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.7:runtime (selected for runtime)
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-registry
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.7
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.7
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.7
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-plugin-registry:jar:2.0.7:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0.7:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]       junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.4.1)
+[DEBUG]       classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:8 for project: org.apache.maven:maven-archiver:jar:2.3 from the repository.
+[DEBUG]   org.apache.maven:maven-archiver:jar:2.3:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0:runtime (removed - nearer found: 2.0.7)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-model
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]     org.apache.maven:maven-model:jar:2.0:runtime (removed - nearer found: 2.0.7)
+[DEBUG] Adding managed dependencies for unknown:maven-project
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]     org.apache.maven:maven-project:jar:2.0:runtime (removed - nearer found: 2.0.7)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-components:pom:1.1.9 for project: null:plexus-archiver:jar:1.0-alpha-9 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.10 for project: org.codehaus.plexus:plexus-components:pom:1.1.9 from the repository.
+[DEBUG]     org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-9:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-containers:pom:1.0-alpha-15 for project: null:plexus-container-default:jar:1.0-alpha-15 from the repository.
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.9 for project: org.codehaus.plexus:plexus-containers:pom:1.0-alpha-15 from the repository.
+[DEBUG] Adding managed dependencies for unknown:plexus-container-default
+[DEBUG]   org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-6
+[DEBUG]   org.codehaus.plexus:plexus-component-api:jar:1.0-alpha-15
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.3
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-15:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG] Adding managed dependencies for unknown:plexus-component-api
+[DEBUG]   org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-6
+[DEBUG]   org.codehaus.plexus:plexus-component-api:jar:1.0-alpha-15
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.3
+[DEBUG]       org.codehaus.plexus:plexus-component-api:jar:1.0-alpha-15:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:1.0-alpha-1:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-containers:pom:1.0-alpha-16 for project: null:plexus-component-api:jar:1.0-alpha-16 from the repository.
+[DEBUG] Adding managed dependencies for unknown:plexus-component-api
+[DEBUG]   org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-7
+[DEBUG]   org.codehaus.plexus:plexus-component-api:jar:1.0-alpha-16
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.3
+[DEBUG]         org.codehaus.plexus:plexus-component-api:jar:1.0-alpha-16:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.9:runtime (removed - nearer found: 1.4.1)
+[DEBUG]   org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-9:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-io:jar:1.0-alpha-1:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-io:jar:1.0-alpha-1:runtime (selected for runtime)
+[DEBUG]   commons-lang:commons-lang:jar:2.1:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.1:runtime (removed - nearer found: 1.4.9)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.9:runtime (selected for runtime)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-jar-plugin:2.2 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0.6:runtime
+org.apache.maven:maven-project:jar:2.0.7:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-jar-plugin:2.2:jar' -->
+[DEBUG]   (f) classesDirectory = C:\workspace\maven-sample\target\classes
+[DEBUG]   (f) defaultManifestFile = C:\workspace\maven-sample\target\classes\META-INF\MANIFEST.MF
+[DEBUG]   (f) finalName = maven-sample-0.0.1-SNAPSHOT
+[DEBUG]   (f) forceCreation = false
+[DEBUG]   (f) outputDirectory = C:\workspace\maven-sample\target
+[DEBUG]   (f) project = MavenProject: jp.canetrash.sample.maven:maven-sample:0.0.1-SNAPSHOT @ C:\workspace\maven-sample\pom.xml
+[DEBUG]   (f) useDefaultManifestFile = false
+[DEBUG] -- end configuration --
+[INFO] [jar:jar {execution: default-jar}]
+[DEBUG] isUp2date: true
+[DEBUG] Archive C:\workspace\maven-sample\target\maven-sample-0.0.1-SNAPSHOT.jar is uptodate.
+[DEBUG] Plugin dependencies for:
+
+org.apache.maven.plugins:maven-assembly-plugin:2.2-beta-2
+
+are:
+
+aspectj:aspectjrt:jar:1.5.3:runtime
+org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-10:runtime
+org.apache.maven.shared:file-management:jar:1.1:runtime
+org.apache.maven.shared:maven-shared-io:jar:1.1:runtime
+org.codehaus.plexus:plexus-active-collections:jar:1.0-beta-2:runtime
+org.codehaus.plexus:plexus-io:jar:1.0-alpha-2:runtime
+org.apache.maven:maven-plugin-api:jar:2.0.4:runtime
+org.apache.maven:maven-project:jar:2.0.4:runtime
+org.apache.maven:maven-archiver:jar:2.2:runtime
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime
+org.codehaus.plexus:plexus-utils:jar:1.5.1:runtime
+org.apache.maven:maven-artifact:jar:2.0.4:runtime
+org.apache.maven:maven-model:jar:2.0.4:runtime
+org.apache.maven.shared:maven-repository-builder:jar:1.0-alpha-2:runtime
+org.apache.maven.shared:maven-common-artifact-filters:jar:1.0:runtime
+
+
+[DEBUG] org.apache.maven.plugins:maven-assembly-plugin:maven-plugin:2.2-beta-2:runtime (selected for runtime)
+[DEBUG]   aspectj:aspectjrt:jar:1.5.3:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-10:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.5.1:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-15:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.3:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-6:runtime (selected for runtime)
+[DEBUG]         junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]       junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-io:jar:1.0-alpha-2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus:pom:1.0.5 for project: null:plexus-utils:jar:1.2 from the repository.
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.2:runtime (removed - nearer found: 1.5.1)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:4 for project: null:file-management:jar:1.1 from the repository.
+[DEBUG]   org.apache.maven.shared:file-management:jar:1.1:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-plugin-api:jar:2.0:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]     org.apache.maven.shared:maven-shared-io:jar:1.0:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0.2 for project: org.apache.maven:maven-artifact:jar:2.0.2 from the repository.
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-artifact
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-artifact-manager
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.2:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-repository-metadata
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]         org.apache.maven:maven-repository-metadata:jar:2.0.2:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]         org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG] Retrieving parent-POM: org.apache.maven.wagon:wagon:pom:1.0-alpha-6 for project: null:wagon-provider-api:jar:1.0-alpha-6 from the repository.
+[DEBUG] Adding managed dependencies for unknown:wagon-provider-api
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-provider-test:jar:1.0-alpha-6
+[DEBUG]   junit:junit:jar:3.8.1
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]         org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.2:runtime (removed - nearer found: 1.5.1)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG]   org.apache.maven.shared:maven-shared-io:jar:1.0:runtime (removed - nearer found: 1.1)
+[DEBUG]   org.apache.maven.shared:maven-shared-io:jar:1.1:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0.2:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.2:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.2:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]     org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.4.6:runtime (removed - nearer found: 1.5.1)
+[DEBUG]   org.codehaus.plexus:plexus-active-collections:jar:1.0-beta-2:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.codehaus.plexus:plexus-containers:pom:1.0-alpha-22 for project: null:plexus-container-default:jar:1.0-alpha-22 from the repository.
+[DEBUG] Adding managed dependencies for unknown:plexus-container-default
+[DEBUG]   org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-7
+[DEBUG]   org.codehaus.plexus:plexus-component-api:jar:1.0-alpha-19
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.3
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-22:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG]   org.codehaus.plexus:plexus-io:jar:1.0-alpha-2:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.2:runtime (removed - nearer found: 1.5.1)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0.4 for project: org.apache.maven:maven-plugin-api:jar:2.0.4 from the repository.
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-api
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-project
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-settings
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]     org.apache.maven:maven-settings:jar:2.0.4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-model
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.4:runtime (selected for runtime)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG] Adding managed dependencies for unknown:maven-profile
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]     org.apache.maven:maven-profile:jar:2.0.4:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG]     org.apache.maven:maven-model:jar:2.0.4:runtime (selected for runtime)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-artifact-manager
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.4:runtime (removed - nearer found: 2.0.2)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-artifact
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-alpha-6
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-7
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-6
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0.4:runtime (removed - nearer found: 2.0.2)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-15)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:3 for project: org.apache.maven:maven-archiver:jar:2.2 from the repository.
+[DEBUG]   org.apache.maven:maven-archiver:jar:2.2:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-project:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]     org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-7:runtime (removed - nearer found: 1.0-alpha-10)
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0:runtime (removed - nearer found: 2.0.2)
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-15:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime (selected for runtime)
+[DEBUG]     junit:junit:jar:3.8.1:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]     classworlds:classworlds:jar:1.1-alpha-2:runtime (selected for runtime)
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.5.1:runtime (selected for runtime)
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.2:runtime (removed - nearer found: 2.0.4)
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.4:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.4:runtime (selected for runtime)
+[DEBUG]     org.codehaus.plexus:plexus-utils:jar:1.1:runtime (removed - nearer found: 1.5.1)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:7 for project: null:maven-repository-builder:jar:1.0-alpha-2 from the repository.
+[DEBUG]   org.apache.maven.shared:maven-repository-builder:jar:1.0-alpha-2:runtime (selected for runtime)
+[DEBUG]     org.apache.maven:maven-artifact-manager:jar:2.0.4:runtime (removed - nearer found: 2.0.2)
+[DEBUG] Retrieving parent-POM: org.apache.maven.shared:maven-shared-components:pom:6 for project: null:maven-common-artifact-filters:jar:1.0-alpha-1 from the repository.
+[DEBUG]     org.apache.maven.shared:maven-common-artifact-filters:jar:1.0-alpha-1:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.2:runtime (removed - nearer found: 2.0.4)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]   org.apache.maven.shared:maven-common-artifact-filters:jar:1.0-alpha-1:runtime (removed - nearer found: 1.0)
+[DEBUG]   org.apache.maven.shared:maven-common-artifact-filters:jar:1.0:runtime (selected for runtime)
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven:pom:2.0.8 for project: null:maven-artifact:jar:null from the repository.
+[DEBUG] Retrieving parent-POM: org.apache.maven:maven-parent:pom:6 for project: null:maven:pom:2.0.8 from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-artifact
+[DEBUG]   org.apache.maven:maven-plugin-descriptor:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-error-diagnostics:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-model:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-project:jar:2.0.8
+[DEBUG]   org.apache.maven.reporting:maven-reporting-api:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-repository-metadata:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-artifact:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-artifact-manager:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-artifact-test:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-settings:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-profile:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-plugin-registry:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-plugin-api:jar:2.0.8
+[DEBUG]   org.apache.maven:maven-monitor:jar:2.0.8
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.4.6
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+[DEBUG]   easymock:easymock:jar:1.2_Java1.3:test
+[DEBUG]   classworlds:classworlds:jar:1.1
+[DEBUG]     org.apache.maven:maven-artifact:jar:2.0.8:runtime (removed - nearer found: 2.0.4)
+[DEBUG]     org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]     org.apache.maven.shared:maven-plugin-testing-harness:jar:1.1:runtime (selected for runtime)
+[DEBUG]       org.apache.maven:maven-project:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-core
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]       org.apache.maven:maven-core:jar:2.0:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-settings
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-settings:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]         org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]           org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5:runtime (removed - nearer found: 1.0-alpha-6)
+[DEBUG] Adding managed dependencies for unknown:maven-plugin-parameter-documenter
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-plugin-parameter-documenter:jar:2.0:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]           org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]         org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]           org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5:runtime (removed - nearer found: 1.0-alpha-6)
+[DEBUG] Retrieving parent-POM: org.apache.maven.reporting:maven-reporting:pom:2.0 for project: null:maven-reporting-api:jar:2.0 from the repository.
+[DEBUG] Adding managed dependencies for unknown:maven-reporting-api
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven.reporting:maven-reporting-api:jar:2.0:runtime (selected for runtime)
+[DEBUG]           doxia:doxia-sink-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for unknown:maven-profile
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-profile:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]         org.apache.maven:maven-model:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]         org.apache.maven:maven-artifact:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]         org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5:runtime (removed - nearer found: 1.0-alpha-6)
+[DEBUG]         org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-repository-metadata
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-repository-metadata:jar:2.0:runtime (removed - nearer found: 2.0.2)
+[DEBUG] Adding managed dependencies for unknown:maven-error-diagnostics
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-error-diagnostics:jar:2.0:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]         org.apache.maven:maven-project:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-registry
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-plugin-registry:jar:2.0:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]           org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]         commons-cli:commons-cli:jar:1.0:runtime (selected for runtime)
+[DEBUG]         org.apache.maven:maven-plugin-api:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-plugin-descriptor
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-plugin-descriptor:jar:2.0:runtime (selected for runtime)
+[DEBUG]           org.apache.maven:maven-plugin-api:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]           org.apache.maven:maven-artifact:jar:2.0:runtime (removed - nearer found: 2.0.4)
+[DEBUG]           org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8:runtime (removed - nearer found: 1.0-alpha-9-stable-1)
+[DEBUG]         org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:runtime (selected for runtime)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-artifact-manager
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-artifact-manager:jar:2.0:runtime (removed - nearer found: 2.0.2)
+[DEBUG] Adding managed dependencies for org.apache.maven:maven-monitor
+[DEBUG]   org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-8
+[DEBUG]   org.codehaus.plexus:plexus-utils:jar:1.0.4
+[DEBUG]   org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-file:jar:1.0-alpha-5
+[DEBUG]   org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-alpha-5
+[DEBUG]         org.apache.maven:maven-monitor:jar:2.0:runtime (selected for runtime)
+[DEBUG]         org.apache.maven.wagon:wagon-ssh:jar:1.0-alpha-5:runtime (selected for runtime)
+[DEBUG]           com.jcraft:jsch:jar:0.1.23:runtime (selected for runtime)
+[DEBUG]           org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]           org.apache.maven.wagon:wagon-provider-api:jar:1.0-alpha-5:runtime (removed - nearer found: 1.0-alpha-6)
+[DEBUG]         org.codehaus.plexus:plexus-utils:jar:1.0.4:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.4.2:runtime (removed - nearer found: 1.5.1)
+[DEBUG]       org.codehaus.plexus:plexus-archiver:jar:1.0-alpha-7:runtime (removed - nearer found: 1.0-alpha-10)
+[DEBUG]  The following artifacts were filtered out for plugin: org.apache.maven.plugins:maven-assembly-plugin:2.2-beta-2 because they're already in the core of Maven:
+
+org.apache.maven:maven-plugin-api:jar:2.0.4:runtime
+org.apache.maven:maven-project:jar:2.0.4:runtime
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:runtime
+org.apache.maven:maven-artifact:jar:2.0.4:runtime
+org.apache.maven:maven-model:jar:2.0.4:runtime
+
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Cannot find ArtifactResolver with hint: project-cache-aware
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverproject-cache-aware.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.shared.repository.DefaultRepositoryAssembler.contextualize(DefaultRepositoryAssembler.java:721)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: default
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverdefault.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.shared.repository.DefaultRepositoryAssembler.contextualize(DefaultRepositoryAssembler.java:721)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: project-cache-aware
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverproject-cache-aware.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.assembly.artifact.DefaultDependencyResolver.contextualize(DefaultDependencyResolver.java:280)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: default
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverdefault.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.assembly.artifact.DefaultDependencyResolver.contextualize(DefaultDependencyResolver.java:280)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: project-cache-aware
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverproject-cache-aware.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.assembly.artifact.DefaultDependencyResolver.contextualize(DefaultDependencyResolver.java:280)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: default
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverdefault.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.assembly.artifact.DefaultDependencyResolver.contextualize(DefaultDependencyResolver.java:280)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: project-cache-aware
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverproject-cache-aware.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.assembly.artifact.DefaultDependencyResolver.contextualize(DefaultDependencyResolver.java:280)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Cannot find ArtifactResolver with hint: default
+org.codehaus.plexus.component.repository.exception.ComponentLookupException: Component descriptor cannot be found in the component repository: org.apache.maven.artifact.resolver.ArtifactResolverdefault.
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:323)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:312)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.assembly.artifact.DefaultDependencyResolver.contextualize(DefaultDependencyResolver.java:280)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.ContextualizePhase.execute(ContextualizePhase.java:20)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookupList(DefaultPlexusContainer.java:423)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:111)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.ClassicSingletonComponentManager.getComponent(ClassicSingletonComponentManager.java:92)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assignRequirementToField(FieldComponentComposer.java:129)
+	at org.codehaus.plexus.component.composition.FieldComponentComposer.assembleComponent(FieldComponentComposer.java:73)
+	at org.codehaus.plexus.component.composition.DefaultComponentComposerManager.assembleComponent(DefaultComponentComposerManager.java:68)
+	at org.codehaus.plexus.DefaultPlexusContainer.composeComponent(DefaultPlexusContainer.java:1486)
+	at org.codehaus.plexus.personality.plexus.lifecycle.phase.CompositionPhase.execute(CompositionPhase.java:29)
+	at org.codehaus.plexus.lifecycle.AbstractLifecycleHandler.start(AbstractLifecycleHandler.java:101)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.startComponentLifecycle(AbstractComponentManager.java:105)
+	at org.codehaus.plexus.component.manager.AbstractComponentManager.createComponentInstance(AbstractComponentManager.java:95)
+	at org.codehaus.plexus.component.manager.PerLookupComponentManager.getComponent(PerLookupComponentManager.java:48)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:331)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:440)
+	at org.apache.maven.plugin.DefaultPluginManager.getConfiguredMojo(DefaultPluginManager.java:652)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:468)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalWithLifecycle(DefaultLifecycleExecutor.java:556)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:535)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-assembly-plugin:2.2-beta-2:attached' -->
+[DEBUG]   (s) appendAssemblyId = false
+[DEBUG]   (f) mainClass = jp.canetrash.sample.maven.Main
+[DEBUG]   (s) manifest = org.apache.maven.archiver.ManifestConfiguration@e555bd
+[DEBUG]   (s) archive = org.apache.maven.archiver.MavenArchiveConfiguration@5ff916
+[DEBUG]   (f) attach = true
+[DEBUG]   (s) basedir = C:\workspace\maven-sample
+[DEBUG]   (s) descriptorRefs = [jar-with-dependencies]
+[DEBUG]   (f) dryRun = false
+[DEBUG]   (s) finalName = test
+[DEBUG]   (f) ignoreDirFormatExtensions = false
+[DEBUG]   (s) ignoreMissingDescriptor = false
+[DEBUG]   (s) includeSite = false
+[DEBUG]   (s) localRepository = Repository[local|file://C:\Users\tfunato\.m2\repository]
+[DEBUG]   (s) outputDirectory = C:\workspace\maven-sample\target
+[DEBUG]   (f) project = MavenProject: jp.canetrash.sample.maven:maven-sample:0.0.1-SNAPSHOT @ C:\workspace\maven-sample\pom.xml
+[DEBUG]   (s) reactorProjects = [MavenProject: jp.canetrash.sample.maven:maven-sample:0.0.1-SNAPSHOT @ C:\workspace\maven-sample\pom.xml]
+[DEBUG]   (f) remoteRepositories = [Repository[java.net2|http://download.java.net/maven/2], Repository[central|http://repo1.maven.org/maven2]]
+[DEBUG]   (s) siteDirectory = C:\workspace\maven-sample\target\site
+[DEBUG]   (f) skipAssembly = false
+[DEBUG]   (s) tarLongFileMode = warn
+[DEBUG]   (s) tempRoot = C:\workspace\maven-sample\target\archive-tmp
+[DEBUG]   (s) workDirectory = C:\workspace\maven-sample\target\assembly\work
+[DEBUG] -- end configuration --
+[INFO] [assembly:attached {execution: make-assembly}]
+[DEBUG] Before assembly is interpolated:
+
+<?xml version="1.0" encoding="UTF-8"?><assembly>
+  <id>jar-with-dependencies</id>
+  <formats>
+    <format>jar</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory></outputDirectory>
+    </fileSet>
+  </fileSets>
+  <dependencySets>
+    <dependencySet>
+      <outputFileNameMapping></outputFileNameMapping>
+      <unpack>true</unpack>
+      <outputDirectory></outputDirectory>
+    </dependencySet>
+  </dependencySets>
+</assembly>
+
+
+[DEBUG] After assembly is interpolated:
+
+<?xml version="1.0" encoding="UTF-8"?><assembly>
+  <id>jar-with-dependencies</id>
+  <formats>
+    <format>jar</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <directory>target/classes</directory>
+      <outputDirectory></outputDirectory>
+    </fileSet>
+  </fileSets>
+  <dependencySets>
+    <dependencySet>
+      <outputFileNameMapping></outputFileNameMapping>
+      <unpack>true</unpack>
+      <outputDirectory></outputDirectory>
+    </dependencySet>
+  </dependencySets>
+</assembly>
+
+
+[DEBUG] All known ContainerDescritporHandler components: [plexus]
+[DEBUG] FileSet[] dir perms: 40755 file perms: 100644
+[DEBUG] The archive base directory is 'null'
+[DEBUG] Adding file-set from directory: 'C:\workspace\maven-sample\target\classes'
+assembly output directory is: ''
+[DEBUG] Adding directory file-set in: C:\workspace\maven-sample\target\classes to archive location: 
+[INFO] Processing DependencySet (output=)
+[DEBUG] Project dependencies are:
+commons-lang:commons-lang:jar:2.4:compile
+[DEBUG] Resolving project dependencies transitively.
+[DEBUG] jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT (selected for null)
+[DEBUG]   commons-lang:commons-lang:jar:2.4:compile (selected for compile)
+[DEBUG] While resolving dependencies of jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT:
+[DEBUG] Statistics for Scope filter [compile=true, runtime=true, test=false, provided=false, system=false]
+
+[DEBUG] The following scope filters were not used: 
+o Runtime
+o Test
+o Provided
+o System
+[DEBUG] Filtering dependency artifacts WITHOUT transitive dependency path information.
+[DEBUG] Adding 2 dependency artifacts.
+[DEBUG] Unpacking artifact: commons-lang:commons-lang:jar:2.4 to assembly location: .
+[DEBUG] Unpacking artifact contents for: commons-lang:commons-lang:jar:2.4:compile to: 
+[DEBUG] includes:
+**/*
+
+[DEBUG] excludes:
+none
+
+[DEBUG] Adding archived file-set in: C:\Users\tfunato\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar to archive location: 
+[DEBUG] Unpacking artifact: jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT to assembly location: .
+[DEBUG] Unpacking artifact contents for: jp.canetrash.sample.maven:maven-sample:jar:0.0.1-SNAPSHOT to: 
+[DEBUG] includes:
+**/*
+
+[DEBUG] excludes:
+none
+
+[DEBUG] Adding archived file-set in: C:\workspace\maven-sample\target\maven-sample-0.0.1-SNAPSHOT.jar to archive location: 
+[INFO] Building jar: C:\workspace\maven-sample\target\test.jar
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory jp/
+[DEBUG] adding directory jp/canetrash/
+[DEBUG] adding directory jp/canetrash/sample/
+[DEBUG] adding directory jp/canetrash/sample/maven/
+[DEBUG] adding entry jp/canetrash/sample/maven/Main.class
+[DEBUG] adding directory org/
+[DEBUG] adding directory org/apache/
+[DEBUG] adding directory org/apache/commons/
+[DEBUG] adding directory org/apache/commons/lang/
+[DEBUG] adding directory org/apache/commons/lang/builder/
+[DEBUG] adding directory org/apache/commons/lang/enum/
+[DEBUG] adding directory org/apache/commons/lang/enums/
+[DEBUG] adding directory org/apache/commons/lang/exception/
+[DEBUG] adding directory org/apache/commons/lang/math/
+[DEBUG] adding directory org/apache/commons/lang/mutable/
+[DEBUG] adding directory org/apache/commons/lang/text/
+[DEBUG] adding directory org/apache/commons/lang/time/
+[DEBUG] adding entry META-INF/LICENSE.txt
+[DEBUG] adding entry META-INF/NOTICE.txt
+[DEBUG] adding entry org/apache/commons/lang/ArrayUtils.class
+[DEBUG] adding entry org/apache/commons/lang/BitField.class
+[DEBUG] adding entry org/apache/commons/lang/BooleanUtils.class
+[DEBUG] adding entry org/apache/commons/lang/builder/CompareToBuilder.class
+[DEBUG] adding entry org/apache/commons/lang/builder/EqualsBuilder.class
+[DEBUG] adding entry org/apache/commons/lang/builder/HashCodeBuilder$1.class
+[DEBUG] adding entry org/apache/commons/lang/builder/HashCodeBuilder.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ReflectionToStringBuilder.class
+[DEBUG] adding entry org/apache/commons/lang/builder/StandardToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringBuilder.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle$1.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle$DefaultToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle$MultiLineToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle$NoFieldNameToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle$ShortPrefixToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle$SimpleToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/builder/ToStringStyle.class
+[DEBUG] adding entry org/apache/commons/lang/CharEncoding.class
+[DEBUG] adding entry org/apache/commons/lang/CharRange.class
+[DEBUG] adding entry org/apache/commons/lang/CharSet.class
+[DEBUG] adding entry org/apache/commons/lang/CharSetUtils.class
+[DEBUG] adding entry org/apache/commons/lang/CharUtils.class
+[DEBUG] adding entry org/apache/commons/lang/ClassUtils.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$ArrayEntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$BinaryEntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$EntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$HashEntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$LookupEntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$MapIntMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$PrimitiveEntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities$TreeEntityMap.class
+[DEBUG] adding entry org/apache/commons/lang/Entities.class
+[DEBUG] adding entry org/apache/commons/lang/enum/Enum$Entry.class
+[DEBUG] adding entry org/apache/commons/lang/enum/Enum.class
+[DEBUG] adding entry org/apache/commons/lang/enum/EnumUtils.class
+[DEBUG] adding entry org/apache/commons/lang/enum/ValuedEnum.class
+[DEBUG] adding entry org/apache/commons/lang/enums/Enum$Entry.class
+[DEBUG] adding entry org/apache/commons/lang/enums/Enum.class
+[DEBUG] adding entry org/apache/commons/lang/enums/EnumUtils.class
+[DEBUG] adding entry org/apache/commons/lang/enums/ValuedEnum.class
+[DEBUG] adding entry org/apache/commons/lang/exception/ExceptionUtils.class
+[DEBUG] adding entry org/apache/commons/lang/exception/Nestable.class
+[DEBUG] adding entry org/apache/commons/lang/exception/NestableDelegate.class
+[DEBUG] adding entry org/apache/commons/lang/exception/NestableError.class
+[DEBUG] adding entry org/apache/commons/lang/exception/NestableException.class
+[DEBUG] adding entry org/apache/commons/lang/exception/NestableRuntimeException.class
+[DEBUG] adding entry org/apache/commons/lang/IllegalClassException.class
+[DEBUG] adding entry org/apache/commons/lang/IncompleteArgumentException.class
+[DEBUG] adding entry org/apache/commons/lang/IntHashMap$Entry.class
+[DEBUG] adding entry org/apache/commons/lang/IntHashMap.class
+[DEBUG] adding entry org/apache/commons/lang/LocaleUtils.class
+[DEBUG] adding entry org/apache/commons/lang/math/DoubleRange.class
+[DEBUG] adding entry org/apache/commons/lang/math/FloatRange.class
+[DEBUG] adding entry org/apache/commons/lang/math/Fraction.class
+[DEBUG] adding entry org/apache/commons/lang/math/IEEE754rUtils.class
+[DEBUG] adding entry org/apache/commons/lang/math/IntRange.class
+[DEBUG] adding entry org/apache/commons/lang/math/JVMRandom.class
+[DEBUG] adding entry org/apache/commons/lang/math/LongRange.class
+[DEBUG] adding entry org/apache/commons/lang/math/NumberRange.class
+[DEBUG] adding entry org/apache/commons/lang/math/NumberUtils.class
+[DEBUG] adding entry org/apache/commons/lang/math/RandomUtils.class
+[DEBUG] adding entry org/apache/commons/lang/math/Range.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/Mutable.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableBoolean.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableByte.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableDouble.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableFloat.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableInt.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableLong.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableObject.class
+[DEBUG] adding entry org/apache/commons/lang/mutable/MutableShort.class
+[DEBUG] adding entry org/apache/commons/lang/NotImplementedException.class
+[DEBUG] adding entry org/apache/commons/lang/NullArgumentException.class
+[DEBUG] adding entry org/apache/commons/lang/NumberRange.class
+[DEBUG] adding entry org/apache/commons/lang/NumberUtils.class
+[DEBUG] adding entry org/apache/commons/lang/ObjectUtils$Null.class
+[DEBUG] adding entry org/apache/commons/lang/ObjectUtils.class
+[DEBUG] adding entry org/apache/commons/lang/RandomStringUtils.class
+[DEBUG] adding entry org/apache/commons/lang/SerializationException.class
+[DEBUG] adding entry org/apache/commons/lang/SerializationUtils.class
+[DEBUG] adding entry org/apache/commons/lang/StringEscapeUtils.class
+[DEBUG] adding entry org/apache/commons/lang/StringUtils.class
+[DEBUG] adding entry org/apache/commons/lang/SystemUtils.class
+[DEBUG] adding entry org/apache/commons/lang/text/CompositeFormat.class
+[DEBUG] adding entry org/apache/commons/lang/text/ExtendedMessageFormat.class
+[DEBUG] adding entry org/apache/commons/lang/text/FormatFactory.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrBuilder$StrBuilderReader.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrBuilder$StrBuilderTokenizer.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrBuilder$StrBuilderWriter.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrBuilder.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrLookup$MapStrLookup.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrLookup.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrMatcher$CharMatcher.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrMatcher$CharSetMatcher.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrMatcher$NoMatcher.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrMatcher$StringMatcher.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrMatcher$TrimMatcher.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrMatcher.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrSubstitutor.class
+[DEBUG] adding entry org/apache/commons/lang/text/StrTokenizer.class
+[DEBUG] adding entry org/apache/commons/lang/time/DateFormatUtils.class
+[DEBUG] adding entry org/apache/commons/lang/time/DateUtils$DateIterator.class
+[DEBUG] adding entry org/apache/commons/lang/time/DateUtils.class
+[DEBUG] adding entry org/apache/commons/lang/time/DurationFormatUtils$Token.class
+[DEBUG] adding entry org/apache/commons/lang/time/DurationFormatUtils.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$CharacterLiteral.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$NumberRule.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$PaddedNumberField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$Pair.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$Rule.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$StringLiteral.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TextField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TimeZoneDisplayKey.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TimeZoneNameRule.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TimeZoneNumberRule.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TwelveHourField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TwentyFourHourField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TwoDigitMonthField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TwoDigitNumberField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$TwoDigitYearField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$UnpaddedMonthField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat$UnpaddedNumberField.class
+[DEBUG] adding entry org/apache/commons/lang/time/FastDateFormat.class
+[DEBUG] adding entry org/apache/commons/lang/time/StopWatch.class
+[DEBUG] adding entry org/apache/commons/lang/UnhandledException.class
+[DEBUG] adding entry org/apache/commons/lang/Validate.class
+[DEBUG] adding entry org/apache/commons/lang/WordUtils.class
+[DEBUG] adding directory META-INF/maven/
+[DEBUG] adding directory META-INF/maven/commons-lang/
+[DEBUG] adding directory META-INF/maven/commons-lang/commons-lang/
+[DEBUG] adding entry META-INF/maven/commons-lang/commons-lang/pom.xml
+[DEBUG] adding entry META-INF/maven/commons-lang/commons-lang/pom.properties
+[DEBUG] duplicate file jp/canetrash/sample/maven/Main.class found, adding.
+[DEBUG] adding directory META-INF/maven/jp.canetrash.sample.maven/
+[DEBUG] adding directory META-INF/maven/jp.canetrash.sample.maven/maven-sample/
+[DEBUG] adding entry META-INF/maven/jp.canetrash.sample.maven/maven-sample/pom.xml
+[DEBUG] adding entry META-INF/maven/jp.canetrash.sample.maven/maven-sample/pom.properties
+[WARNING] Configuration options: 'appendAssemblyId' is set to false, and 'classifier' is missing.
+Instead of attaching the assembly file: C:\workspace\maven-sample\target\test.jar, it will become the file for main project artifact.
+NOTE: If multiple descriptors or descriptor-formats are provided for this project, the value of this file will be non-deterministic!
+[WARNING] Replacing pre-existing project main-artifact file: C:\workspace\maven-sample\target\maven-sample-0.0.1-SNAPSHOT.jar
+with assembly file: C:\workspace\maven-sample\target\test.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9 seconds
+[INFO] Finished at: Wed Dec 23 01:44:59 JST 2009
+[INFO] Final Memory: 13M/25M
+[INFO] ------------------------------------------------------------------------

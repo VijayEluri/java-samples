@@ -1,0 +1,661 @@
+{
+    "pipes": [
+        {
+            "color1": "fff",
+            "color2": "08f",
+            "color3": "f00",
+            "kinds": "古ユクモノ笛<br />ユクモノ笛改<br />ユクモノホルン<br />真ユクモノ笛<br />ブラスゲニア<br />王琴トドロキ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "防御力強化【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#f00;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "体力増加【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "風圧無効"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "f00",
+            "color3": "0f0",
+            "kinds": "土砂笙【戦ノ音】<br />土砂笙【獣ノ音】<br/> ブリッツワークス",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "体力回復【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "回復速度【小】"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "f00",
+            "color3": "0ff",
+            "kinds": "ストライプゴング<br />メタルバグパイプ<br />メタルバグパイプ改<br />ヘビィバグパイプ<br />クロノヒツギ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#f00;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "暑さ無効"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "寒さ無効"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "聴覚保護【小】"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "f00",
+            "color3": "ff0",
+            "kinds": "ドラグマ【壱式】<br/>ドラグマ【弐式】<br/>セロヴィセロベルデ<br/>セロヴィウノベルデ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "火耐性強化【小】＆<br/>火やられ【小】無効"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "08f",
+            "color3": "0f0",
+            "kinds": "ドロスヴォイス<br/>ドロスヴォイス改<br/>ウネリシェルン<br/>ウネリシェルン改",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "防御力強化【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "体力回復【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0f0;'> ♪</span>",
+                    "effect": "風圧無効"
+                }
+                , {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#fff;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "体力回復【小】＆<br/>解毒"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "08f",
+            "color3": "0ff",
+            "kinds": "ヒドゥントーン<br/>63式軍学口風琴<br/>グィロスト",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "防御力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "千里眼"
+                }
+                , {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "風圧無効"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆対泥"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "08f",
+            "color3": "ff0",
+            "kinds": "ヴァルキリコーダー<br/>ヴァルキリコーダー改",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "防御力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "氷耐性強化【小】＆<br/>氷やられ【小】無効"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "0f0",
+            "color3": "0ff",
+            "kinds": "マギアチャーム<br/>マギアチャーム改<br/>トランペッコ<br/>トランクルペッコ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#fff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0f0;'> ♪</span>",
+                    "effect": "体力回復【中】<br/>消臭"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0f0;'> ♪</span><span style='color:#fff;'> ♪</span>",
+                    "effect": "聴覚保護【小】"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "0f0",
+            "color3": "ff0",
+            "kinds": "セロヴィセロ<br/>セロヴィウノ<br/>セロヴィセロブラン",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "回復速度【小】"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "雷耐性強化【小】＆<br/>雷やられ【小】無効"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "fff",
+            "color2": "0ff",
+            "color3": "ff0",
+            "kinds": "アグナディオン<br/>セロヴィセロジョーヌ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#fff;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "竜耐性強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆対泥"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "耐震"
+                }
+                , {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "麻痺無効"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#fff;'> ♪</span>",
+                    "effect": "水耐性強化【小】＆<br/>水やられ【小】無効"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "属性攻撃力強化"
+                }
+                , {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "f00",
+            "color3": "f94",
+            "kinds": "王牙琴【鳴雷】<br/>アヴニルオルゲール<br/>アイスエイジ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "攻撃強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f00;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "のけぞり無効"
+                },
+                {
+                    "timbre": "<span style='color:#f94;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f94;'> ♪</span>",
+                    "effect": "全旋律効果延長"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "08f",
+            "color3": "f94",
+            "kinds": "覇笛ハウカムトルム<br/>ドズルヴォンヴァ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f94;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "攻撃力強化【小】＆<br/>防御力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f94;'> ♪</span>",
+                    "effect": "攻撃力強化【小】＆<br/>防御力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "防御力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f94;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【大】"
+                },
+                {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f94;'> ♪</span>",
+                    "effect": "風圧を完全無効"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "0ff",
+            "color3": "f94",
+            "kinds": "ブラッドスクリーム",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f4f;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "精霊王の加護"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#f4f;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f94;'> ♪</span>",
+                    "effect": "全状態異常無効"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "状態異常攻撃強化"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "f00",
+            "color3": "08f",
+            "kinds": "ブラスゲニア改<br/>ギガスゲニア<br/>真ユクモノ笛改<br/>ユクモ雅笛【千鳥】",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "攻撃力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "防御力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f00;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "体力増加【大】"
+                },
+                {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f00;'> ♪</span> ",
+                    "effect": "風圧無効"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "f00",
+            "color3": "0f0",
+            "kinds": "土砂笙【厳ノ音】<br/>ギガブリッツワークス",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "攻撃力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "回復速度【大】"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "f00",
+            "color3": "0ff",
+            "kinds": "ストライプドラゴング<br/>轟鼓【虎鐘】<br/>凄く風化した狩猟笛<br/>風化した狩猟笛<br/>ヘヴィバグパイプ改<br/>フォルティッシモ<br/>カゲノヒツギ<br/>ヤミノヒツギ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "攻撃力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f00;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "暑さ無効"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "寒さ無効"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "聴覚保護【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "f00",
+            "color3": "ff0",
+            "kinds": "アイスキュリン<br/>ドラグマ【参式】<br/>セロヴィドスベルデ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#f00;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#f4f;'> ♪</span> <span style='color:#f00;'> ♪</span>",
+                    "effect": "攻撃力強化【小】"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#f00;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "火耐性強化【大】＆<br/>火やられ完全無効"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "08f",
+            "color3": "0f0",
+            "kinds": "ドヴォンヴァ<br/>ロア＝ルドラ<br/>ウェルテクスシェルン",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "防御力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0f0;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【大】"
+                },
+                {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0f0;'> ♪</span>",
+                    "effect": "風圧無効"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "体力回復【中】＆<br/>解毒"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "08f",
+            "color3": "0ff",
+            "kinds": "夜笛【逢魔】<br/>63式軍楽口風琴改<br/>ハプルニクス<br/>グィロスト改<br/>グィロティスカ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "防御力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "千里眼"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#08f;'> ♪</span><span style='color:#0ff;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【大】"
+                },
+                {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "風圧無効"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "気絶無効"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "ff0",
+            "color3": "08f",
+            "kinds": "ハードボーンホルン<br/>ハードボーンホルン改<br/>ヘヴィボーンホルン<br/>クイーンリコーダー<br/>ゴルトリコーダー",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "防御力強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#08f;'> ♪</span>",
+                    "effect": "スタミナ減少<br/>無効【大】"
+                },
+                {
+                    "timbre": "<span style='color:#08f;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "風圧を完全無効"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#08f;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "氷耐性強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "0f0",
+            "color3": "0ff",
+            "kinds": "カーサスドラゴング<br/>マギアチャーム＝ベル<br/>トルペクルーパー<br/>ブラッドコフィン",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span> ",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span><span style='color:#0ff;'> ♪</span>",
+                    "effect": "体力回復【大】"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "聴覚保護【大】"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "0f0",
+            "color3": "ff0",
+            "kinds": "セロヴィウノブラン",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span> ",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#ff0;'> ♪</span><span style='color:#0f0;'> ♪</span>",
+                    "effect": "属性攻撃力強化"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#f4f;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "精霊王の加護"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "回復速度【小】"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "雷耐性強化【大】＆<br/>雷やられ完全無効"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "0ff",
+            "color3": "ff0",
+            "kinds": "アグナディオン改<br/>フレイムエリオーネ<br/>セロヴィウノジョーヌ",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span> ",
+                    "effect": "竜耐性強化【大】"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "水耐性強化【大】＆<br/>水やられ完全無効 "
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "属性攻撃力強化"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span>",
+                    "effect": "耐雪＆耐泥"
+                },
+                
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#0ff;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "耐震"
+                },
+                {
+                    "timbre": "<span style='color:#0ff;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "麻痺無効"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "0f0",
+            "color3": "f94",
+            "kinds": "吼鼓【鬼咬】",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span> ",
+                    "effect": "体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#0f0;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f4f;'> ♪</span><span style='color:#f94;'> ♪</span>",
+                    "effect": "会心率UP＆<br/>体力回復【小】"
+                },
+                {
+                    "timbre": "<span style='color:#f94;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#0f0;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "聴覚保護【大】"
+                }
+            ]
+        },
+        {
+            "color1": "f4f",
+            "color2": "ff0",
+            "color3": "f94",
+            "kinds": "崩笛イコカムルバス<br/>凶琴【秋嵐】",
+            "effects": [
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#f94;'> ♪</span>  <span style='color:#ff0;'> ♪</span> ",
+                    "effect": "聴覚保護【小】＆<br/>風圧を無効"
+                },
+                {
+                    "timbre": "<span style='color:#f4f;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#ff0;'> ♪</span><span style='color:#f94;'> ♪</span>",
+                    "effect": "属性攻撃力強化"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span>",
+                    "effect": "高周波発生"
+                },
+                {
+                    "timbre": "<span style='color:#ff0;'> ♪</span> <span style='color:#f94;'> ♪</span> <span style='color:#f4f;'> ♪</span>",
+                    "effect": "全属性耐性強化"
+                },
+                {
+                    "timbre": "<span style='color:#f94;'> ♪</span> <span style='color:#ff0;'> ♪</span> <span style='color:#ff0;'> ♪</span><span style='color:#f94;'> ♪</span>",
+                    "effect": "属性やられ無効"
+                }
+            ]
+        }
+    ]
+}

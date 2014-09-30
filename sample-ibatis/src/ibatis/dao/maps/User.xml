@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+	"http://www.ibatis.com/dtd/sql-map-2.dtd"
+>
+
+<sqlMap namespace="User">
+
+	<typeAlias alias="user" type="ibatis.domain.User" />
+
+	<resultMap id="userResult" class="user">
+		<result property="id" column="ID" />
+		<result property="pass" column="PASS" />
+		<result property="name" column="NAME" />
+		<result property="email" column="EMAIL" nullValue="hogehoge@kom"/>
+		<result property="created" column="CREATE_DATE" />
+	</resultMap>
+
+	<select id="getUserByPk" resultMap="userResult" parameterClass="string">
+select ID, PASS, NAME, EMAIL,CREATE_DATE from
+M_USER where ID = #value#
+	</select>
+
+	<select id="getUserList" resultMap="userResult">
+select ID, PASS, NAME, EMAIL,CREATE_DATE from M_USER
+	</select>
+    <parameterMap id="swapParameters" class="map" >
+        <parameter property="out" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT"/>
+        <parameter property="inValue1" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN"/>
+    </parameterMap>
+	<procedure id="procedureCheck" parameterMap="swapParameters" resultClass="integer">
+		{? = call FUNCTION_CHECK (?)}
+	</procedure>
+	<insert id="insertUser"  parameterClass="ibatis.domain.User">
+		insert into M_USER (ID,PASS,NAME,EMAIL,CREATE_DATE) values(#id#, #pass#, #name#, #email#, sysdate)
+	</insert>
+</sqlMap>
