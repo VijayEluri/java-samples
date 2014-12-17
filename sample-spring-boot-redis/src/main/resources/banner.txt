@@ -1,0 +1,12 @@
+lllllllllllllllllllllll,,,　　　 　　　　 　　　　　 　 　 llllll 　 llllll
+llllll 　 　　'llllll　　 　　　　 　　 　 　 　　　　llll
+llllll 　 　　,llllll 　　 ,,llllll'''llllll,, 　 　,,llllllllllllll,,'lllll 　 llllll 　 ,,lllll'''''llllll,,
+llllllllllllllllllllll''' 　 　llll'' 　 　 lllll　 ,lllll' 　 　 'lllllll 　 llllll 　 lllll,, 　　''''
+llllll　 　 ''lllll,,　 　lllllllllllllllllllllllll　 lllll 　　 　 lllll 　 llllll 　　''''''lllllllll,,,,
+llllll 　 　　'lllll,　　'llll,, 　 　 ,,,,, 　'lllll,,　 　 ,,llllll 　 llllll 　 ,,,,, 　 　'llllll
+llllll　　　　 'llllll, 　 '''lllllllllllllll'''　 　''llllllllllllll'' llll, 　 lllll 　 '''lllllll,,lllllll''
+　 　　 　 　 　 　　 　 ''''''　 　　　 　 '''''　　　 　 　 　　 　　 ''''
+Application Veriosn:${application.version}
+Formated Application Veriosn:${application.formatted-version}
+Spring Boot Version:${spring-boot.version}
+Spring Boot Formated Version:${spring-boot.formatted-version}
