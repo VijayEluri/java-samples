@@ -1,5 +1,6 @@
 package jp.canetrash.samples.gs;
 
+
 public class Player {
 
 	public Player(String name, Integer birthYear) {

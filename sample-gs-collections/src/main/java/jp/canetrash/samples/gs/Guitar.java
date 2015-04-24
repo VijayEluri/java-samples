@@ -1,7 +1,7 @@
 package jp.canetrash.samples.gs;
 
-import com.gs.collections.api.list.MutableList;
-import com.gs.collections.impl.list.mutable.FastList;
+import com.gs.collections.api.set.MutableSet;
+import com.gs.collections.impl.set.mutable.UnifiedSet;
 
 /**
  * @author tfunato
@@ -9,11 +9,17 @@ import com.gs.collections.impl.list.mutable.FastList;
  */
 public class Guitar {
 
+	private double scale;
+	private String name;
+
+	private final MutableSet<Player> players = UnifiedSet.newSet();
+
 	public Guitar(String name, double scale) {
 		super();
 		this.scale = scale;
 		this.name = name;
 	}
+
 
 	public double getScale() {
 		return scale;
@@ -23,11 +29,6 @@ public class Guitar {
 		this.scale = scale;
 	}
 
-	private double scale;
-	private String name;
-
-	private final MutableList<Player> players = FastList.newList();
-
 	public String getName() {
 		return name;
 	}
@@ -36,7 +37,7 @@ public class Guitar {
 		this.name = name;
 	}
 
-	public MutableList<Player> getPlayers() {
+	public MutableSet<Player> getPlayers() {
 		return players;
 	}
 
